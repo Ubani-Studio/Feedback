@@ -1,6 +1,6 @@
 # Feedback Instrument — Directions & Strategy
 
-> Lorenz chaos attractor → 6 waveguide resonators → 19 African tuning systems → 9 polyrhythmic patterns → live performance instrument
+> Lorenz chaos attractor → 6 waveguide resonators + sub-bass → 19 African tuning systems → 9 polyrhythmic patterns → live performance instrument
 
 ---
 
@@ -12,7 +12,7 @@
 4. [Grants, Funding & Residencies](#4-grants-funding--residencies)
 5. [Festivals & Presentation Contexts](#5-festivals--presentation-contexts)
 6. [Direct Competitors](#6-direct-competitors)
-7. [ERRC Blue Ocean Analysis](#7-errc-blue-ocean-analysis)
+7. [ERRC Blue Ocean Analysis — Moat Protection](#7-errc-blue-ocean-analysis--moat-protection)
 8. [Problem Statement](#8-problem-statement)
 9. [Value Increase Strategies](#9-value-increase-strategies)
 
@@ -338,39 +338,50 @@ Luxury hospitality and retail investing heavily in sonic branding. Low-chaos amb
 
 ---
 
-## 7. ERRC Blue Ocean Analysis
+## 7. ERRC Blue Ocean Analysis — Moat Protection
 
-### ELIMINATE (things the industry does that we don't need)
+> **THE MOAT:** African tuning systems as synthesis architecture + polyrhythmic voice allocation + steerable chaos + root snap-back. These four pillars are interlocking — copying one without the others produces a lesser product.
 
-- **Preset banks** — Feedback is a system, not a preset library. No "Analog Pad 47."
-- **12-TET default** — Don't include Western equal temperament as the starting tuning. Start from African systems. 12-TET is available but not privileged.
-- **DAW-first workflow** — Don't optimize for sitting inside Ableton. This is a standalone performance instrument first.
-- **Skeuomorphic GUI** — No fake knobs, no fake rack. The interface is the math and the culture.
-- **Sample playback** — Nothing is sampled. Everything is generated. This is synthesis from first principles.
+### ELIMINATE (attack the assumptions competitors can't abandon)
 
-### REDUCE (things we do less than competitors)
+- **12-TET as default tuning** — Every competitor (Kaivo, Chromaphone, Pigments, Surge XT) starts from Western equal temperament. Even with Scala support, their engines are 12-TET first, microtonal as afterthought. We eliminate 12-TET as starting point entirely. African tuning is the foundation, not a flavor.
+- **Preset banks as product** — AAS and Arturia sell preset packs as DLC. Feedback is a system that generates sound from principles, not a library of pre-made sounds. This is un-copyable because the sound comes from the interaction between chaos, tuning, and rhythm — not from stored parameter snapshots.
+- **Sample playback** — Nothing is sampled. This eliminates the entire cultural extraction problem (sampling African instruments without context) while making the sound generation engine the product, not the samples.
+- **MIDI keyboard as primary input** — Competitors assume note-per-key polyphony. We don't. The arpeggiator and pattern engine handle voice allocation through culturally-informed rhythmic patterns, not chromatic note input. This is a fundamental architectural difference.
 
-- **Voice count** — 6 voices, not 128. Intentional limitation for timbral clarity and performance control.
-- **Polyphony** — Not a keyboard instrument. The arpeggiator handles voice allocation through patterns, not MIDI notes.
-- **Plugin format** — Max patch first. VST/AU comes later via RNBO. This keeps development focused.
-- **Ease of use** — The learning curve is real (19 tunings, 9 patterns, chaos parameters). Accept this. Power users, not beginners.
-- **Feature breadth** — Do one thing (chaos → resonance → African tuning) deeply instead of many things shallowly.
+### REDUCE (constrain to sharpen the moat)
 
-### RAISE (things we do more than anyone)
+- **Voice count to 6** — Competitors boast 128+ voices. We use exactly 6, each with distinct timbral character (sub bass / body / metallic / transient / drone / crystalline). This makes pattern-aware voice allocation meaningful — Bembe step 5 hits body+transient, step 7 hits metallic, because those are the RIGHT timbres for those positions in the bell pattern. 128 generic voices can't do this.
+- **Plugin format (for now)** — Max patch first, RNBO export later. Staying in Max protects development speed and keeps us ahead of anyone trying to clone the architecture. When we do export, the gen~ codebox IS the IP.
+- **General accessibility** — 19 tuning systems, 9 rhythm patterns, chaos parameters with smoothing modes. The learning curve filters for power users who will become evangelists, not casual browsers who churn. Profile 10 (Kampala, 10/10): "This is the instrument I would have designed if I could code."
+- **Feature breadth** — One chain done deeply: chaos → waveguide → African tuning → polyrhythmic voice allocation → live performance control. Competitors spread wide (Pigments: 6 engines). We go narrow and deep where no one else is.
 
-- **Tuning system depth** — 19 culturally-specific tuning systems, not arbitrary microtonal scales. Each has musicological context.
-- **Rhythmic intelligence** — 9 African/diaspora rhythm patterns (Bembe, Shiko, Gahu, Son Clave, Fume Fume, Kassa, Poly 3:2, Triplet, Call/Response) with per-voice bitmask activation.
-- **Performance control** — Root snap-back, brightness, register controls, smoothing modes. Designed for live performance, not studio automation.
-- **Mathematical foundation** — Lorenz attractors, waveguide synthesis, chaos theory. The science is real, not marketing.
-- **Cultural grounding** — Built FROM African musical systems, not Western systems with African presets bolted on.
+### RAISE (amplify what protects the moat)
 
-### CREATE (things no one else offers)
+- **Tuning system depth** — 19 systems across 5 African regions, each with musicological sourcing (Akinbo 2019 for dundun, Chopi timbila field measurements, BaAka Pygmy 5-TET). This isn't microtonal curiosity — it's ethnomusicological accuracy. Profile 22 (ethnomusicologist): "whoever built this actually studied the source material." This knowledge base is a moat within the moat — hard to replicate without the research.
+- **Per-voice rhythmic intelligence** — Each pattern step has a 6-bit bitmask that activates specific voice combinations for timbral intent. Bembe bell: bass on beat 1, mid on beat 5, metallic on beat 7, crystal on beat 9. Son Clave: low body on the three-side, full spread on the two-side. This isn't random — it's compositional knowledge embedded in the engine. No sequencer or probability module can replicate this without understanding WHY these voices go on these beats.
+- **Root snap-back** — Multiple unrelated profiles (experimental #3, dance #30, live performer #16) independently identified this as the key differentiator. It solves the fundamental problem of chaos instruments: interesting for 90 seconds, unusable for a performance. Snap-back makes chaos PLAYABLE. The v2 implementation is bulletproof (11 edge-case scenarios verified, delay-based with home-store gate architecture).
+- **Sub-bass presence** — Dedicated sub waveguide tracking voice 1 at -1 octave, very dark (brightness 0.1), very high feedback (0.99995), with output saturation via tanh(signal * drive). This directly addresses Profile 8 (Joburg/gqom, 7→target 9): "gqom needs sub weight." Bass physical presence is critical for dance contexts (Profile 30) and fashion shows (Profile 28).
 
-- **Chaos-to-resonance pipeline** — Lorenz attractor driving waveguide resonators through African tuning systems. This specific chain doesn't exist anywhere.
-- **Root snap-back** — A control mechanism that lets you explore chaos but always return to a musical center. No other instrument has this.
-- **Pattern-aware voice allocation** — Each rhythm pattern step activates specific voices with timbral intent (bass voices on downbeats, metallic voices on cross-rhythms).
-- **Cultural instrument, not cultural preset** — The tuning and rhythm systems aren't skins on a Western engine. They're the architecture.
-- **The four-instrument system** — Feedback is Project 1 of four. Corpus Resonance (WORLD), Coupled Rhythm Engine (COLLECTIVE), Swarm Polyphony (ENSEMBLE). No competitor has a roadmap like this.
+### CREATE (things no competitor can build without our architecture)
+
+- **Chaos-to-resonance-to-tuning pipeline** — Lorenz attractor → 6 heterogeneous waveguides → African tuning ratios. This is ONE system, not three bolted-together modules. The chaos drives the resonators which are pitched by the tuning which is arpeggiated by the patterns. Remove any piece and the product is fundamentally different. A competitor would need to rebuild the entire chain, not just copy a feature.
+- **Pattern-aware timbral voice allocation** — The bitmask system means each rhythm pattern is also a TIMBRAL COMPOSITION. Gahu (15-step Ewe dance bell): bass+metallic → mid → low-mid+mid-high → crystal → bass+mid → metallic+crystal. This is not a sequencer triggering notes — it's a rhythmic orchestration engine. No one else has this because it requires the intersection of ethnomusicological knowledge + synthesis architecture + specific timbral voice assignments.
+- **Cultural architecture, not cultural preset** — The Yoruba pentatonic flex parameter (blending Pythagorean ratios with just intervals at runtime) isn't a scale you load — it's a synthesis behavior. The dundun 3-tone system shapes the waveguide ratios differently than the Ethiopian Tizita. The tuning IS the sound engine. This is structurally impossible to replicate by adding a preset pack to an existing synth.
+- **Steerable chaos with musical anchoring** — Root snap-back + Lorenz parameter smoothing + bounded chaos gain + MIDI clock sync. The chaos is musically useful because you can steer it: rho controls the character (20=converging, 28=classic chaos, 100=periodic), root snap-back gives you a home base, MIDI sync locks the arp to your drummer. Profile 3 (Brooklyn): "every chaos instrument I've used just drifts into unusable territory after 90 seconds live."
+- **The four-instrument system** — Feedback is instrument 1 of 4 (Feedback → Corpus Resonance → Coupled Rhythm Engine → Swarm Polyphony). Each builds on the same African-tuning-as-architecture thesis with different synthesis models. A competitor would need to replicate an entire instrument family, not just one product.
+
+### Moat Durability Assessment
+
+| Moat Pillar | Time to Copy | Why Hard |
+|------------|-------------|----------|
+| 19 African tuning systems | 6-12 months | Requires ethnomusicological research, not just Scala files |
+| Polyrhythmic voice allocation | 3-6 months | Requires understanding WHY specific timbres go on specific beats |
+| Steerable chaos (snap-back) | 1-3 months | Technically simple, but requires understanding the DESIGN PROBLEM it solves |
+| Sub-bass waveguide | 1 month | Easy to copy in isolation, but worthless without the tuning architecture |
+| **Full system integration** | **12-18 months** | **All four pillars must work together. Copying one misses the point.** |
+
+**The real moat is the INTERSECTION.** Any individual feature is copiable. The combination of chaos + waveguides + African tuning + polyrhythmic voice allocation + snap-back is not, because it requires understanding all five domains simultaneously. A synthesizer company could add African tuning presets. A chaos module could add snap-back. But neither would have the timbral voice allocation or the culturally-informed rhythmic patterns, because those emerge from the intersection.
 
 ---
 
