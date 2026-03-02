@@ -438,7 +438,7 @@
 										600.0,
 										350.0
 									],
-									"code": "// LORENZ ATTRACTOR \u2014 audio-rate chaos\n// 4 unrolled Euler steps per sample (no for-loop for compatibility)\n// Noise perturbation prevents fixed-point convergence\n\nParam sigma(10);\nParam rho(28);\nParam beta(2.667);\nParam dt(0.0012);\nParam gain(1.0);\nHistory hx(0.1);\nHistory hy(0);\nHistory hz(0);\n\nrho_mod = rho + in1;\n\n// 4 integration steps per sample (unrolled)\n// effective speed = dt * 4 * samplerate LTU/sec\n// dt=0.0012 -> ~212 LTU/s (audible chaos)\ntx = hx; ty = hy; tz = hz;\n\ndx = sigma * (ty - tx); dy = tx * (rho_mod - tz) - ty; dz = tx * ty - beta * tz;\ntx += dx * dt; ty += dy * dt; tz += dz * dt;\n\ndx = sigma * (ty - tx); dy = tx * (rho_mod - tz) - ty; dz = tx * ty - beta * tz;\ntx += dx * dt; ty += dy * dt; tz += dz * dt;\n\ndx = sigma * (ty - tx); dy = tx * (rho_mod - tz) - ty; dz = tx * ty - beta * tz;\ntx += dx * dt; ty += dy * dt; tz += dz * dt;\n\ndx = sigma * (ty - tx); dy = tx * (rho_mod - tz) - ty; dz = tx * ty - beta * tz;\ntx += dx * dt; ty += dy * dt; tz += dz * dt;\n\n// Clamp + noise prevents convergence on fixed points\n// noise() * 0.01 escapes any basin in ~0.2 sec\n// Inaudible: contributes < 0.001 to audio output\nhx = clamp(tx, -100, 100) + noise() * 0.01;\nhy = clamp(ty, -100, 100) + noise() * 0.01;\nhz = clamp(tz, -100, 100) + noise() * 0.01;\n\n// Normalize + soft-limit\n// x ~ +-15 at rho=28, +-55 at rho=166\nout1 = tanh(hx * 0.04 * gain);\nout2 = tanh(hy * 0.03 * gain);\nout3 = tanh(hz * 0.025 * gain);"
+									"code": "// LORENZ ATTRACTOR \u2014 audio-rate chaos\n// 4 unrolled Euler steps, noise perturbation,\n// smoothed params for click-free transitions\n\nParam sigma(10);\nParam rho(28);\nParam beta(2.667);\nParam dt(0.0012);\nParam gain(1.0);\nParam reset(0);\nHistory hx(0.1);\nHistory hy(0);\nHistory hz(0);\nHistory s_sigma(10);\nHistory s_rho(28);\nHistory s_beta(2.667);\nHistory s_gain(1.0);\n\n// Smooth params \u2014 prevents clicks on change\ns_sigma += (sigma - s_sigma) * 0.001;\ns_rho += (rho - s_rho) * 0.001;\ns_beta += (beta - s_beta) * 0.001;\ns_gain += (gain - s_gain) * 0.001;\n\nrho_mod = s_rho + in1;\n\n// 4 unrolled Euler steps\ntx = hx; ty = hy; tz = hz;\n\ndx = s_sigma * (ty - tx); dy = tx * (rho_mod - tz) - ty; dz = tx * ty - s_beta * tz;\ntx += dx * dt; ty += dy * dt; tz += dz * dt;\n\ndx = s_sigma * (ty - tx); dy = tx * (rho_mod - tz) - ty; dz = tx * ty - s_beta * tz;\ntx += dx * dt; ty += dy * dt; tz += dz * dt;\n\ndx = s_sigma * (ty - tx); dy = tx * (rho_mod - tz) - ty; dz = tx * ty - s_beta * tz;\ntx += dx * dt; ty += dy * dt; tz += dz * dt;\n\ndx = s_sigma * (ty - tx); dy = tx * (rho_mod - tz) - ty; dz = tx * ty - s_beta * tz;\ntx += dx * dt; ty += dy * dt; tz += dz * dt;\n\n// Reset: hold at initial conditions while reset=1\nhx = (reset > 0.5) ? 0.1 : clamp(tx, -100, 100) + noise() * 0.01;\nhy = (reset > 0.5) ? 0.0 : clamp(ty, -100, 100) + noise() * 0.01;\nhz = (reset > 0.5) ? 0.0 : clamp(tz, -100, 100) + noise() * 0.01;\n\n// Normalize + soft-limit\nout1 = tanh(hx * 0.04 * s_gain);\nout2 = tanh(hy * 0.03 * s_gain);\nout3 = tanh(hz * 0.025 * s_gain);"
 								}
 							},
 							{
@@ -907,6 +907,94 @@
 						20.0
 					]
 				}
+			},
+			{
+				"box": {
+					"id": "obj-reset-btn",
+					"maxclass": "button",
+					"numinlets": 1,
+					"numoutlets": 1,
+					"outlettype": [
+						"bang"
+					],
+					"parameter_enable": 0,
+					"patching_rect": [
+						15.0,
+						430.0,
+						30.0,
+						30.0
+					]
+				}
+			},
+			{
+				"box": {
+					"id": "obj-reset-label",
+					"maxclass": "comment",
+					"text": "RESET",
+					"numinlets": 1,
+					"numoutlets": 0,
+					"patching_rect": [
+						48.0,
+						435.0,
+						50.0,
+						20.0
+					],
+					"fontface": 1
+				}
+			},
+			{
+				"box": {
+					"id": "obj-reset-on",
+					"maxclass": "message",
+					"text": "reset 1",
+					"numinlets": 2,
+					"numoutlets": 1,
+					"outlettype": [
+						""
+					],
+					"patching_rect": [
+						15.0,
+						468.0,
+						50.0,
+						22.0
+					]
+				}
+			},
+			{
+				"box": {
+					"id": "obj-reset-del",
+					"maxclass": "newobj",
+					"text": "delay 100",
+					"numinlets": 2,
+					"numoutlets": 1,
+					"outlettype": [
+						"bang"
+					],
+					"patching_rect": [
+						75.0,
+						468.0,
+						65.0,
+						22.0
+					]
+				}
+			},
+			{
+				"box": {
+					"id": "obj-reset-off",
+					"maxclass": "message",
+					"text": "reset 0",
+					"numinlets": 2,
+					"numoutlets": 1,
+					"outlettype": [
+						""
+					],
+					"patching_rect": [
+						75.0,
+						498.0,
+						50.0,
+						22.0
+					]
+				}
 			}
 		],
 		"lines": [
@@ -1190,6 +1278,66 @@
 				"patchline": {
 					"source": [
 						"obj-rho-p5",
+						0
+					],
+					"destination": [
+						"obj-gen",
+						0
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-reset-btn",
+						0
+					],
+					"destination": [
+						"obj-reset-on",
+						0
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-reset-btn",
+						0
+					],
+					"destination": [
+						"obj-reset-del",
+						0
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-reset-on",
+						0
+					],
+					"destination": [
+						"obj-gen",
+						0
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-reset-del",
+						0
+					],
+					"destination": [
+						"obj-reset-off",
+						0
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-reset-off",
 						0
 					],
 					"destination": [
