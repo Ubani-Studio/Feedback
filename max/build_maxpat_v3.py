@@ -15,7 +15,7 @@ Param sigma(10);
 Param rho(28);
 Param beta(2.667);
 Param lorenz_dt(0.0012);
-Param chaos_gain(0.01);
+Param chaos_gain(0.03);
 Param root(55);
 Param flex(0.5);
 Param tuning_system(0);
@@ -84,7 +84,7 @@ History s_sigma(10);
 History s_rho(28);
 History s_beta(2.667);
 History s_dt(0.0012);
-History s_cg(0.01);
+History s_cg(0.03);
 History lx(0.1);
 History ly(0);
 History lz(0);
@@ -416,9 +416,9 @@ if (init_done < 0.5) {
 
     // === LUSOPHONE / DIASPORA PATTERNS ===
 
-    // Pattern 9 — Kuduro (arp_mode 15, offset 144, length 16)
-    // Angolan: heavy kick pattern, syncopated. x..x..x.x..x..x. at 140 BPM
-    poke(arp_pat_data, 16, 144, 0);
+    // Pattern 9 — Kuduro (arp_mode 15, offset 144, length 15)
+    // Angolan: heavy kick pattern, syncopated. x..x..x.x..x..x at 140 BPM
+    poke(arp_pat_data, 15, 144, 0);
     poke(arp_pat_data, 3, 145, 0);   // step 0: v1+v2 bass+body (kick)
     poke(arp_pat_data, 0, 146, 0);
     poke(arp_pat_data, 0, 147, 0);
@@ -434,55 +434,53 @@ if (init_done < 0.5) {
     poke(arp_pat_data, 0, 157, 0);
     poke(arp_pat_data, 12, 158, 0);  // step 13: snare
     poke(arp_pat_data, 3, 159, 0);   // step 14: kick (syncopation)
-    poke(arp_pat_data, 0, 160, 0);
 
-    // Pattern 10 — Semba (arp_mode 16, offset 176, length 16)
+    // Pattern 10 — Semba (arp_mode 16, offset 160, length 15)
     // Angolan: flowing, 2-bar feel, bass-heavy with clave accent
-    poke(arp_pat_data, 16, 176, 0);
-    poke(arp_pat_data, 1, 177, 0);   // step 0: v1 bass
-    poke(arp_pat_data, 0, 178, 0);
-    poke(arp_pat_data, 0, 179, 0);
-    poke(arp_pat_data, 6, 180, 0);   // step 3: v2+v3 body+metallic
-    poke(arp_pat_data, 0, 181, 0);
-    poke(arp_pat_data, 1, 182, 0);   // step 5: v1 bass
-    poke(arp_pat_data, 0, 183, 0);
-    poke(arp_pat_data, 48, 184, 0);  // step 7: v5+v6 shimmer
-    poke(arp_pat_data, 1, 185, 0);   // step 8: v1 bass
-    poke(arp_pat_data, 0, 186, 0);
-    poke(arp_pat_data, 8, 187, 0);   // step 10: v4 transient
-    poke(arp_pat_data, 0, 188, 0);
-    poke(arp_pat_data, 6, 189, 0);   // step 12: v2+v3 body+metallic
-    poke(arp_pat_data, 0, 190, 0);
-    poke(arp_pat_data, 1, 191, 0);   // step 14: v1 bass
-    poke(arp_pat_data, 0, 192, 0);
+    poke(arp_pat_data, 15, 160, 0);
+    poke(arp_pat_data, 1, 161, 0);   // step 0: v1 bass
+    poke(arp_pat_data, 0, 162, 0);
+    poke(arp_pat_data, 0, 163, 0);
+    poke(arp_pat_data, 6, 164, 0);   // step 3: v2+v3 body+metallic
+    poke(arp_pat_data, 0, 165, 0);
+    poke(arp_pat_data, 1, 166, 0);   // step 5: v1 bass
+    poke(arp_pat_data, 0, 167, 0);
+    poke(arp_pat_data, 48, 168, 0);  // step 7: v5+v6 shimmer
+    poke(arp_pat_data, 1, 169, 0);   // step 8: v1 bass
+    poke(arp_pat_data, 0, 170, 0);
+    poke(arp_pat_data, 8, 171, 0);   // step 10: v4 transient
+    poke(arp_pat_data, 0, 172, 0);
+    poke(arp_pat_data, 6, 173, 0);   // step 12: v2+v3 body+metallic
+    poke(arp_pat_data, 0, 174, 0);
+    poke(arp_pat_data, 1, 175, 0);   // step 14: v1 bass
 
-    // Pattern 11 — Kizomba (arp_mode 17, offset 192, length 8)
+    // Pattern 11 — Kizomba (arp_mode 17, offset 176, length 8)
     // Angolan slow: intimate bass pulse, minimal percussion. 90 BPM.
-    poke(arp_pat_data, 8, 192, 0);
-    poke(arp_pat_data, 3, 193, 0);   // step 0: v1+v2 bass+body
-    poke(arp_pat_data, 0, 194, 0);
-    poke(arp_pat_data, 48, 195, 0);  // step 2: v5+v6 shimmer
-    poke(arp_pat_data, 0, 196, 0);
-    poke(arp_pat_data, 3, 197, 0);   // step 4: bass+body
-    poke(arp_pat_data, 0, 198, 0);
-    poke(arp_pat_data, 4, 199, 0);   // step 6: v3 metallic
-    poke(arp_pat_data, 0, 200, 0);
+    poke(arp_pat_data, 8, 176, 0);
+    poke(arp_pat_data, 3, 177, 0);   // step 0: v1+v2 bass+body
+    poke(arp_pat_data, 0, 178, 0);
+    poke(arp_pat_data, 48, 179, 0);  // step 2: v5+v6 shimmer
+    poke(arp_pat_data, 0, 180, 0);
+    poke(arp_pat_data, 3, 181, 0);   // step 4: bass+body
+    poke(arp_pat_data, 0, 182, 0);
+    poke(arp_pat_data, 4, 183, 0);   // step 6: v3 metallic
+    poke(arp_pat_data, 0, 184, 0);
 
-    // Pattern 12 — Marrabenta (arp_mode 18, offset 208, length 12)
+    // Pattern 12 — Marrabenta (arp_mode 18, offset 192, length 12)
     // Mozambican: 12/8 guitar-derived, bright and driving
-    poke(arp_pat_data, 12, 208, 0);
-    poke(arp_pat_data, 5, 209, 0);   // step 0: v1+v3 bass+metallic
-    poke(arp_pat_data, 0, 210, 0);
-    poke(arp_pat_data, 32, 211, 0);  // step 2: v6 crystal
-    poke(arp_pat_data, 2, 212, 0);   // step 3: v2 body
-    poke(arp_pat_data, 0, 213, 0);
-    poke(arp_pat_data, 16, 214, 0);  // step 5: v5 drone
-    poke(arp_pat_data, 5, 215, 0);   // step 6: v1+v3 bass+metallic
-    poke(arp_pat_data, 0, 216, 0);
-    poke(arp_pat_data, 8, 217, 0);   // step 8: v4 transient
-    poke(arp_pat_data, 2, 218, 0);   // step 9: v2 body
-    poke(arp_pat_data, 0, 219, 0);
-    poke(arp_pat_data, 48, 220, 0);  // step 11: v5+v6 shimmer
+    poke(arp_pat_data, 12, 192, 0);
+    poke(arp_pat_data, 5, 193, 0);   // step 0: v1+v3 bass+metallic
+    poke(arp_pat_data, 0, 194, 0);
+    poke(arp_pat_data, 32, 195, 0);  // step 2: v6 crystal
+    poke(arp_pat_data, 2, 196, 0);   // step 3: v2 body
+    poke(arp_pat_data, 0, 197, 0);
+    poke(arp_pat_data, 16, 198, 0);  // step 5: v5 drone
+    poke(arp_pat_data, 5, 199, 0);   // step 6: v1+v3 bass+metallic
+    poke(arp_pat_data, 0, 200, 0);
+    poke(arp_pat_data, 8, 201, 0);   // step 8: v4 transient
+    poke(arp_pat_data, 2, 202, 0);   // step 9: v2 body
+    poke(arp_pat_data, 0, 203, 0);
+    poke(arp_pat_data, 48, 204, 0);  // step 11: v5+v6 shimmer
 
     init_done = 1;
 }
@@ -652,9 +650,9 @@ cy = b_active ? ((cm < 0.5) ? bl_y : (cm < 1.5) ? md_y : ay) : ay;
 cz = b_active ? ((cm < 0.5) ? bl_z : (cm < 1.5) ? md_z : az) : az;
 
 // Route mode: separate chaos for voices 4-6
-cx_456 = (b_active && cm > 1.5) ? bx_raw : cx;
-cy_456 = (b_active && cm > 1.5) ? by_raw : cy;
-cz_456 = (b_active && cm > 1.5) ? bz_raw : cz;
+cx_456 = (b_active * (cm > 1.5)) ? bx_raw : cx;
+cy_456 = (b_active * (cm > 1.5)) ? by_raw : cy;
+cz_456 = (b_active * (cm > 1.5)) ? bz_raw : cz;
 
 // === ANALOG CLOCK INPUT (rising edge → BPM) ===
 clk_in = in2;
@@ -663,17 +661,17 @@ clk_prev = clk_in;
 clk_count = clk_edge ? 0 : clk_count + 1;
 clk_hz = clk_edge ? (samplerate / max(clk_count, 1)) : 0;
 clk_bpm = clk_edge ? clamp(clk_hz * 60.0, 20, 300) : clk_bpm;
-arp_bpm = (clk_enable > 0.5) ? clk_bpm : arp_bpm;
+eff_arp_bpm = (clk_enable > 0.5) ? clk_bpm : arp_bpm;
 
 // === ARPEGGIATOR (BPM sync + patterns + MIDI reset) ===
-eff_rate = (arp_div > 0.01) ? (arp_bpm / 60.0 * arp_div) : arp_rate;
+eff_rate = (arp_div > 0.01) ? (eff_arp_bpm / 60.0 * arp_div) : arp_rate;
 arp_ph_new = arp_phase + eff_rate / samplerate;
 arp_trig_flag = (arp_ph_new >= 1.0);
 arp_phase = arp_ph_new - floor(arp_ph_new);
 
 // Pattern detection
 is_user_pat = (arp_mode > 19.5);
-is_eucl = (arp_mode > 18.5 && arp_mode < 19.5);
+is_eucl = ((arp_mode > 18.5) * (arp_mode < 19.5));
 is_pattern = (arp_mode > 5.5);
 pat_idx = clamp(floor(arp_mode - 6), 0, 12);
 pat_base = pat_idx * 16;
@@ -696,7 +694,7 @@ pat_next_s = mod(arp_step + 1, pat_len);
 
 // Select step
 new_s = is_pattern ? pat_next_s : std_new_s;
-new_d = (arp_mode > 2.5 && arp_mode < 3.5) ? pp_new_dir : arp_dir;
+new_d = ((arp_mode > 2.5) * (arp_mode < 3.5)) ? pp_new_dir : arp_dir;
 arp_step = arp_trig_flag ? new_s : arp_step;
 arp_dir = arp_trig_flag ? new_d : arp_dir;
 
@@ -707,7 +705,7 @@ arp_phase = (arp_reset > 0.5) ? 0 : arp_phase;
 cur = floor(arp_step);
 
 // Standard voice activation (modes 0-5)
-arp_active = (arp_mode > 0.5 && arp_mode < 4.5);
+arp_active = ((arp_mode > 0.5) * (arp_mode < 4.5));
 st1 = arp_active ? (abs(cur) < 0.5 ? 1.0 : 0.0) : 1.0;
 st2 = arp_active ? (abs(cur - 1) < 0.5 ? 1.0 : 0.0) : 1.0;
 st3 = arp_active ? (abs(cur - 2) < 0.5 ? 1.0 : 0.0) : 1.0;
@@ -997,6 +995,21 @@ boxes.append(comment("obj-title",
     [15.0, 15.0, 280.0, 195.0], linecount=11))
 
 boxes.append(box("obj-ezdac", "ezdac~", numinlets=2, numoutlets=0, patching_rect=[15.0, 210.0, 45.0, 45.0]))
+
+# Loadbang → auto-start DSP + send defaults to gen~
+boxes.append(newobj("obj-loadbang", "loadbang", [200.0, 215.0, 55.0, 22.0], numinlets=1, numoutlets=1, outlettype=["bang"]))
+# Start DSP automatically — startwindow sent to dac~ turns on audio
+boxes.append(msg("obj-startdsp", "startwindow", [280.0, 215.0, 75.0, 22.0]))
+lines.append(line("obj-loadbang", 0, "obj-startdsp", 0))
+lines.append(line("obj-startdsp", 0, "obj-dac", 0))
+# Delay 100ms to ensure gen~ is compiled before sending params
+boxes.append(newobj("obj-init-delay", "delay 100", [200.0, 240.0, 55.0, 22.0], numinlets=2, numoutlets=1, outlettype=["bang"]))
+boxes.append(msg("obj-init-msg", "mute 0, chaos_gain 0.03, master_gain 0.7, rho 28, root 55, arp_mode 0",
+                 [200.0, 265.0, 290.0, 22.0]))
+boxes.append(newobj("obj-s-init", "s toGen", [200.0, 290.0, 52.0, 22.0], numinlets=1, numoutlets=0))
+lines.append(line("obj-loadbang", 0, "obj-init-delay", 0))
+lines.append(line("obj-init-delay", 0, "obj-init-msg", 0))
+lines.append(line("obj-init-msg", 0, "obj-s-init", 0))
 
 # STOP toggle
 boxes.append({"box": {"id": "obj-mute-tog", "maxclass": "toggle", "numinlets": 1, "numoutlets": 1,
