@@ -131,7 +131,7 @@
 					"outlettype": [
 						""
 					],
-					"text": "mute 0, chaos_gain 0.05, master_gain 0.7, rho 28, root 55, arp_mode 0, att_sel 0, att_b_sel -1, combine_mode 0",
+					"text": "mute 0, chaos_gain 0.05, master_gain 1.0, rho 28, root 55, arp_mode 0, att_sel 0, att_b_sel -1, combine_mode 0",
 					"patching_rect": [
 						200.0,
 						265.0,
@@ -6550,7 +6550,7 @@
 					"outlettype": [
 						"signal"
 					],
-					"text": "*~ 0.8",
+					"text": "*~ 1.0",
 					"patching_rect": [
 						100.0,
 						2415.0,
@@ -6568,7 +6568,7 @@
 					"outlettype": [
 						"signal"
 					],
-					"text": "*~ 0.8",
+					"text": "*~ 1.0",
 					"patching_rect": [
 						180.0,
 						2415.0,
@@ -6922,8 +6922,8 @@
 					"patcher": {
 						"fileversion": 1,
 						"appversion": {
-							"major": 8,
-							"minor": 6,
+							"major": 9,
+							"minor": 1,
 							"revision": 0,
 							"architecture": "x64",
 							"modernui": 1
@@ -6959,15 +6959,8 @@
 									"text": "in~ 1",
 									"numinlets": 0,
 									"numoutlets": 1,
-									"outlettype": [
-										"signal"
-									],
-									"patching_rect": [
-										30.0,
-										30.0,
-										35.0,
-										22.0
-									],
+									"outlettype": [ "signal" ],
+									"patching_rect": [ 30.0, 30.0, 35.0, 22.0 ],
 									"comment": "signal L"
 								}
 							},
@@ -6978,15 +6971,8 @@
 									"text": "in~ 2",
 									"numinlets": 0,
 									"numoutlets": 1,
-									"outlettype": [
-										"signal"
-									],
-									"patching_rect": [
-										100.0,
-										30.0,
-										35.0,
-										22.0
-									],
+									"outlettype": [ "signal" ],
+									"patching_rect": [ 100.0, 30.0, 35.0, 22.0 ],
 									"comment": "signal R"
 								}
 							},
@@ -6997,15 +6983,8 @@
 									"text": "in 1",
 									"numinlets": 0,
 									"numoutlets": 1,
-									"outlettype": [
-										""
-									],
-									"patching_rect": [
-										250.0,
-										30.0,
-										30.0,
-										22.0
-									],
+									"outlettype": [ "" ],
+									"patching_rect": [ 250.0, 30.0, 30.0, 22.0 ],
 									"comment": "toggle 0/1"
 								}
 							},
@@ -7016,17 +6995,8 @@
 									"text": "sel 1 0",
 									"numinlets": 1,
 									"numoutlets": 3,
-									"outlettype": [
-										"bang",
-										"bang",
-										""
-									],
-									"patching_rect": [
-										250.0,
-										65.0,
-										50.0,
-										22.0
-									]
+									"outlettype": [ "bang", "bang", "" ],
+									"patching_rect": [ 250.0, 65.0, 50.0, 22.0 ]
 								}
 							},
 							{
@@ -7036,57 +7006,30 @@
 									"text": "t b b",
 									"numinlets": 1,
 									"numoutlets": 2,
-									"outlettype": [
-										"bang",
-										"bang"
-									],
-									"patching_rect": [
-										250.0,
-										100.0,
-										33.0,
-										22.0
-									]
+									"outlettype": [ "bang", "bang" ],
+									"patching_rect": [ 250.0, 100.0, 33.0, 22.0 ]
 								}
 							},
 							{
 								"box": {
-									"id": "r-date",
+									"id": "r-counter",
 									"maxclass": "newobj",
-									"text": "date",
-									"numinlets": 1,
-									"numoutlets": 6,
-									"outlettype": [
-										"int",
-										"int",
-										"int",
-										"int",
-										"int",
-										"int"
-									],
-									"patching_rect": [
-										310.0,
-										100.0,
-										80.0,
-										22.0
-									]
+									"text": "counter",
+									"numinlets": 5,
+									"numoutlets": 4,
+									"outlettype": [ "int", "", "", "int" ],
+									"patching_rect": [ 310.0, 100.0, 52.0, 22.0 ]
 								}
 							},
 							{
 								"box": {
 									"id": "r-sprintf",
 									"maxclass": "newobj",
-									"text": "sprintf chaos_%04d%02d%02d_%02d%02d%02d.wav",
-									"numinlets": 6,
+									"text": "sprintf chaos_rec_%03d.wav",
+									"numinlets": 1,
 									"numoutlets": 1,
-									"outlettype": [
-										""
-									],
-									"patching_rect": [
-										310.0,
-										140.0,
-										260.0,
-										22.0
-									]
+									"outlettype": [ "" ],
+									"patching_rect": [ 310.0, 135.0, 165.0, 22.0 ]
 								}
 							},
 							{
@@ -7096,15 +7039,8 @@
 									"text": "prepend open",
 									"numinlets": 1,
 									"numoutlets": 1,
-									"outlettype": [
-										""
-									],
-									"patching_rect": [
-										310.0,
-										175.0,
-										78.0,
-										22.0
-									]
+									"outlettype": [ "" ],
+									"patching_rect": [ 310.0, 170.0, 78.0, 22.0 ]
 								}
 							},
 							{
@@ -7114,15 +7050,8 @@
 									"text": "delay 150",
 									"numinlets": 2,
 									"numoutlets": 1,
-									"outlettype": [
-										"bang"
-									],
-									"patching_rect": [
-										250.0,
-										140.0,
-										52.0,
-										22.0
-									]
+									"outlettype": [ "bang" ],
+									"patching_rect": [ 250.0, 140.0, 52.0, 22.0 ]
 								}
 							},
 							{
@@ -7132,15 +7061,8 @@
 									"text": "1",
 									"numinlets": 2,
 									"numoutlets": 1,
-									"outlettype": [
-										""
-									],
-									"patching_rect": [
-										250.0,
-										175.0,
-										22.0,
-										22.0
-									]
+									"outlettype": [ "" ],
+									"patching_rect": [ 250.0, 175.0, 22.0, 22.0 ]
 								}
 							},
 							{
@@ -7150,15 +7072,8 @@
 									"text": "0",
 									"numinlets": 2,
 									"numoutlets": 1,
-									"outlettype": [
-										""
-									],
-									"patching_rect": [
-										420.0,
-										65.0,
-										22.0,
-										22.0
-									]
+									"outlettype": [ "" ],
+									"patching_rect": [ 420.0, 65.0, 22.0, 22.0 ]
 								}
 							},
 							{
@@ -7168,15 +7083,8 @@
 									"text": "sfrecord~ 2",
 									"numinlets": 2,
 									"numoutlets": 1,
-									"outlettype": [
-										"signal"
-									],
-									"patching_rect": [
-										30.0,
-										220.0,
-										80.0,
-										22.0
-									]
+									"outlettype": [ "signal" ],
+									"patching_rect": [ 30.0, 220.0, 80.0, 22.0 ]
 								}
 							},
 							{
@@ -7186,27 +7094,17 @@
 									"text": "out 1",
 									"numinlets": 1,
 									"numoutlets": 0,
-									"patching_rect": [
-										310.0,
-										220.0,
-										35.0,
-										22.0
-									]
+									"patching_rect": [ 310.0, 220.0, 35.0, 22.0 ]
 								}
 							},
 							{
 								"box": {
 									"id": "r-label",
 									"maxclass": "comment",
-									"text": "One-click record\nToggle ON = auto-name + start\nToggle OFF = stop\nFiles save next to patch",
+									"text": "One-click record\nToggle ON = auto-name + start\nToggle OFF = stop\nFiles: chaos_rec_000.wav, 001, etc.",
 									"numinlets": 1,
 									"numoutlets": 0,
-									"patching_rect": [
-										30.0,
-										260.0,
-										200.0,
-										60.0
-									],
+									"patching_rect": [ 30.0, 260.0, 220.0, 60.0 ],
 									"fontsize": 10.0,
 									"linecount": 4
 								}
@@ -7215,230 +7113,86 @@
 						"lines": [
 							{
 								"patchline": {
-									"source": [
-										"r-in1",
-										0
-									],
-									"destination": [
-										"r-sf",
-										0
-									]
+									"source": [ "r-in1", 0 ],
+									"destination": [ "r-sf", 0 ]
 								}
 							},
 							{
 								"patchline": {
-									"source": [
-										"r-in2",
-										0
-									],
-									"destination": [
-										"r-sf",
-										1
-									]
+									"source": [ "r-in2", 0 ],
+									"destination": [ "r-sf", 1 ]
 								}
 							},
 							{
 								"patchline": {
-									"source": [
-										"r-in3",
-										0
-									],
-									"destination": [
-										"r-sel",
-										0
-									]
+									"source": [ "r-in3", 0 ],
+									"destination": [ "r-sel", 0 ]
 								}
 							},
 							{
 								"patchline": {
-									"source": [
-										"r-sel",
-										0
-									],
-									"destination": [
-										"r-trig",
-										0
-									]
+									"source": [ "r-sel", 0 ],
+									"destination": [ "r-trig", 0 ]
 								}
 							},
 							{
 								"patchline": {
-									"source": [
-										"r-sel",
-										1
-									],
-									"destination": [
-										"r-stop",
-										0
-									]
+									"source": [ "r-sel", 1 ],
+									"destination": [ "r-stop", 0 ]
 								}
 							},
 							{
 								"patchline": {
-									"source": [
-										"r-stop",
-										0
-									],
-									"destination": [
-										"r-sf",
-										0
-									]
+									"source": [ "r-stop", 0 ],
+									"destination": [ "r-sf", 0 ]
 								}
 							},
 							{
 								"patchline": {
-									"source": [
-										"r-trig",
-										1
-									],
-									"destination": [
-										"r-date",
-										0
-									]
+									"source": [ "r-trig", 1 ],
+									"destination": [ "r-counter", 0 ]
 								}
 							},
 							{
 								"patchline": {
-									"source": [
-										"r-date",
-										0
-									],
-									"destination": [
-										"r-sprintf",
-										0
-									]
+									"source": [ "r-counter", 0 ],
+									"destination": [ "r-sprintf", 0 ]
 								}
 							},
 							{
 								"patchline": {
-									"source": [
-										"r-date",
-										1
-									],
-									"destination": [
-										"r-sprintf",
-										1
-									]
+									"source": [ "r-sprintf", 0 ],
+									"destination": [ "r-prepend", 0 ]
 								}
 							},
 							{
 								"patchline": {
-									"source": [
-										"r-date",
-										2
-									],
-									"destination": [
-										"r-sprintf",
-										2
-									]
+									"source": [ "r-prepend", 0 ],
+									"destination": [ "r-sf", 0 ]
 								}
 							},
 							{
 								"patchline": {
-									"source": [
-										"r-date",
-										3
-									],
-									"destination": [
-										"r-sprintf",
-										3
-									]
+									"source": [ "r-trig", 0 ],
+									"destination": [ "r-del", 0 ]
 								}
 							},
 							{
 								"patchline": {
-									"source": [
-										"r-date",
-										4
-									],
-									"destination": [
-										"r-sprintf",
-										4
-									]
+									"source": [ "r-del", 0 ],
+									"destination": [ "r-start", 0 ]
 								}
 							},
 							{
 								"patchline": {
-									"source": [
-										"r-date",
-										5
-									],
-									"destination": [
-										"r-sprintf",
-										5
-									]
+									"source": [ "r-start", 0 ],
+									"destination": [ "r-sf", 0 ]
 								}
 							},
 							{
 								"patchline": {
-									"source": [
-										"r-sprintf",
-										0
-									],
-									"destination": [
-										"r-prepend",
-										0
-									]
-								}
-							},
-							{
-								"patchline": {
-									"source": [
-										"r-prepend",
-										0
-									],
-									"destination": [
-										"r-sf",
-										0
-									]
-								}
-							},
-							{
-								"patchline": {
-									"source": [
-										"r-trig",
-										0
-									],
-									"destination": [
-										"r-del",
-										0
-									]
-								}
-							},
-							{
-								"patchline": {
-									"source": [
-										"r-del",
-										0
-									],
-									"destination": [
-										"r-start",
-										0
-									]
-								}
-							},
-							{
-								"patchline": {
-									"source": [
-										"r-start",
-										0
-									],
-									"destination": [
-										"r-sf",
-										0
-									]
-								}
-							},
-							{
-								"patchline": {
-									"source": [
-										"r-sprintf",
-										0
-									],
-									"destination": [
-										"r-out1",
-										0
-									]
+									"source": [ "r-sprintf", 0 ],
+									"destination": [ "r-out1", 0 ]
 								}
 							}
 						]
