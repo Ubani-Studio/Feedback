@@ -62,7 +62,7 @@ var presets = [
 	{
 		index: 1,
 		name: "Legba Carrefour",
-		source: "Rigaud p.168 — Crossroads hub",
+		source: "Rigaud p.189 — Crossroads hub",
 		description: "Center hub connects to all 5. Arms connect only to center. Star topology.",
 		predicted_behavior: "Strong leader-follower. Center entrains all arms. Arms don't influence each other.",
 		adj: [
@@ -78,7 +78,7 @@ var presets = [
 	{
 		index: 2,
 		name: "Carrefour Diamond",
-		source: "Rigaud p.185 — Diamond mesh",
+		source: "Rigaud p.206 — Diamond mesh",
 		description: "5 nodes fully connected in diamond. 6th node peripheral through node 4.",
 		predicted_behavior: "Near-all-to-all lock for 5 core voices. One outsider drifts — rhythmic tension.",
 		adj: [
@@ -94,7 +94,7 @@ var presets = [
 	{
 		index: 3,
 		name: "Ferraille",
-		source: "Rigaud p.240 — V-shape sabre",
+		source: "Rigaud p.266 — V-shape sabre",
 		description: "V-graph: junction connects to 2 tips. Oscillators 3-5 completely free.",
 		predicted_behavior: "Two-against-one lock + 3 free voices. Fractured groove at high K.",
 		adj: [
@@ -110,7 +110,7 @@ var presets = [
 	{
 		index: 4,
 		name: "Ogou Bhathalah",
-		source: "Rigaud p.230 — W/M zigzag",
+		source: "Rigaud p.256 — W/M zigzag",
 		description: "3 diamond centers in chain (L-M-R). Star endpoints at vertices. Zigzag topology.",
 		predicted_behavior: "Wave propagation L-to-M-to-R. Sync cascades along the chain — rolling groove.",
 		adj: [
@@ -126,7 +126,7 @@ var presets = [
 	{
 		index: 5,
 		name: "Legba co-sou",
-		source: "Rigaud p.170 — Circle with dots",
+		source: "Rigaud p.191 — Circle with dots",
 		description: "Nearest-neighbor ring. Each oscillator connects to its 2 immediate neighbors.",
 		predicted_behavior: "Traveling wave. Phase patterns rotate — circular rhythm cascade.",
 		adj: [
@@ -142,23 +142,23 @@ var presets = [
 	{
 		index: 6,
 		name: "Marassa",
-		source: "Rigaud p.118 — Divine Twins",
-		description: "Two disconnected triangles. Group A (0-1-2) and Group B (3-4-5) sync internally but never connect.",
-		predicted_behavior: "Two independent rhythmic worlds. Each triangle locks internally, groups drift against each other — polyrhythmic phasing.",
+		source: "Rigaud p.409 — Maraça caille (bilateral cross)",
+		description: "Mirrored twins on shared axis. Two triangles (0-1-2, 3-4-5) bridged at 2-3 (0.5). Twins are connected, not isolated.",
+		predicted_behavior: "Twin groups lock internally. Weak bridge creates cross-talk — lobes drift then re-sync. Polyrhythmic phasing with periodic convergence.",
 		adj: [
 			0,1,1,0,0,0,
 			1,0,1,0,0,0,
-			1,1,0,0,0,0,
-			0,0,0,0,1,1,
+			1,1,0,0.5,0,0,
+			0,0,0.5,0,1,1,
 			0,0,0,1,0,1,
 			0,0,0,1,1,0
 		],
-		node_labels: ["twin_A1", "twin_A2", "twin_A3", "twin_B1", "twin_B2", "twin_B3"]
+		node_labels: ["twin_A1", "twin_A2", "twin_A_bridge", "twin_B_bridge", "twin_B1", "twin_B2"]
 	},
 	{
 		index: 7,
 		name: "Damballah Wedo",
-		source: "Rigaud p.91 — Serpent path",
+		source: "Rigaud p.169 — Danbhalah-la-flambeau",
 		description: "Linear chain 0-1-2-3-4-5. Sync propagates like a wave from head to tail.",
 		predicted_behavior: "Phase wave — each oscillator entrains its neighbor. Ripple effect. Delay-line groove.",
 		adj: [
@@ -174,7 +174,7 @@ var presets = [
 	{
 		index: 8,
 		name: "Erzulie Freda",
-		source: "Rigaud p.147 — Heart / two lobes",
+		source: "Rigaud p.215 — Heart / two lobes",
 		description: "Two triangles sharing apex (node 0). Bridge node 5 connects lobe tips. Weighted: bridge at 0.5.",
 		predicted_behavior: "Two lobes lock internally. Bridge creates weak cross-talk — lobes drift then re-sync.",
 		adj: [
@@ -190,7 +190,7 @@ var presets = [
 	{
 		index: 9,
 		name: "Baron Samedi",
-		source: "Rigaud p.260 — Cross of the dead",
+		source: "Rigaud p.286+ — Cross of the dead (plate not located)",
 		description: "Center hub (0) with 4 arms. Cross-bracing: 1-3 and 2-4 diagonal. Node 5 weak to center.",
 		predicted_behavior: "Hub dominates. Diagonals create secondary sync paths at 40% strength — ghost rhythms.",
 		adj: [
@@ -206,18 +206,18 @@ var presets = [
 	{
 		index: 10,
 		name: "Simbi",
-		source: "Rigaud p.202 — Water snake / parallel streams",
-		description: "Two parallel chains (0-1-2 and 3-4-5) with cross-link 1-4 at 0.6 strength.",
-		predicted_behavior: "Two independent streams with weak coupling. Polyrhythmic — streams sync internally, cross-talk creates beating.",
+		source: "Rigaud p.404 — Sim'bi Yamphaca (three branches from root)",
+		description: "Root basin (0) feeds 3 branch bases (1,3,5). Two branches extend to tips (1-2, 3-4). Fan/tree from shared root.",
+		predicted_behavior: "Root entrains all branches. Tips follow with delay. Three-way phase spread — rivulet divergence from single source.",
 		adj: [
+			0,  1,  0,  1,  0,  1,
+			1,  0,  1,  0,  0,  0,
 			0,  1,  0,  0,  0,  0,
-			1,  0,  1,  0,  0.6,0,
-			0,  1,  0,  0,  0,  0,
-			0,  0,  0,  0,  1,  0,
-			0,  0.6,0,  1,  0,  1,
-			0,  0,  0,  0,  1,  0
+			1,  0,  0,  0,  1,  0,
+			0,  0,  0,  1,  0,  0,
+			1,  0,  0,  0,  0,  0
 		],
-		node_labels: ["stream_A0", "stream_A1", "stream_A2", "stream_B0", "stream_B1", "stream_B2"]
+		node_labels: ["root_basin", "branch_A", "tip_A", "branch_B", "tip_B", "branch_C"]
 	},
 	{
 		index: 11,

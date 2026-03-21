@@ -15,7 +15,7 @@
 # OSC from Max (port 7000):
 #   /kuramoto/r        — order parameter (0-1)
 #   /kuramoto/phases   — 6 phases (0-1)
-#   /veve/preset       — preset index (0-5)
+#   /veve/preset       — preset index (0-12)
 #
 # This replaces the simple phase ring from build_viz.py
 # with the veve topology graph.
@@ -148,6 +148,90 @@ PRESETS = [
             1,0,0,0,1,0
         ],
         "pos": [[6,0],[3,5.196],[-3,5.196],[-6,0],[-3,-5.196],[3,-5.196]]
+    },
+    {
+        "name": "Marassa",
+        "adj": [
+            0,1,1,0,0,0,
+            1,0,1,0,0,0,
+            1,1,0,0.5,0,0,
+            0,0,0.5,0,1,1,
+            0,0,0,1,0,1,
+            0,0,0,1,1,0
+        ],
+        "pos": [[-6,4],[-6,-4],[-2,0],[2,0],[6,4],[6,-4]]
+    },
+    {
+        "name": "Damballah Wedo",
+        "adj": [
+            0,1,0,0,0,0,
+            1,0,1,0,0,0,
+            0,1,0,1,0,0,
+            0,0,1,0,1,0,
+            0,0,0,1,0,1,
+            0,0,0,0,1,0
+        ],
+        "pos": [[-10,0],[-6,0],[-2,0],[2,0],[6,0],[10,0]]
+    },
+    {
+        "name": "Erzulie Freda",
+        "adj": [
+            0,1,1,1,1,0,
+            1,0,1,0,0,0.5,
+            1,1,0,0,0,0,
+            1,0,0,0,1,0,
+            1,0,0,1,0,0.5,
+            0,0.5,0,0,0.5,0
+        ],
+        "pos": [[0,6],[-4,2],[-6,-2],[4,2],[6,-2],[0,-4]]
+    },
+    {
+        "name": "Baron Samedi",
+        "adj": [
+            0,1,1,1,1,0.4,
+            1,0,0,0.4,0,0,
+            1,0,0,0,0.4,0,
+            1,0.4,0,0,0,0,
+            1,0,0.4,0,0,0,
+            0.4,0,0,0,0,0
+        ],
+        "pos": [[0,0],[0,8],[8,0],[0,-8],[-8,0],[4,-6]]
+    },
+    {
+        "name": "Simbi",
+        "adj": [
+            0,1,0,1,0,1,
+            1,0,1,0,0,0,
+            0,1,0,0,0,0,
+            1,0,0,0,1,0,
+            0,0,0,1,0,0,
+            1,0,0,0,0,0
+        ],
+        "pos": [[0,-6],[-5,0],[-8,6],[0,2],[0,8],[5,0]]
+    },
+    {
+        "name": "Ayizan",
+        "adj": [
+            0,1,0,0,0,0,
+            1,0,1,0,0.7,0,
+            0,1,0,1,0,0.7,
+            0,0,1,0,0,0,
+            0,0.7,0,0,0,0,
+            0,0,0.7,0,0,0
+        ],
+        "pos": [[-8,0],[-3,0],[3,0],[8,0],[-3,6],[3,6]]
+    },
+    {
+        "name": "Gran Bwa",
+        "adj": [
+            0,1,1,0,0,0,
+            1,0,0,1,1,0,
+            1,0,0,0,0,1,
+            0,1,0,0,0,0,
+            0,1,0,0,0,0,
+            0,0,1,0,0,0
+        ],
+        "pos": [[0,-6],[-4,-1],[4,-1],[-7,4],[-1,4],[5,4]]
     }
 ]
 '''
@@ -553,7 +637,7 @@ def build_veve_standalone():
     print("OSC channels expected:")
     print("  /kuramoto/phases — 6 floats (phase1-phase6)")
     print("  /kuramoto/r      — 1 float (order parameter)")
-    print("  /veve/preset     — 1 int (preset index 0-5)")
+    print("  /veve/preset     — 1 int (preset index 0-12)")
     print("")
     print("Presets:")
     print("  0: All-to-all (default)")
@@ -562,6 +646,13 @@ def build_veve_standalone():
     print("  3: Ferraille (V-graph, 3+3)")
     print("  4: Ogou Bhathalah (zigzag chain)")
     print("  5: Legba co-sou (ring)")
+    print("  6: Marassa (bridged twins)")
+    print("  7: Damballah Wedo (linear chain)")
+    print("  8: Erzulie Freda (heart/two lobes)")
+    print("  9: Baron Samedi (cross + diagonals)")
+    print("  10: Simbi (3 branches from root)")
+    print("  11: Ayizan (spine + branches)")
+    print("  12: Gran Bwa (hierarchical tree)")
     print("=" * 50)
 
 
