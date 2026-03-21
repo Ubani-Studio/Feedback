@@ -13,34 +13,52 @@ Nothing is mapped symbolically. The visualization shows what the system is doing
 ## Architecture
 
 ```
-Max/MSP                          TouchDesigner
-─────────                        ─────────────
-gen~ (Kuramoto oscillators)      oscinCHOP (port 7000)
-  6 oscillators                    ↓
-  19 tuning systems              GLSL TOP (veve_viz)
-  13 veve topologies               phase → brightness
-  weighted adjacency via buffer    alignment → line thickness
-  ↓                                weight → line opacity
-gen~ (KS resonators)               root → circle size (exponential)
-  6 heterogeneous strings          decay → trigger sharpness
-  decay, drive, root               bloom + feedback trail
-  ↓                                ↓
-node.script (osc_send.js)        Output
+Max/MSP                              TouchDesigner
+─────────                            ─────────────
+gen~ (Kuramoto oscillators)          oscinCHOP (port 7000)
+  6 oscillators                        ↓
+  19 tuning systems                  GLSL TOP (veve_viz)
+  13 veve topologies                   phase → brightness
+  weighted adjacency via buffer        alignment → line thickness
+  ↓                                    weight → line opacity
+gen~ (KS resonators)                   root → circle size
+  6 heterogeneous strings              octave → size jump
+  tanh saturation + analog drift       decay → trail persistence
+  octave control (-2 to +2)            excite mode → visual quality
+  ↓                                    bloom + feedback trail
+nn~ (PERI RAVE)                        ↓
+  corpus-flavored excitation         Output
+  noise~ → nn~ peri_v1
+  toggle: noise / PERI
+  ↓
+adc~ (mic feedback)
+  gate~ → resonator input
+  transducer → mic → delay lines
+  ↓
+8-channel output
+  ch 1-2: stereo monitor mix
+  ch 3-8: individual resonators → transducer array
+  ↓
+node.script (osc_send.js)
   UDP OSC → port 7000
 ```
 
-**OSC channels**: `/kuramoto/phases` (6 floats), `/kuramoto/r` (order parameter), `/veve/preset`, `/resonator/decay`, `/audio/amplitude`, `/root/freq`, `/morph/amount`
+**OSC channels**: `/kuramoto/phases` (6 floats), `/kuramoto/r` (order parameter), `/veve/preset`, `/resonator/decay`, `/audio/amplitude`, `/root/freq`, `/morph/amount`, `/octave/offset`, `/excite/mode`
 
 ## Parameters
 
 | Parameter | Range | Effect |
 |-----------|-------|--------|
-| Veve | 13 presets | Topology — which oscillators couple and how strongly |
+| Veve | 13 presets | Topology, which oscillators couple and how strongly |
 | K (coupling) | 0-5 | Synchronization strength. 0 = free, 0.5-2 = groove, 3+ = locked |
 | Root | 20-880 Hz | Base frequency. Low = scaffolding (large, thick). High = rubber band (pinpoint, thin) |
+| Octave | -2 to +2 | Integer octave shift. Doubles/halves all resonator frequencies |
 | Tuning | 19 systems | Interval ratios between the 6 oscillators |
 | Decay | 0-1.5 | KS feedback coefficient. Low = percussive flash. High = sustained drone |
-| Drive | 0-1 | Excitation energy into resonators |
+| Drive | 0-1 | Excitation energy + saturation intensity. High = tanh distortion, growling strings |
+| Drift | 0-0.01 | Analog component tolerance simulation. Subtle pitch/timing wandering |
+| PERI | toggle | Excitation source. Off = white noise, On = RAVE corpus-shaped texture |
+| Mic Feedback | toggle + 0-1 | Acoustic feedback from transducer surface. Amount controls blend |
 | Morph | 0-1 | Interpolate topology between current veve and morph target |
 
 ## Veve Topologies
@@ -77,11 +95,11 @@ Weight 1.0 = full coupling. Weight 0.4 = ghost coupling. Weight 0 = no connectio
 
 The Morph parameter interpolates between two adjacency matrices in real-time. The veve_loader writes blended weights to the buffer, and both the audio engine and visualization respond:
 
-- Morph 0.0: fully current preset
-- Morph 0.5: connections forming/breaking — half-states
-- Morph 1.0: fully target preset
+Morph 0.0: fully current preset
+Morph 0.5: connections forming/breaking, half-states
+Morph 1.0: fully target preset
 
-Connections don't snap — they fade in and out as continuous weight values.
+Connections don't snap. They fade in and out as continuous weight values.
 
 ## Physical Build
 
@@ -91,25 +109,31 @@ The instrument is designed for physical vibration, not conventional speakers. Si
 
 Mount 6 tactile transducers on a resonant surface. Each transducer corresponds to one oscillator. Their physical positions should mirror the veve topology — the spatial arrangement IS the veve.
 
-**Transducers** (per unit, need 6):
-- Dayton Audio TT25-16 (25W, clean for KS tones, ~$10 each)
-- Clark Synthesis TST329 Gold Transducer (higher fidelity, ~$80 each)
-- Rolen Star RS-24B (wide bandwidth, ~$90 each)
+**Transducers** (per unit, need 6)
 
-**Amplification**:
-- 6-channel amp: Dayton Audio MA1240a (12-channel, bridgeable) or 3x stereo amps
-- Per-channel power: 20-50W sufficient for transducers on resonant surface
+Dayton Audio TT25-16 (25W, clean for KS tones, ~$10 each)
+Clark Synthesis TST329 Gold Transducer (higher fidelity, ~$80 each)
+Rolen Star RS-24B (wide bandwidth, ~$90 each)
 
-**Surfaces** (the surface IS the instrument):
-- Hardwood panel (oak, maple) — 18mm+, warm resonance, sustain
-- Sheet metal (steel, brass) — 1-3mm, bright, metallic harmonics, short decay
-- Glass panel (tempered, 6mm+) — crystalline, fragile aesthetically and literally
-- Gourd/calabash — traditional, curved resonance, uneven harmonics
-- Concrete slab — heavy, subharmonic emphasis, brutalist
+**Amplification**
 
-**Mounting**: Bolt transducers directly to surface underside. Isolation feet (sorbothane pads) underneath to decouple from floor/table. Surface should be free to vibrate — don't clamp edges unless you want nodal damping.
+6-channel amp: Dayton Audio MA1240a (12-channel, bridgeable) or 3x stereo amps. Per-channel power: 20-50W sufficient for transducers on resonant surface.
 
-**Wiring**: 6-channel audio interface (e.g. MOTU UltraLite, Focusrite 18i8) → 6-channel amp → 6 transducers. Route each Max output channel to one transducer.
+**Surfaces** (the surface IS the instrument)
+
+Hardwood panel (oak, maple), 18mm+, warm resonance, sustain
+Sheet metal (steel, brass), 1-3mm, bright, metallic harmonics, short decay
+Glass panel (tempered, 6mm+), crystalline, fragile aesthetically and literally
+Gourd/calabash, traditional, curved resonance, uneven harmonics
+Concrete slab, heavy, subharmonic emphasis, brutalist
+
+**Mounting**
+
+Bolt transducers directly to surface underside. Isolation feet (sorbothane pads) underneath to decouple from floor/table. Surface should be free to vibrate. Don't clamp edges unless you want nodal damping.
+
+**Wiring**
+
+8-channel audio interface (e.g. MOTU UltraLite mk5, Focusrite 18i20) → 6-channel amp → 6 transducers. Channels 1-2 for stereo monitoring, channels 3-8 each to one transducer.
 
 ### Alternative: Spatial Speaker Array
 
@@ -121,18 +145,20 @@ Standard stereo monitoring works for development. The spatial and haptic dimensi
 
 ## Requirements
 
-- Max/MSP 9 (gen~, node.script)
-- TouchDesigner (GLSL TOP, oscinCHOP)
-- Node.js (for osc_send.js via node.script)
+Max/MSP 9 (gen~, node.script, nn~ CUDA)
+TouchDesigner (GLSL TOP, oscinCHOP)
+Node.js (for osc_send.js via node.script)
+nn_tilde_cuda package (GPU-accelerated RAVE inference)
 
 ## Files
 
 ```
 max/
   feedback_veve.maxpat     Main patch (all gen~ embedded inline)
+  peri_v1.ts               PERI RAVE model (1.58M steps, 43MB)
   veve_loader.js           Preset loader + morph + buffer writer
   osc_send.js              OSC bridge to TouchDesigner
-  max_mcp*.js              MCP bridge (Claude <> Max)
+  max_mcp*.js              MCP bridge
 td/
   build_veve_viz.py        TD network builder
 ```
@@ -143,4 +169,6 @@ td/
 2. DSP turns on automatically (ezdac~)
 3. OSC starts sending after 3 seconds (loadbang → delay → metro)
 4. Open TouchDesigner project with veve_viz network
-5. Adjust veve, coupling, root, tuning, decay, drive, morph
+5. Adjust veve, coupling, root, octave, tuning, decay, drive, drift, morph
+6. Toggle PERI for corpus-shaped excitation
+7. Toggle Mic + set Feedback amount for transducer feedback loop

@@ -16,9 +16,17 @@
 #   /kuramoto/r        — order parameter (0-1)
 #   /kuramoto/phases   — 6 phases (0-1)
 #   /veve/preset       — preset index (0-12)
+#   /octave/offset     — octave shift (-2 to +2)
+#   /excite/mode       — 0=noise, 1=PERI
+#   /resonator/decay   — KS decay (0-1.5)
+#   /root/freq         — root frequency (20-880)
+#   /morph/amount      — topology morph (0-1)
+#   /audio/amplitude   — master amplitude
 #
-# This replaces the simple phase ring from build_viz.py
-# with the veve topology graph.
+# TD GLSL SHADER UPDATES for festival-grade:
+#   - Octave: scale ringR by pow(2.0, -octave_offset) — lower octave = larger circles
+#   - Excite mode: when PERI active, add warm tint (0.15, 0.08, 0.0) to connections
+#   - These read from oscinCHOP uniforms automatically
 #
 # ============================================
 

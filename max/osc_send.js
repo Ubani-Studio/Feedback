@@ -8,6 +8,8 @@
 //   kuramoto_r <r>
 //   kuramoto_phases <p1> <p2> <p3> <p4> <p5> <p6>
 //   veve_preset <index>
+//   octave_offset <value>
+//   excite_mode <0|1>
 //   list <x> <y> <z> <loudness>  (backward compatible)
 //
 // OSC ADDRESSES SENT:
@@ -15,6 +17,8 @@
 //   /kuramoto/r
 //   /kuramoto/phases (6 floats: phase1-phase6)
 //   /veve/preset
+//   /octave/offset
+//   /excite/mode
 //
 // ============================================
 
@@ -148,5 +152,21 @@ Max.addHandler('morph', function() {
     }
 });
 
+// --- Octave offset ---
+Max.addHandler('octave_offset', function() {
+    var args = Array.prototype.slice.call(arguments);
+    if (args.length >= 1) {
+        send('/octave/offset', args[0]);
+    }
+});
+
+// --- Excitation mode (0=noise, 1=PERI) ---
+Max.addHandler('excite_mode', function() {
+    var args = Array.prototype.slice.call(arguments);
+    if (args.length >= 1) {
+        send('/excite/mode', args[0]);
+    }
+});
+
 Max.post('osc_send.js ready — target ' + HOST + ':' + PORT);
-Max.post('  Channels: lorenz, kuramoto_r, kuramoto_phases, veve_preset, resonator_decay, amplitude, root_freq, morph');
+Max.post('  Channels: lorenz, kuramoto_r, kuramoto_phases, veve_preset, resonator_decay, amplitude, root_freq, morph, octave_offset, excite_mode');
