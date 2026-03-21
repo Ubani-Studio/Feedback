@@ -40,23 +40,13 @@ OSC_PORT = 7000
 BASE_PATH = '/project1'
 CONTAINER_NAME = 'feedback_viz'
 
-# Colors
-BG_COLOR = (0.02, 0.02, 0.05)
-SYNC_COLOR = (1.0, 0.6, 0.1)        # Amber (synced)
-FREE_COLOR = (0.2, 0.4, 1.0)        # Blue (free)
-EDGE_DIM = (0.08, 0.08, 0.12)       # Edge color when desynchronized
-EDGE_BRIGHT = (0.9, 0.5, 0.1)       # Edge color when synchronized
+# White on black — nothing is mapped symbolically
+BG_COLOR = (0.0, 0.0, 0.0)
+NODE_COLOR = (1.0, 1.0, 1.0)        # White
+EDGE_DIM = (0.06, 0.06, 0.06)       # Edge when desynchronized
+EDGE_BRIGHT = (1.0, 1.0, 1.0)       # Edge when synchronized
 
-VOICE_COLORS = [
-    (0.9, 0.2, 0.2),   # v0: sub bass — red
-    (1.0, 0.6, 0.1),   # v1: body — amber
-    (0.1, 0.8, 0.8),   # v2: metallic — cyan
-    (1.0, 0.9, 0.2),   # v3: transient — yellow
-    (0.4, 0.2, 0.9),   # v4: drone — indigo
-    (0.9, 0.3, 0.7),   # v5: crystalline — magenta
-]
-
-RENDER_RES = (1920, 1080)
+RENDER_RES = (1280, 720)
 VEVE_SCALE = 0.8   # Scale factor for veve node positions
 
 
@@ -253,20 +243,18 @@ VEVE_NODE_SCRIPT = VEVE_PRESETS_CODE + '''
 import math
 
 SCALE = ''' + str(VEVE_SCALE) + '''
-VOICE_COLORS = ''' + str(VOICE_COLORS) + '''
-SYNC_COLOR = ''' + str(list(SYNC_COLOR)) + '''
-FREE_COLOR = ''' + str(list(FREE_COLOR)) + '''
 
 # Smoothed positions for animation
 smooth_pos = [[0.0, 0.0] for _ in range(6)]
-SMOOTH_RATE = 0.08  # Lower = smoother transition
-current_preset_idx = -1
+SMOOTH_RATE = 0.08
+
+# Pulse persistence — sustained glow controlled by decay
+held_pulse = [0.0] * 6
 
 def onCook(scriptOp):
-    global smooth_pos, current_preset_idx
+    global smooth_pos, held_pulse
     scriptOp.clear()
 
-    # --- Read inputs ---
     # Input 0: phases (6 channels, 0-1)
     phases = [0.0] * 6
     if scriptOp.inputs and len(scriptOp.inputs) > 0:
@@ -289,21 +277,53 @@ def onCook(scriptOp):
             preset_idx = int(p_inp[0][0])
             preset_idx = max(0, min(preset_idx, len(PRESETS) - 1))
 
+    # Input 3: decay (0-1.5)
+    decay = 0.3
+    if scriptOp.inputs and len(scriptOp.inputs) > 3:
+        d_inp = scriptOp.inputs[3]
+        if d_inp.numChans > 0:
+            decay = max(0.0, min(d_inp[0][0], 1.5))
+
+    # Input 4: root frequency (20-880)
+    root_freq = 220.0
+    if scriptOp.inputs and len(scriptOp.inputs) > 4:
+        f_inp = scriptOp.inputs[4]
+        if f_inp.numChans > 0:
+            root_freq = max(20.0, min(f_inp[0][0], 880.0))
+
+    # Input 5: octave offset (-2 to +2)
+    octave = 0.0
+    if scriptOp.inputs and len(scriptOp.inputs) > 5:
+        o_inp = scriptOp.inputs[5]
+        if o_inp.numChans > 0:
+            octave = o_inp[0][0]
+
     preset = PRESETS[preset_idx]
     target_pos = preset["pos"]
 
-    # --- Smooth position transition on preset change ---
-    if current_preset_idx != preset_idx:
-        current_preset_idx = preset_idx
-        # Don't snap — let smoothing handle the animation
-
+    # Smooth position transition
     for i in range(6):
         tx = target_pos[i][0] * SCALE
         ty = target_pos[i][1] * SCALE
         smooth_pos[i][0] += (tx - smooth_pos[i][0]) * SMOOTH_RATE
         smooth_pos[i][1] += (ty - smooth_pos[i][1]) * SMOOTH_RATE
 
-    # --- Build instance channels ---
+    # Decay controls pulse release rate
+    # decay 0 = fast release (percussive flash)
+    # decay 1.5 = near-permanent glow (sustained drone)
+    decay_norm = decay / 1.5
+    release_rate = 0.3 * (1.0 - decay_norm) ** 2 + 0.002
+
+    # Root frequency controls base circle size
+    # Low freq (20Hz) = large scaffolding. High freq (880Hz) = pinpoint.
+    # Normalize: 20Hz -> 1.0, 880Hz -> 0.15
+    freq_scale = 1.0 - (root_freq - 20.0) / (880.0 - 20.0) * 0.85
+
+    # Octave shifts double/halve size
+    oct_scale = 2.0 ** (-octave)
+
+    base_size = 0.2 * freq_scale * oct_scale
+
     tx_vals = []
     ty_vals = []
     tz_vals = []
@@ -319,31 +339,29 @@ def onCook(scriptOp):
         ty_vals.append(smooth_pos[i][1])
         tz_vals.append(0.0)
 
-        # Phase-based pulse: flash when phase wraps near 0 (trigger moment)
+        # Phase pulse: flash when phase wraps near 0
         phase = phases[i]
-        # Pulse near phase=0 (or 1, same thing on the circle)
         wrap_dist = min(phase, 1.0 - phase)
-        pulse = max(0.0, 1.0 - wrap_dist * 20.0)  # Sharp pulse near 0
+        raw_pulse = max(0.0, 1.0 - wrap_dist * 20.0)
 
-        # Color: lerp voice color → sync color based on r
-        vc = VOICE_COLORS[i]
-        cr = vc[0] * (1.0 - r) + SYNC_COLOR[0] * r
-        cg = vc[1] * (1.0 - r) + SYNC_COLOR[1] * r
-        cb = vc[2] * (1.0 - r) + SYNC_COLOR[2] * r
+        # Sustain pulse with decay-controlled release
+        if raw_pulse > held_pulse[i]:
+            held_pulse[i] = raw_pulse
+        else:
+            held_pulse[i] = max(held_pulse[i] - release_rate, 0.0)
+        pulse = held_pulse[i]
 
-        # Brighten on pulse
-        brightness = 1.0 + pulse * 2.0
-        cr = min(cr * brightness, 1.0)
-        cg = min(cg * brightness, 1.0)
-        cb = min(cb * brightness, 1.0)
+        # White on black: brightness = base dim + pulse glow + sync boost
+        base_bright = 0.15 + r * 0.15
+        brightness = base_bright + pulse * (0.7 + decay_norm * 0.3)
+        brightness = min(brightness, 1.0)
 
-        cr_vals.append(cr)
-        cg_vals.append(cg)
-        cb_vals.append(cb)
+        cr_vals.append(brightness)
+        cg_vals.append(brightness)
+        cb_vals.append(brightness)
 
-        # Scale: base + pulse + sync boost
-        base_scale = 0.25 + r * 0.15
-        s = base_scale + pulse * 0.3
+        # Size: root freq base + pulse expansion
+        s = base_size + pulse * base_size * 0.8
         sx_vals.append(s)
         sy_vals.append(s)
         sz_vals.append(s)
@@ -370,35 +388,30 @@ VEVE_EDGE_SCRIPT = VEVE_PRESETS_CODE + '''
 import math
 
 SCALE = ''' + str(VEVE_SCALE) + '''
-SYNC_COLOR = ''' + str(list(SYNC_COLOR)) + '''
-FREE_COLOR = ''' + str(list(FREE_COLOR)) + '''
-EDGE_DIM = ''' + str(list(EDGE_DIM)) + '''
-EDGE_BRIGHT = ''' + str(list(EDGE_BRIGHT)) + '''
 
-# Smoothed positions (shared with node script via matching logic)
+# Smoothed positions (must match node script)
 smooth_pos = [[0.0, 0.0] for _ in range(6)]
 SMOOTH_RATE = 0.08
-current_preset_idx = -1
+
+# Edge brightness persistence — sustained by decay
+held_edge_bright = {}
 
 def onCook(scriptOp):
-    global smooth_pos, current_preset_idx
+    global smooth_pos, held_edge_bright
     scriptOp.clear()
 
-    # --- Read CHOP inputs via parent ---
-    # We get preset + r from the container's CHOP data
-    container = scriptOp.parent()
+    container = scriptOp.parent().parent()
 
-    # Read preset index
+    # Read preset
     preset_idx = 0
     try:
         p_chop = container.op('veve_preset_select')
         if p_chop and p_chop.numChans > 0:
-            preset_idx = int(p_chop[0][0])
-            preset_idx = max(0, min(preset_idx, len(PRESETS) - 1))
+            preset_idx = int(max(0, min(p_chop[0][0], len(PRESETS) - 1)))
     except:
         pass
 
-    # Read order parameter r
+    # Read r
     r = 0.5
     try:
         r_chop = container.op('kura_r_select')
@@ -407,13 +420,27 @@ def onCook(scriptOp):
     except:
         pass
 
+    # Read decay
+    decay = 0.3
+    try:
+        d_chop = container.op('decay_select')
+        if d_chop and d_chop.numChans > 0:
+            decay = max(0.0, min(d_chop[0][0], 1.5))
+    except:
+        pass
+
+    # Read root freq for line weight
+    root_freq = 220.0
+    try:
+        f_chop = container.op('freq_select')
+        if f_chop and f_chop.numChans > 0:
+            root_freq = max(20.0, min(f_chop[0][0], 880.0))
+    except:
+        pass
+
     preset = PRESETS[preset_idx]
     adj = preset["adj"]
     target_pos = preset["pos"]
-
-    # Smooth positions (must match node script)
-    if current_preset_idx != preset_idx:
-        current_preset_idx = preset_idx
 
     for i in range(6):
         tx = target_pos[i][0] * SCALE
@@ -421,42 +448,34 @@ def onCook(scriptOp):
         smooth_pos[i][0] += (tx - smooth_pos[i][0]) * SMOOTH_RATE
         smooth_pos[i][1] += (ty - smooth_pos[i][1]) * SMOOTH_RATE
 
-    # --- Generate edge lines ---
-    # For each pair (i,j) where adj[i*6+j] > 0 and i < j (avoid duplicates)
-    edge_count = 0
+    # Decay controls edge persistence
+    decay_norm = decay / 1.5
+    release_rate = 0.15 * (1.0 - decay_norm) ** 2 + 0.001
+
     for i in range(6):
         for j in range(i + 1, 6):
             w = adj[i * 6 + j]
             if w > 0:
-                x0 = smooth_pos[i][0]
-                y0 = smooth_pos[i][1]
-                x1 = smooth_pos[j][0]
-                y1 = smooth_pos[j][1]
-
-                # Create line primitive
                 p0 = scriptOp.appendPoint()
-                p0.x = x0
-                p0.y = y0
+                p0.x = smooth_pos[i][0]
+                p0.y = smooth_pos[i][1]
                 p0.z = 0
 
                 p1 = scriptOp.appendPoint()
-                p1.x = x1
-                p1.y = y1
+                p1.x = smooth_pos[j][0]
+                p1.y = smooth_pos[j][1]
                 p1.z = 0
 
-                line = scriptOp.appendPoly(2, closed=False)
+                scriptOp.appendPoly(2, closed=False)
 
-                # Edge color: lerp dim→bright with r and weight
-                blend = r * w
-                cr = EDGE_DIM[0] + (EDGE_BRIGHT[0] - EDGE_DIM[0]) * blend
-                cg = EDGE_DIM[1] + (EDGE_BRIGHT[1] - EDGE_DIM[1]) * blend
-                cb = EDGE_DIM[2] + (EDGE_BRIGHT[2] - EDGE_DIM[2]) * blend
-
-                # Set vertex color via point color
-                p0.Cd = tdu.Color(cr, cg, cb, 0.6 + r * 0.4)
-                p1.Cd = tdu.Color(cr, cg, cb, 0.6 + r * 0.4)
-
-                edge_count += 1
+                # Brightness from sync, sustained by decay
+                target_bright = r * w
+                key = (i, j)
+                prev = held_edge_bright.get(key, 0.0)
+                if target_bright > prev:
+                    held_edge_bright[key] = target_bright
+                else:
+                    held_edge_bright[key] = max(prev - release_rate, target_bright * 0.3)
 
     return
 '''
@@ -469,93 +488,144 @@ def onCook(scriptOp):
 def build_veve_graph(container, osc_node):
     """
     Build the veve topology graph visualization.
-    Replaces the simple Kuramoto phase ring with a graph
-    whose topology is defined by the active veve preset.
+    White on black. Phase = brightness. Sync = edge brightness.
+    Root freq = circle size. Decay = persistence.
     """
     base_x = 0
     base_y = 200
 
-    # --- Select phase channels ---
-    phase_sel = container.create(selectCHOP, 'kura_phase_select')
+    # --- Select CHOPs from OSC ---
+    phase_sel = container.create('selectCHOP', 'kura_phase_select')
     phase_sel.par.chop = osc_node.path
-    phase_sel.par.channames = 'phase1 phase2 phase3 phase4 phase5 phase6'
+    phase_sel.par.channames = 'kuramoto/phases1 kuramoto/phases2 kuramoto/phases3 kuramoto/phases4 kuramoto/phases5 kuramoto/phases6'
     phase_sel.nodeX = base_x
     phase_sel.nodeY = base_y
 
-    # --- Select order parameter ---
-    r_sel = container.create(selectCHOP, 'kura_r_select')
+    r_sel = container.create('selectCHOP', 'kura_r_select')
     r_sel.par.chop = osc_node.path
-    r_sel.par.channames = 'r'
+    r_sel.par.channames = 'kuramoto/r'
     r_sel.nodeX = base_x + 200
     r_sel.nodeY = base_y
 
-    # --- Select veve preset index ---
-    preset_sel = container.create(selectCHOP, 'veve_preset_select')
+    preset_sel = container.create('selectCHOP', 'veve_preset_select')
     preset_sel.par.chop = osc_node.path
-    preset_sel.par.channames = 'veve_preset'
+    preset_sel.par.channames = 'veve/preset'
     preset_sel.nodeX = base_x + 400
     preset_sel.nodeY = base_y
 
-    # --- Script CHOP: compute veve node positions ---
-    node_script = container.create(scriptCHOP, 'veve_node_positions')
-    wire(phase_sel, node_script, 0, 0)
-    wire(r_sel, node_script, 0, 1)
-    wire(preset_sel, node_script, 0, 2)
+    decay_sel = container.create('selectCHOP', 'decay_select')
+    decay_sel.par.chop = osc_node.path
+    decay_sel.par.channames = 'resonator/decay'
+    decay_sel.nodeX = base_x + 600
+    decay_sel.nodeY = base_y
+
+    freq_sel = container.create('selectCHOP', 'freq_select')
+    freq_sel.par.chop = osc_node.path
+    freq_sel.par.channames = 'root/freq'
+    freq_sel.nodeX = base_x + 800
+    freq_sel.nodeY = base_y
+
+    octave_sel = container.create('selectCHOP', 'octave_select')
+    octave_sel.par.chop = osc_node.path
+    octave_sel.par.channames = 'octave/offset'
+    octave_sel.nodeX = base_x + 1000
+    octave_sel.nodeY = base_y
+
+    # --- Script CHOP: node positions + brightness + size ---
+    node_script = container.create('scriptCHOP', 'veve_node_positions')
+    node_script.par.timeslice = False
+    wire(phase_sel, node_script, 0, 0)    # input 0: phases
+    wire(r_sel, node_script, 0, 1)        # input 1: r
+    wire(preset_sel, node_script, 0, 2)   # input 2: preset
+    wire(decay_sel, node_script, 0, 3)    # input 3: decay
+    wire(freq_sel, node_script, 0, 4)     # input 4: root freq
+    wire(octave_sel, node_script, 0, 5)   # input 5: octave
     node_script.nodeX = base_x
     node_script.nodeY = base_y - 200
 
     # --- Null for instance data ---
-    node_null = container.create(nullCHOP, 'veve_instance_data')
+    node_null = container.create('nullCHOP', 'veve_instance_data')
     wire(node_script, node_null)
     node_null.nodeX = base_x
     node_null.nodeY = base_y - 350
 
-    # --- Sphere SOP for nodes ---
-    node_sphere = container.create(sphereSOP, 'veve_node_sphere')
-    node_sphere.par.type = 2   # polygon
-    node_sphere.par.rows = 12
-    node_sphere.par.cols = 16
-    node_sphere.par.radx = 0.3
-    node_sphere.par.rady = 0.3
-    node_sphere.par.radz = 0.3
-    node_sphere.nodeX = base_x + 200
-    node_sphere.nodeY = base_y - 350
-
-    # --- Material for nodes (per-instance color) ---
-    node_mat = container.create(constantMAT, 'veve_node_mat')
-    node_mat.par.colorr = 1.0
-    node_mat.par.colorg = 1.0
-    node_mat.par.colorb = 1.0
-    node_mat.par.alpha = 0.9
-    node_mat.nodeX = base_x + 200
-    node_mat.nodeY = base_y - 450
-
-    # --- Geometry COMP for nodes (instanced) ---
-    node_geo = container.create(geometryCOMP, 'veve_node_geo')
+    # --- Node geometry (instanced spheres) ---
+    node_geo = container.create('geometryCOMP', 'veve_node_geo')
     node_geo.par.instancing = True
-    node_geo.par.instancechop = node_null.path
-    node_geo.par.material = node_mat.path
+    node_geo.par.instanceop = node_null.path
+    node_geo.par.instancetx = 'tx'
+    node_geo.par.instancety = 'ty'
+    node_geo.par.instancetz = 'tz'
+    node_geo.par.instancesx = 'sx'
+    node_geo.par.instancesy = 'sy'
+    node_geo.par.instancesz = 'sz'
+    node_geo.par.instancecolormode = 1
+    node_geo.par.instancecolorop = node_null.path
+    node_geo.par.instancer = 'cr'
+    node_geo.par.instanceg = 'cg'
+    node_geo.par.instanceb = 'cb'
     node_geo.nodeX = base_x
     node_geo.nodeY = base_y - 500
 
-    # --- Script SOP: generate edge lines ---
-    edge_script_sop = container.create(scriptSOP, 'veve_edges')
-    edge_script_sop.nodeX = base_x + 400
-    edge_script_sop.nodeY = base_y - 350
+    # Sphere SOP inside node_geo
+    node_sphere = node_geo.create('sphereSOP', 'sphere1')
+    node_sphere.par.type = 2
+    node_sphere.par.rows = 16
+    node_sphere.par.cols = 24
+    node_sphere.par.radx = 1.0
+    node_sphere.par.rady = 1.0
+    node_sphere.par.radz = 1.0
 
-    # --- Material for edges (wireframe with per-point color) ---
-    edge_mat = container.create(wireframeMAT, 'veve_edge_mat')
-    edge_mat.par.colorr = 1.0
-    edge_mat.par.colorg = 1.0
-    edge_mat.par.colorb = 1.0
-    edge_mat.nodeX = base_x + 400
-    edge_mat.nodeY = base_y - 450
+    # White material
+    node_mat = node_geo.create('constantMAT', 'mat1')
+    node_mat.par.colorr = 1.0
+    node_mat.par.colorg = 1.0
+    node_mat.par.colorb = 1.0
+    node_mat.par.alpha = 1.0
+    node_geo.par.material = node_mat.path
 
-    # --- Geometry COMP for edges ---
-    edge_geo = container.create(geometryCOMP, 'veve_edge_geo')
-    edge_geo.par.material = edge_mat.path
+    # --- Edge geometry (Script SOP lines) ---
+    edge_geo = container.create('geometryCOMP', 'veve_edge_geo')
     edge_geo.nodeX = base_x + 400
     edge_geo.nodeY = base_y - 500
+
+    edge_script_sop = edge_geo.create('scriptSOP', 'edges1')
+
+    # White wireframe, brightness driven by r
+    edge_mat = edge_geo.create('wireframeMAT', 'mat1')
+    edge_mat.par.colorr.mode = 2
+    edge_mat.par.colorr.expr = "0.06 + op('" + r_sel.path + "')[0] * 0.94"
+    edge_mat.par.colorg.mode = 2
+    edge_mat.par.colorg.expr = "0.06 + op('" + r_sel.path + "')[0] * 0.94"
+    edge_mat.par.colorb.mode = 2
+    edge_mat.par.colorb.expr = "0.06 + op('" + r_sel.path + "')[0] * 0.94"
+    edge_geo.par.material = edge_mat.path
+
+    # --- Camera (orthographic-like, 2D view) ---
+    cam = container.create('cameraCOMP', 'cam1')
+    cam.par.tx = 0
+    cam.par.ty = 0
+    cam.par.tz = 30
+    cam.nodeX = base_x
+    cam.nodeY = base_y - 700
+
+    # --- Render TOP ---
+    render = container.create('renderTOP', 'render1')
+    render.par.camera = cam.path
+    render.par.geometry = node_geo.path + ' ' + edge_geo.path
+    render.par.resolutionw = 1280
+    render.par.resolutionh = 720
+    render.par.bgcolorr = 0.0
+    render.par.bgcolorg = 0.0
+    render.par.bgcolorb = 0.0
+    render.nodeX = base_x + 200
+    render.nodeY = base_y - 700
+
+    # --- Output ---
+    out = container.create('nullTOP', 'out1')
+    render.outputConnectors[0].connect(out.inputConnectors[0])
+    out.nodeX = base_x + 400
+    out.nodeY = base_y - 700
 
     return (node_script, VEVE_NODE_SCRIPT,
             edge_script_sop, VEVE_EDGE_SCRIPT,
@@ -566,14 +636,14 @@ def build_veve_graph(container, osc_node):
 # WRITE CALLBACKS
 # ============================================
 
-def write_callbacks(container, script_op, code, name):
+def write_callbacks(parent_op, script_op, code, name):
     """Write callback code to a docked Text DAT."""
     docked = script_op.docked
     if docked:
         callbacks_dat = docked[0]
         callbacks_dat.text = code
     else:
-        dat = container.create(textDAT, name + '_callbacks')
+        dat = parent_op.create('textDAT', name + '_callbacks')
         dat.text = code
         dat.dock = script_op
         try:
@@ -604,7 +674,7 @@ def build_veve_standalone():
     osc = container.op('osc_in')
     if osc is None:
         # Create OSC input if it doesn't exist
-        osc = container.create(oscinCHOP, 'osc_in')
+        osc = container.create('oscinCHOP', 'osc_in')
         osc.par.port = OSC_PORT
         osc.par.active = True
         osc.nodeX = 0
@@ -613,11 +683,20 @@ def build_veve_standalone():
     else:
         print(f"[OK] Using existing OSC In: {osc.path}")
 
-    # Remove old Kuramoto ring if present
+    # Remove old nodes (both legacy Kuramoto ring and previous veve build)
     old_nodes = ['kura_phase_select', 'kura_r_select', 'kura_positions',
                  'kura_shuffle', 'kura_instance_data', 'kura_sphere',
                  'kura_mat', 'kura_geo', 'kura_ring', 'kura_ring_mat',
-                 'kura_ring_geo']
+                 'kura_ring_geo',
+                 'veve_preset_select', 'decay_select', 'freq_select',
+                 'octave_select',
+                 'veve_node_positions', 'veve_instance_data',
+                 'veve_node_sphere', 'veve_node_mat', 'veve_node_geo',
+                 'veve_edges', 'veve_edge_mat', 'veve_edge_geo',
+                 'veve_nodes_callbacks', 'veve_edges_callbacks',
+                 'cam1', 'render1', 'out1',
+                 'veve_node_positions_callbacks', 'veve_edges_callbacks',
+                 'test_geo', 'test_render', 'test_inst_chop']
     for name in old_nodes:
         old = container.op(name)
         if old is not None:
@@ -630,7 +709,7 @@ def build_veve_standalone():
      node_geo, edge_geo) = build_veve_graph(container, osc)
 
     write_callbacks(container, node_script, node_code, 'veve_nodes')
-    write_callbacks(container, edge_sop, edge_code, 'veve_edges')
+    write_callbacks(edge_geo, edge_sop, edge_code, 'veve_edges')
 
     print("[OK] Veve node positions (Script CHOP)")
     print("[OK] Veve edge topology (Script SOP)")

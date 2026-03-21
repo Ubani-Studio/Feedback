@@ -168,5 +168,13 @@ Max.addHandler('excite_mode', function() {
     }
 });
 
+// --- PERI level ---
+Max.addHandler('peri_level', function() {
+    var args = Array.prototype.slice.call(arguments);
+    if (args.length >= 1) {
+        send('/peri/level', args[0]);
+    }
+});
+
 Max.post('osc_send.js ready — target ' + HOST + ':' + PORT);
-Max.post('  Channels: lorenz, kuramoto_r, kuramoto_phases, veve_preset, resonator_decay, amplitude, root_freq, morph, octave_offset, excite_mode');
+Max.post('  Channels: lorenz, kuramoto_r, kuramoto_phases, veve_preset, resonator_decay, amplitude, root_freq, morph, octave_offset, excite_mode, peri_level');
