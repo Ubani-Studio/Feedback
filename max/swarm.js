@@ -27,7 +27,7 @@
 //             → [udpsend] as OSC /swarm/trigger for TD flash
 //
 // PARAMETER MESSAGES (send to inlet 0):
-//   agents N               set agent count (re-initializes)
+//   set_agents N            set agent count (re-initializes)
 //   separation 0.5         separation weight (0-1)
 //   alignment 0.3          alignment weight (0-1)
 //   cohesion 0.5           cohesion weight (0-1)
@@ -122,7 +122,7 @@ function degree_to_freq(degree) {
 function snap_to_gridline(y) {
     // Returns the degree index (0 to TOTAL_GRIDLINES-1)
     // of the nearest Yoruba pentatonic gridline
-    var min_dist = Infinity;
+    var min_dist = 999999;
     var nearest_idx = 0;
     for (var i = 0; i < TOTAL_GRIDLINES; i++) {
         var d = Math.abs(y - ALL_GRIDLINES[i]);
@@ -138,7 +138,7 @@ function snap_to_gridline(y) {
 // AGENTS
 // =====================
 
-var agents = [];
+var swarm_agents = [];
 
 function Agent(id) {
     this.id = id;
@@ -152,9 +152,9 @@ function Agent(id) {
 }
 
 function init_agents() {
-    agents = [];
+    swarm_agents = [];
     for (var i = 0; i < NUM_AGENTS; i++) {
-        agents.push(new Agent(i));
+        swarm_agents.push(new Agent(i));
     }
     post("swarm: initialized " + NUM_AGENTS + " agents, "
          + TOTAL_GRIDLINES + " gridlines across "
@@ -168,16 +168,16 @@ function init_agents() {
 function update_swarm() {
     var pitch_max = OCTAVE_Y_SIZE * NUM_OCTAVES;
 
-    for (var i = 0; i < agents.length; i++) {
-        var a = agents[i];
+    for (var i = 0; i < swarm_agents.length; i++) {
+        var a = swarm_agents[i];
         var sep_x = 0, sep_y = 0;
         var ali_x = 0, ali_y = 0;
         var coh_x = 0, coh_y = 0;
         var n_count = 0;
 
-        for (var j = 0; j < agents.length; j++) {
+        for (var j = 0; j < swarm_agents.length; j++) {
             if (i === j) continue;
-            var b = agents[j];
+            var b = swarm_agents[j];
 
             // X distance with wraparound (rhythmic cycle)
             var dx = a.x - b.x;
@@ -254,9 +254,10 @@ function update_swarm() {
                 var freq = degree_to_freq(current_degree);
                 var velocity = Math.min(speed / max_speed, 1.0);
 
-                // Outlet 0: [voice_id, frequency, velocity]
-                // voice_id maps to which resonator (0-5)
-                outlet(0, a.voice, freq, velocity);
+                // Outlet 0: target + note data for poly~
+                // poly~ voices are 1-indexed
+                outlet(0, "target", a.voice + 1);
+                outlet(0, freq, velocity);
 
                 // Outlet 3: trigger flash for TD [agent_id, x_pos, y_pos]
                 outlet(3, a.id, a.x, a.y);
@@ -271,25 +272,25 @@ function update_swarm() {
 // =====================
 
 function compute_metrics() {
-    if (agents.length === 0) return;
+    if (swarm_agents.length === 0) return;
 
     // Center of mass
     var cx = 0, cy = 0;
-    for (var i = 0; i < agents.length; i++) {
-        cx += agents[i].x;
-        cy += agents[i].y;
+    for (var i = 0; i < swarm_agents.length; i++) {
+        cx += swarm_agents[i].x;
+        cy += swarm_agents[i].y;
     }
-    cx /= agents.length;
-    cy /= agents.length;
+    cx /= swarm_agents.length;
+    cy /= swarm_agents.length;
 
     // Spread (average distance from center)
     var spread = 0;
-    for (var i = 0; i < agents.length; i++) {
-        var dx = agents[i].x - cx;
-        var dy = agents[i].y - cy;
+    for (var i = 0; i < swarm_agents.length; i++) {
+        var dx = swarm_agents[i].x - cx;
+        var dy = swarm_agents[i].y - cy;
         spread += Math.sqrt(dx * dx + dy * dy);
     }
-    spread /= agents.length;
+    spread /= swarm_agents.length;
 
     // Density (inverse of spread, normalized 0-1)
     var max_spread = Math.sqrt(0.25 + Math.pow(OCTAVE_Y_SIZE * NUM_OCTAVES * 0.5, 2));
@@ -297,14 +298,14 @@ function compute_metrics() {
 
     // Velocity alignment (like Kuramoto order parameter but for direction)
     var sum_vx = 0, sum_vy = 0;
-    for (var i = 0; i < agents.length; i++) {
-        var sp = Math.sqrt(agents[i].vx * agents[i].vx + agents[i].vy * agents[i].vy);
+    for (var i = 0; i < swarm_agents.length; i++) {
+        var sp = Math.sqrt(swarm_agents[i].vx * swarm_agents[i].vx + swarm_agents[i].vy * swarm_agents[i].vy);
         if (sp > 0.0001) {
-            sum_vx += agents[i].vx / sp;
-            sum_vy += agents[i].vy / sp;
+            sum_vx += swarm_agents[i].vx / sp;
+            sum_vy += swarm_agents[i].vy / sp;
         }
     }
-    var order = Math.sqrt(sum_vx * sum_vx + sum_vy * sum_vy) / agents.length;
+    var order = Math.sqrt(sum_vx * sum_vx + sum_vy * sum_vy) / swarm_agents.length;
 
     // Outlet 2: [density, spread, order]
     outlet(2, density, spread, order);
@@ -315,13 +316,11 @@ function compute_metrics() {
 // =====================
 
 function output_positions() {
-    // Send all positions as a flat list: [N, x0, y0, x1, y1, ...]
-    var pos = [agents.length];
-    for (var i = 0; i < agents.length; i++) {
-        pos.push(agents[i].x);
-        pos.push(agents[i].y);
+    // Send each agent position as individual message (Max js outlet has no .apply)
+    // Format: [agent_index, x, y] from outlet 1
+    for (var i = 0; i < swarm_agents.length; i++) {
+        outlet(1, i, swarm_agents[i].x, swarm_agents[i].y);
     }
-    outlet.apply(null, [1].concat(pos));
 }
 
 // =====================
@@ -331,31 +330,33 @@ function output_positions() {
 var frame_count = 0;
 
 function bang() {
-    if (inlet === 0) {
-        // Main update tick
-        update_swarm();
+    try {
+        if (inlet === 0) {
+            // Main update tick
+            update_swarm();
 
-        frame_count++;
-        // Send positions and metrics every 5 frames (reduce OSC traffic)
-        if (frame_count % 5 === 0) {
-            output_positions();
-            compute_metrics();
+            // Close gate after processing (notes only on Kuramoto trigger frames)
+            if (gate_mode === 1) {
+                gate_open = 0;
+            }
+
+            frame_count++;
+            // Send positions and metrics every 5 frames (reduce OSC traffic)
+            if (frame_count % 5 === 0) {
+                output_positions();
+                compute_metrics();
+            }
+        } else if (inlet === 1) {
+            // Kuramoto gate pulse (inlet 1)
+            // Open the gate briefly for note events
+            gate_open = 1;
         }
-    } else if (inlet === 1) {
-        // Kuramoto gate pulse (inlet 1)
-        // Open the gate briefly for note events
-        gate_open = 1;
-        // The gate closes after this frame's update
-        // (effectively: notes only on Kuramoto trigger frames)
+    } catch (e) {
+        post("swarm.js ERROR: " + e.message + "\n");
     }
 }
 
-// Close gate after each frame if in gated mode
-function postframe_gate() {
-    if (gate_mode === 1) {
-        gate_open = 0;
-    }
-}
+
 
 // =====================
 // MESSAGE HANDLERS
@@ -368,7 +369,7 @@ function msg_float(v) {
     }
 }
 
-function agents(n) {
+function set_agents(n) {
     NUM_AGENTS = Math.max(2, Math.min(n, 500));
     init_agents();
 }

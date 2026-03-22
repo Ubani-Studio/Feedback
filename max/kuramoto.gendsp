@@ -1,0 +1,418 @@
+{
+	"patcher": {
+		"fileversion": 1,
+		"appversion": {
+			"major": 8,
+			"minor": 6,
+			"revision": 0,
+			"architecture": "x64",
+			"modernui": 1
+		},
+		"classnamespace": "dsp.gen",
+		"rect": [
+			0,
+			0,
+			900,
+			700
+		],
+		"bglocked": 0,
+		"openinpresentation": 0,
+		"default_fontsize": 12.0,
+		"default_fontface": 0,
+		"default_fontname": "Arial",
+		"gridonopen": 1,
+		"gridsize": [
+			15.0,
+			15.0
+		],
+		"gridsnaponopen": 1,
+		"objectsnaponopen": 1,
+		"statusbarvisible": 2,
+		"toolbarvisible": 1,
+		"boxes": [
+			{
+				"box": {
+					"id": "obj-codebox",
+					"maxclass": "codebox",
+					"numinlets": 0,
+					"numoutlets": 13,
+					"outlettype": [
+						"",
+						"",
+						"",
+						"",
+						"",
+						"",
+						"",
+						"",
+						"",
+						"",
+						"",
+						"",
+						""
+					],
+					"patching_rect": [
+						150.0,
+						150.0,
+						600.0,
+						400.0
+					],
+					"code": "// ============================================\n// KURAMOTO COUPLED OSCILLATOR ENGINE\n// Project 3: Coupled Rhythm Engine\n// Phase 4, Step 4.1\n// ============================================\n//\n// 6 coupled oscillators whose synchronization is\n// controlled by coupling strength K.\n//\n// K = 0:   all oscillators free. Polymetric scatter.\n// K = 0.3-0.7: THE SWEET SPOT. Groove EMERGES.\n//              Partial sync. Some voices lock, others drift.\n//              This is where the music lives.\n// K = 1+:  all locked. Unison pulse. Dramatic.\n//\n// The frequency ratios encode African timeline relationships,\n// NOT Western subdivisions. These are polyrhythmic ratios\n// derived from West African bell patterns and interlocking.\n//\n// The math: d\u03b8i/dt = \u03c9i + (K/N) * \u03a3 sin(\u03b8j - \u03b8i)\n// Each oscillator is pulled toward every other oscillator\n// by an amount proportional to K.\n//\n// OUTPUTS:\n//   out1-out6:   trigger impulses (1-sample, excite resonators)\n//   out7:        order parameter r (0-1, groove meter for TD)\n//   out8-out13:  phases normalized 0-1 (for OSC to TD)\n//\n// HOW TO USE:\n//   [gen~ kuramoto]\n//   |1  |2  |3  |4  |5  |6     <- triggers to resonators\n//   |7                          <- order param r to TD\n//   |8  |9  |10 |11 |12 |13    <- phases to TD / dundun_pitch\n//\n// CONNECT TO RESONATORS:\n//   out1 -> resonator 1 excitation (sub bass)\n//   out2 -> resonator 2 excitation (body)\n//   out3 -> resonator 3 excitation (ogene metallic)\n//   out4 -> resonator 4 excitation (transient click)\n//   out5 -> resonator 5 excitation (drone)\n//   out6 -> resonator 6 excitation (crystalline)\n//\n// SEND TO TOUCHDESIGNER:\n//   out7 -> [udpsend] /kuramoto/r\n//   out8-out13 -> [pak f f f f f f] -> [udpsend] /kuramoto/phases\n//   Visualize: 6 dots on a circle at their phase angles.\n//   Lines between them, thickness = K. Color = warm(synced)/cool(free).\n//   Order parameter r = groove meter bar.\n//\n// ============================================\n\n\n// ====================\n// DECLARATIONS\n// ====================\n\nParam K(0.5);              // Coupling strength \u2014 YOUR MAIN KNOB\n                           // 0 = free, 0.3-0.7 = groove, 1+ = locked\n\nParam tempo(120);          // Base tempo in BPM\n\n// Natural frequency RATIOS \u2014 these encode the polyrhythm\n// Default: West African bell pattern relationships\nParam ratio1(1.0);         // Base pulse (the timeline)\nParam ratio2(1.5);         // 3:2 cross-rhythm (hemiola)\nParam ratio3(1.333);       // 4:3 relationship\nParam ratio4(0.75);        // Half-time feel\nParam ratio5(2.0);         // Double-time\nParam ratio6(0.667);       // Slow cycle (2:3 against base)\n\n// Trigger shape\nParam trig_width(0.001);   // Trigger pulse width in seconds\n                           // 0.001 = 1ms click\n                           // 0.01 = 10ms for softer attack\n\n// Phase state\n// Initial phases spread evenly so they don't all start synced\nHistory t1(0.0);\nHistory t2(1.047);       // 2\u03c0/6 apart\nHistory t3(2.094);\nHistory t4(3.142);\nHistory t5(4.189);\nHistory t6(5.236);\n\n// Trigger pulse counters\nHistory trig_count1(0);\nHistory trig_count2(0);\nHistory trig_count3(0);\nHistory trig_count4(0);\nHistory trig_count5(0);\nHistory trig_count6(0);\n\n\n// ====================\n// CONSTANTS\n// ====================\n\ntwopi = 6.28318530718;\nN = 6;\ndt_step = 1.0 / samplerate;\n\n\n// ====================\n// NATURAL FREQUENCIES\n// ====================\n// Convert tempo (BPM) to frequency (Hz), then to angular velocity\n\nbase_freq = tempo / 60.0;\n\nw1 = base_freq * ratio1 * twopi;\nw2 = base_freq * ratio2 * twopi;\nw3 = base_freq * ratio3 * twopi;\nw4 = base_freq * ratio4 * twopi;\nw5 = base_freq * ratio5 * twopi;\nw6 = base_freq * ratio6 * twopi;\n\n\n// ====================\n// KURAMOTO COUPLING\n// ====================\n// d\u03b8i/dt = \u03c9i + (K/N) * \u03a3 sin(\u03b8j - \u03b8i)\n//\n// The sin(\u03b8j - \u03b8i) term:\n//   - When \u03b8j is AHEAD of \u03b8i: sin > 0, pulls \u03b8i forward\n//   - When \u03b8j is BEHIND \u03b8i: sin < 0, pulls \u03b8i back\n//   - When they're IN PHASE: sin = 0, no pull\n// Net effect: oscillators attract toward phase alignment.\n// Higher K = stronger pull = faster synchronization.\n\ncoupling = K / N;\n\nsum1 = sin(t2-t1) + sin(t3-t1) + sin(t4-t1) + sin(t5-t1) + sin(t6-t1);\nsum2 = sin(t1-t2) + sin(t3-t2) + sin(t4-t2) + sin(t5-t2) + sin(t6-t2);\nsum3 = sin(t1-t3) + sin(t2-t3) + sin(t4-t3) + sin(t5-t3) + sin(t6-t3);\nsum4 = sin(t1-t4) + sin(t2-t4) + sin(t3-t4) + sin(t5-t4) + sin(t6-t4);\nsum5 = sin(t1-t5) + sin(t2-t5) + sin(t3-t5) + sin(t4-t5) + sin(t6-t5);\nsum6 = sin(t1-t6) + sin(t2-t6) + sin(t3-t6) + sin(t4-t6) + sin(t5-t6);\n\n// Phase derivatives (angular velocity + coupling)\nd1 = w1 + coupling * sum1;\nd2 = w2 + coupling * sum2;\nd3 = w3 + coupling * sum3;\nd4 = w4 + coupling * sum4;\nd5 = w5 + coupling * sum5;\nd6 = w6 + coupling * sum6;\n\n\n// ====================\n// PHASE INTEGRATION\n// ====================\n\nt1_new = t1 + d1 * dt_step;\nt2_new = t2 + d2 * dt_step;\nt3_new = t3 + d3 * dt_step;\nt4_new = t4 + d4 * dt_step;\nt5_new = t5 + d5 * dt_step;\nt6_new = t6 + d6 * dt_step;\n\n\n// ====================\n// TRIGGER DETECTION\n// ====================\n// A trigger fires when the phase WRAPS past 2\u03c0\n// This means one complete cycle \u2014 the oscillator's \"beat\"\n\nwrap1 = (t1_new >= twopi) ? 1 : 0;\nwrap2 = (t2_new >= twopi) ? 1 : 0;\nwrap3 = (t3_new >= twopi) ? 1 : 0;\nwrap4 = (t4_new >= twopi) ? 1 : 0;\nwrap5 = (t5_new >= twopi) ? 1 : 0;\nwrap6 = (t6_new >= twopi) ? 1 : 0;\n\n\n// ====================\n// PHASE WRAP (modulo 2\u03c0)\n// ====================\n\nt1 = t1_new - twopi * floor(t1_new / twopi);\nt2 = t2_new - twopi * floor(t2_new / twopi);\nt3 = t3_new - twopi * floor(t3_new / twopi);\nt4 = t4_new - twopi * floor(t4_new / twopi);\nt5 = t5_new - twopi * floor(t5_new / twopi);\nt6 = t6_new - twopi * floor(t6_new / twopi);\n\n\n// ====================\n// TRIGGER PULSE SHAPING\n// ====================\n// Convert single-sample wrap detection into a short pulse\n// This gives the resonators a proper excitation impulse\n\ntrig_samples = max(trig_width * samplerate, 1);\n\n// Start counter on wrap, count down\ntrig_count1 = (wrap1 > 0) ? trig_samples : max(trig_count1 - 1, 0);\ntrig_count2 = (wrap2 > 0) ? trig_samples : max(trig_count2 - 1, 0);\ntrig_count3 = (wrap3 > 0) ? trig_samples : max(trig_count3 - 1, 0);\ntrig_count4 = (wrap4 > 0) ? trig_samples : max(trig_count4 - 1, 0);\ntrig_count5 = (wrap5 > 0) ? trig_samples : max(trig_count5 - 1, 0);\ntrig_count6 = (wrap6 > 0) ? trig_samples : max(trig_count6 - 1, 0);\n\n// Pulse output: 1 during trigger, 0 otherwise\npulse1 = (trig_count1 > 0) ? 1 : 0;\npulse2 = (trig_count2 > 0) ? 1 : 0;\npulse3 = (trig_count3 > 0) ? 1 : 0;\npulse4 = (trig_count4 > 0) ? 1 : 0;\npulse5 = (trig_count5 > 0) ? 1 : 0;\npulse6 = (trig_count6 > 0) ? 1 : 0;\n\n\n// ====================\n// ORDER PARAMETER (groove meter)\n// ====================\n// r = (1/N) * |\u03a3 e^(i\u03b8j)|\n// r = 0: completely desynchronized (no groove)\n// r = 1: perfectly synchronized (unison)\n// The RISE of r from 0 toward 1 is the moment groove emerges.\n\n// Sum of cos(\u03b8) and sin(\u03b8) for all oscillators\ncos_sum = cos(t1) + cos(t2) + cos(t3) + cos(t4) + cos(t5) + cos(t6);\nsin_sum = sin(t1) + sin(t2) + sin(t3) + sin(t4) + sin(t5) + sin(t6);\n\n// Magnitude of the mean phase vector\nr = sqrt(cos_sum * cos_sum + sin_sum * sin_sum) / N;\n\n\n// ====================\n// NORMALIZED PHASES (for TD visualization)\n// ====================\n// 0-1 range, easier for OSC and mapping\n\nphase1 = t1 / twopi;\nphase2 = t2 / twopi;\nphase3 = t3 / twopi;\nphase4 = t4 / twopi;\nphase5 = t5 / twopi;\nphase6 = t6 / twopi;\n\n\n// ====================\n// OUTPUTS\n// ====================\n\n// Triggers \u2192 resonator excitation (impulse pulses)\nout1 = pulse1;\nout2 = pulse2;\nout3 = pulse3;\nout4 = pulse4;\nout5 = pulse5;\nout6 = pulse6;\n\n// Order parameter \u2192 TD groove meter\nout7 = r;\n\n// Phases 0-1 \u2192 TD visualization / dundun pitch mapping\nout8  = phase1;\nout9  = phase2;\nout10 = phase3;\nout11 = phase4;\nout12 = phase5;\nout13 = phase6;\n"
+				}
+			},
+			{
+				"box": {
+					"id": "obj-out1",
+					"maxclass": "newobj",
+					"numinlets": 1,
+					"numoutlets": 0,
+					"text": "out 1",
+					"patching_rect": [
+						150.0,
+						600.0,
+						35.0,
+						22.0
+					]
+				}
+			},
+			{
+				"box": {
+					"id": "obj-out2",
+					"maxclass": "newobj",
+					"numinlets": 1,
+					"numoutlets": 0,
+					"text": "out 2",
+					"patching_rect": [
+						200.0,
+						600.0,
+						35.0,
+						22.0
+					]
+				}
+			},
+			{
+				"box": {
+					"id": "obj-out3",
+					"maxclass": "newobj",
+					"numinlets": 1,
+					"numoutlets": 0,
+					"text": "out 3",
+					"patching_rect": [
+						250.0,
+						600.0,
+						35.0,
+						22.0
+					]
+				}
+			},
+			{
+				"box": {
+					"id": "obj-out4",
+					"maxclass": "newobj",
+					"numinlets": 1,
+					"numoutlets": 0,
+					"text": "out 4",
+					"patching_rect": [
+						300.0,
+						600.0,
+						35.0,
+						22.0
+					]
+				}
+			},
+			{
+				"box": {
+					"id": "obj-out5",
+					"maxclass": "newobj",
+					"numinlets": 1,
+					"numoutlets": 0,
+					"text": "out 5",
+					"patching_rect": [
+						350.0,
+						600.0,
+						35.0,
+						22.0
+					]
+				}
+			},
+			{
+				"box": {
+					"id": "obj-out6",
+					"maxclass": "newobj",
+					"numinlets": 1,
+					"numoutlets": 0,
+					"text": "out 6",
+					"patching_rect": [
+						400.0,
+						600.0,
+						35.0,
+						22.0
+					]
+				}
+			},
+			{
+				"box": {
+					"id": "obj-out7",
+					"maxclass": "newobj",
+					"numinlets": 1,
+					"numoutlets": 0,
+					"text": "out 7",
+					"patching_rect": [
+						450.0,
+						600.0,
+						35.0,
+						22.0
+					]
+				}
+			},
+			{
+				"box": {
+					"id": "obj-out8",
+					"maxclass": "newobj",
+					"numinlets": 1,
+					"numoutlets": 0,
+					"text": "out 8",
+					"patching_rect": [
+						500.0,
+						600.0,
+						35.0,
+						22.0
+					]
+				}
+			},
+			{
+				"box": {
+					"id": "obj-out9",
+					"maxclass": "newobj",
+					"numinlets": 1,
+					"numoutlets": 0,
+					"text": "out 9",
+					"patching_rect": [
+						550.0,
+						600.0,
+						35.0,
+						22.0
+					]
+				}
+			},
+			{
+				"box": {
+					"id": "obj-out10",
+					"maxclass": "newobj",
+					"numinlets": 1,
+					"numoutlets": 0,
+					"text": "out 10",
+					"patching_rect": [
+						600.0,
+						600.0,
+						35.0,
+						22.0
+					]
+				}
+			},
+			{
+				"box": {
+					"id": "obj-out11",
+					"maxclass": "newobj",
+					"numinlets": 1,
+					"numoutlets": 0,
+					"text": "out 11",
+					"patching_rect": [
+						650.0,
+						600.0,
+						35.0,
+						22.0
+					]
+				}
+			},
+			{
+				"box": {
+					"id": "obj-out12",
+					"maxclass": "newobj",
+					"numinlets": 1,
+					"numoutlets": 0,
+					"text": "out 12",
+					"patching_rect": [
+						700.0,
+						600.0,
+						35.0,
+						22.0
+					]
+				}
+			},
+			{
+				"box": {
+					"id": "obj-out13",
+					"maxclass": "newobj",
+					"numinlets": 1,
+					"numoutlets": 0,
+					"text": "out 13",
+					"patching_rect": [
+						750.0,
+						600.0,
+						35.0,
+						22.0
+					]
+				}
+			}
+		],
+		"lines": [
+			{
+				"patchline": {
+					"source": [
+						"obj-codebox",
+						0
+					],
+					"destination": [
+						"obj-out1",
+						0
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-codebox",
+						1
+					],
+					"destination": [
+						"obj-out2",
+						0
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-codebox",
+						2
+					],
+					"destination": [
+						"obj-out3",
+						0
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-codebox",
+						3
+					],
+					"destination": [
+						"obj-out4",
+						0
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-codebox",
+						4
+					],
+					"destination": [
+						"obj-out5",
+						0
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-codebox",
+						5
+					],
+					"destination": [
+						"obj-out6",
+						0
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-codebox",
+						6
+					],
+					"destination": [
+						"obj-out7",
+						0
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-codebox",
+						7
+					],
+					"destination": [
+						"obj-out8",
+						0
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-codebox",
+						8
+					],
+					"destination": [
+						"obj-out9",
+						0
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-codebox",
+						9
+					],
+					"destination": [
+						"obj-out10",
+						0
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-codebox",
+						10
+					],
+					"destination": [
+						"obj-out11",
+						0
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-codebox",
+						11
+					],
+					"destination": [
+						"obj-out12",
+						0
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-codebox",
+						12
+					],
+					"destination": [
+						"obj-out13",
+						0
+					]
+				}
+			}
+		]
+	}
+}

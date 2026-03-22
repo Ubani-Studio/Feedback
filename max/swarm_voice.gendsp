@@ -1,0 +1,200 @@
+{
+	"patcher": {
+		"fileversion": 1,
+		"appversion": {
+			"major": 8,
+			"minor": 6,
+			"revision": 0,
+			"architecture": "x64",
+			"modernui": 1
+		},
+		"classnamespace": "dsp.gen",
+		"rect": [
+			0,
+			0,
+			900,
+			700
+		],
+		"bglocked": 0,
+		"openinpresentation": 0,
+		"default_fontsize": 12.0,
+		"default_fontface": 0,
+		"default_fontname": "Arial",
+		"gridonopen": 1,
+		"gridsize": [
+			15.0,
+			15.0
+		],
+		"gridsnaponopen": 1,
+		"objectsnaponopen": 1,
+		"statusbarvisible": 2,
+		"toolbarvisible": 1,
+		"boxes": [
+			{
+				"box": {
+					"id": "obj-codebox",
+					"maxclass": "codebox",
+					"numinlets": 3,
+					"numoutlets": 2,
+					"outlettype": [
+						"",
+						""
+					],
+					"patching_rect": [
+						150.0,
+						150.0,
+						600.0,
+						400.0
+					],
+					"code": "// ============================================\n// SWARM VOICE \u2014 Single Resonator Voice for poly~\n// Project 4, Step 5.1\n// ============================================\n//\n// INPUTS:\n//   in1 = trigger (impulse, 0 or 1)\n//   in2 = frequency (Hz, from swarm note event)\n//   in3 = velocity (0-1, from swarm agent speed)\n//\n// OUTPUTS:\n//   out1 = audio left\n//   out2 = audio right\n//\n// ============================================\n\n// --- Declarations ---\nParam voice_id(0);         // 0-5, sets the timbral character\nParam master_gain(0.3);\nHistory prev_trig(0);\nHistory exc_count(0);\nDelay d(48000);\nHistory prev_del(0);\n\n// --- Per-voice timbre (heterogeneous sound ideal) ---\ndamping = (voice_id == 0) ? 0.9995 :\n          (voice_id == 1) ? 0.998 :\n          (voice_id == 2) ? 0.996 :\n          (voice_id == 3) ? 0.97 :\n          (voice_id == 4) ? 0.9998 : 0.994;\n\nbrightness = (voice_id == 0) ? 0.2 :\n             (voice_id == 1) ? 0.4 :\n             (voice_id == 2) ? 0.8 :\n             (voice_id == 3) ? 0.9 :\n             (voice_id == 4) ? 0.3 : 0.95;\n\n// --- Stereo pan per voice ---\npan_l = (voice_id == 0) ? 0.7 :\n        (voice_id == 1) ? 0.5 :\n        (voice_id == 2) ? 0.2 :\n        (voice_id == 3) ? 0.4 :\n        (voice_id == 4) ? 0.6 : 0.3;\n\npan_r = 1.0 - pan_l;\n\n// --- Inputs ---\nfreq = max(in2, 20);\nvelocity = max(in3, 0);\ndelay_len = samplerate / freq;\n\n// --- Trigger \u2192 noise burst excitation ---\ntrigger = (in1 > 0.5) * (prev_trig <= 0.5);\nprev_trig = in1;\n\nexc_count = trigger ? delay_len : max(exc_count - 1, 0);\nexcitation = (exc_count > 0) ? noise() * velocity * 0.5 : 0;\n\n// --- Waveguide resonator ---\ndelayed = d.read(delay_len);\n\navg = (delayed + prev_del) * 0.5;\nprev_del = delayed;\nfiltered = delayed * brightness + avg * (1.0 - brightness);\n\noutput = filtered * damping;\nd.write(excitation + output);\n\n// --- Output ---\nout1 = output * pan_l * master_gain;\nout2 = output * pan_r * master_gain;\n"
+				}
+			},
+			{
+				"box": {
+					"id": "obj-in1",
+					"maxclass": "newobj",
+					"numinlets": 0,
+					"numoutlets": 1,
+					"outlettype": [
+						""
+					],
+					"text": "in 1",
+					"patching_rect": [
+						150.0,
+						50.0,
+						30.0,
+						22.0
+					]
+				}
+			},
+			{
+				"box": {
+					"id": "obj-in2",
+					"maxclass": "newobj",
+					"numinlets": 0,
+					"numoutlets": 1,
+					"outlettype": [
+						""
+					],
+					"text": "in 2",
+					"patching_rect": [
+						230.0,
+						50.0,
+						30.0,
+						22.0
+					]
+				}
+			},
+			{
+				"box": {
+					"id": "obj-in3",
+					"maxclass": "newobj",
+					"numinlets": 0,
+					"numoutlets": 1,
+					"outlettype": [
+						""
+					],
+					"text": "in 3",
+					"patching_rect": [
+						310.0,
+						50.0,
+						30.0,
+						22.0
+					]
+				}
+			},
+			{
+				"box": {
+					"id": "obj-out1",
+					"maxclass": "newobj",
+					"numinlets": 1,
+					"numoutlets": 0,
+					"text": "out 1",
+					"patching_rect": [
+						150.0,
+						600.0,
+						35.0,
+						22.0
+					]
+				}
+			},
+			{
+				"box": {
+					"id": "obj-out2",
+					"maxclass": "newobj",
+					"numinlets": 1,
+					"numoutlets": 0,
+					"text": "out 2",
+					"patching_rect": [
+						200.0,
+						600.0,
+						35.0,
+						22.0
+					]
+				}
+			}
+		],
+		"lines": [
+			{
+				"patchline": {
+					"source": [
+						"obj-in1",
+						0
+					],
+					"destination": [
+						"obj-codebox",
+						0
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-in2",
+						0
+					],
+					"destination": [
+						"obj-codebox",
+						1
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-in3",
+						0
+					],
+					"destination": [
+						"obj-codebox",
+						2
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-codebox",
+						0
+					],
+					"destination": [
+						"obj-out1",
+						0
+					]
+				}
+			},
+			{
+				"patchline": {
+					"source": [
+						"obj-codebox",
+						1
+					],
+					"destination": [
+						"obj-out2",
+						0
+					]
+				}
+			}
+		]
+	}
+}
