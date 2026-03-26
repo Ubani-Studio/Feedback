@@ -4953,437 +4953,6 @@
             },
             {
                 "box": {
-                    "id": "obj-arp-0",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        383.0,
-                        1257.0,
-                        73.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 0",
-                    "varname": "obj-arp-0"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-arp-1",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        438.0,
-                        1257.0,
-                        73.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 1",
-                    "varname": "obj-arp-1"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-arp-2",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        483.0,
-                        1257.0,
-                        73.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 2",
-                    "varname": "obj-arp-2"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-arp-3",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        543.0,
-                        1257.0,
-                        73.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 3",
-                    "varname": "obj-arp-3"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-arp-4",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        608.0,
-                        1257.0,
-                        73.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 4",
-                    "varname": "obj-arp-4"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-arp-5",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        663.0,
-                        1257.0,
-                        73.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 5",
-                    "varname": "obj-arp-5"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 10.0,
-                    "id": "obj-afr-labels",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        383.0,
-                        1285.0,
-                        350.0,
-                        18.0
-                    ],
-                    "text": "Poly3:2   Triplet    Bembe     Shiko    Call/Rsp",
-                    "varname": "obj-afr-labels"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-arp-6",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        383.0,
-                        1303.0,
-                        73.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 6",
-                    "varname": "obj-arp-6"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-arp-7",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        456.0,
-                        1303.0,
-                        73.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 7",
-                    "varname": "obj-arp-7"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-arp-8",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        525.0,
-                        1303.0,
-                        73.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 8",
-                    "varname": "obj-arp-8"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-arp-9",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        592.0,
-                        1303.0,
-                        73.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 9",
-                    "varname": "obj-arp-9"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-arp-10",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        655.0,
-                        1303.0,
-                        79.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 10",
-                    "varname": "obj-arp-10"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 10.0,
-                    "id": "obj-afr2-labels",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        383.0,
-                        1328.0,
-                        350.0,
-                        18.0
-                    ],
-                    "text": "Gahu    Son Clave  Fume Fume   Kassa",
-                    "varname": "obj-afr2-labels"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-arp-11",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        383.0,
-                        1346.0,
-                        78.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 11",
-                    "varname": "obj-arp-11"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-arp-12",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        443.0,
-                        1346.0,
-                        79.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 12",
-                    "varname": "obj-arp-12"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-arp-13",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        523.0,
-                        1346.0,
-                        79.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 13",
-                    "varname": "obj-arp-13"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-arp-14",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        600.0,
-                        1346.0,
-                        79.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 14",
-                    "varname": "obj-arp-14"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 10.0,
-                    "id": "obj-luso-labels",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        383.0,
-                        1368.0,
-                        350.0,
-                        18.0
-                    ],
-                    "text": "Kuduro   Semba    Kizomba  Marrabenta",
-                    "varname": "obj-luso-labels"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-arp-15",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        383.0,
-                        1386.0,
-                        79.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 15",
-                    "varname": "obj-arp-15"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-arp-16",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        446.0,
-                        1386.0,
-                        79.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 16",
-                    "varname": "obj-arp-16"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-arp-17",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        506.0,
-                        1386.0,
-                        79.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 17",
-                    "varname": "obj-arp-17"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-arp-18",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        573.0,
-                        1386.0,
-                        79.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 18",
-                    "varname": "obj-arp-18"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-arp-19",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        653.0,
-                        1386.0,
-                        79.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 19",
-                    "varname": "obj-arp-19"
-                }
-            },
-            {
-                "box": {
                     "fontsize": 10.0,
                     "id": "obj-eucl-hint",
                     "maxclass": "comment",
@@ -5391,7 +4960,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         653.0,
-                        1368.0,
+                        1345.0,
                         70.0,
                         18.0
                     ],
@@ -5408,7 +4977,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         733.0,
-                        1368.0,
+                        1345.0,
                         42.0,
                         18.0
                     ],
@@ -5431,7 +5000,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [
                         733.0,
-                        1386.0,
+                        1365.0,
                         35.0,
                         22.0
                     ],
@@ -5449,7 +5018,7 @@
                     ],
                     "patching_rect": [
                         653.0,
-                        1411.0,
+                        1390.0,
                         89.0,
                         22.0
                     ],
@@ -5466,7 +5035,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         778.0,
-                        1368.0,
+                        1345.0,
                         35.0,
                         18.0
                     ],
@@ -5489,7 +5058,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [
                         778.0,
-                        1386.0,
+                        1365.0,
                         35.0,
                         22.0
                     ],
@@ -5507,161 +5076,12 @@
                     ],
                     "patching_rect": [
                         743.0,
-                        1411.0,
+                        1390.0,
                         83.0,
                         22.0
                     ],
                     "text": "eucl_steps $1",
                     "varname": "obj-es-m"
-                }
-            },
-            {
-                "box": {
-                    "fontface": 1,
-                    "fontsize": 12.0,
-                    "id": "obj-div-label",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        383.0,
-                        1436.0,
-                        123.0,
-                        20.0
-                    ],
-                    "text": "—— ARP RATE ——",
-                    "varname": "obj-div-label"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 10.0,
-                    "id": "obj-div-hint",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        508.0,
-                        1436.0,
-                        230.0,
-                        18.0
-                    ],
-                    "text": "0=free 1=1/4 2=1/8 3=trip 4=1/16",
-                    "varname": "obj-div-hint"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-div-0",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        383.0,
-                        1456.0,
-                        60.0,
-                        22.0
-                    ],
-                    "text": "arp_div 0",
-                    "varname": "obj-div-0"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-div-1",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        448.0,
-                        1456.0,
-                        60.0,
-                        22.0
-                    ],
-                    "text": "arp_div 1",
-                    "varname": "obj-div-1"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-div-2",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        513.0,
-                        1456.0,
-                        60.0,
-                        22.0
-                    ],
-                    "text": "arp_div 2",
-                    "varname": "obj-div-2"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-div-3",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        578.0,
-                        1456.0,
-                        60.0,
-                        22.0
-                    ],
-                    "text": "arp_div 3",
-                    "varname": "obj-div-3"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-div-4",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        643.0,
-                        1456.0,
-                        60.0,
-                        22.0
-                    ],
-                    "text": "arp_div 4",
-                    "varname": "obj-div-4"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-div-5",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        708.0,
-                        1456.0,
-                        81.0,
-                        22.0
-                    ],
-                    "text": "arp_div 1.333",
-                    "varname": "obj-div-5"
                 }
             },
             {
@@ -5674,7 +5094,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         383.0,
-                        1483.0,
+                        1420.0,
                         34.0,
                         20.0
                     ],
@@ -5705,7 +5125,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [
                         418.0,
-                        1483.0,
+                        1420.0,
                         50.0,
                         22.0
                     ],
@@ -5730,7 +5150,7 @@
                     ],
                     "patching_rect": [
                         418.0,
-                        1508.0,
+                        1445.0,
                         73.0,
                         22.0
                     ],
@@ -5748,7 +5168,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         513.0,
-                        1483.0,
+                        1420.0,
                         50.0,
                         20.0
                     ],
@@ -5779,7 +5199,7 @@
                     "parameter_enable": 0,
                     "patching_rect": [
                         568.0,
-                        1483.0,
+                        1420.0,
                         50.0,
                         22.0
                     ],
@@ -5804,7 +5224,7 @@
                     ],
                     "patching_rect": [
                         568.0,
-                        1508.0,
+                        1445.0,
                         70.0,
                         22.0
                     ],
@@ -5820,7 +5240,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         583.0,
-                        1535.0,
+                        1470.0,
                         52.0,
                         22.0
                     ],
@@ -11544,6 +10964,114 @@
                     "text": "s toGen",
                     "varname": "obj-pm-send"
                 }
+            },
+            {
+                "box": {
+                    "fontface": 1,
+                    "fontsize": 11.0,
+                    "id": "obj-arpmode-label",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        540.0,
+                        1260.0,
+                        75.0,
+                        19.0
+                    ],
+                    "text": "Arp Mode",
+                    "varname": "obj-arpmode-label"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-arpmode-umenu",
+                    "maxclass": "umenu",
+                    "numinlets": 1,
+                    "numoutlets": 3,
+                    "outlettype": [
+                        "int",
+                        "",
+                        ""
+                    ],
+                    "parameter_enable": 0,
+                    "patching_rect": [
+                        540.0,
+                        1280.0,
+                        150.0,
+                        22.0
+                    ],
+                    "items": [
+                        "All On",
+                        ",",
+                        "Up",
+                        ",",
+                        "Down",
+                        ",",
+                        "Up/Down",
+                        ",",
+                        "Random",
+                        ",",
+                        "Chord",
+                        ",",
+                        "Poly 3:2",
+                        ",",
+                        "Triplet",
+                        ",",
+                        "Bembe",
+                        ",",
+                        "Shiko",
+                        ",",
+                        "Call/Resp",
+                        ",",
+                        "Gahu",
+                        ",",
+                        "Son Clave",
+                        ",",
+                        "Fume Fume",
+                        ",",
+                        "Kassa",
+                        ",",
+                        "Kuduro",
+                        ",",
+                        "Semba",
+                        ",",
+                        "Kizomba",
+                        ",",
+                        "Marrabenta",
+                        ",",
+                        "Euclidean",
+                        ",",
+                        "Sequencer"
+                    ],
+                    "presentation": 1,
+                    "presentation_rect": [
+                        10.0,
+                        160.0,
+                        150.0,
+                        22.0
+                    ],
+                    "varname": "obj-arpmode-umenu"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-arpmode-msg",
+                    "maxclass": "message",
+                    "numinlets": 2,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        540.0,
+                        1310.0,
+                        90.0,
+                        22.0
+                    ],
+                    "text": "arp_mode $1",
+                    "varname": "obj-arpmode-msg"
+                }
             }
         ],
         "lines": [
@@ -11855,246 +11383,6 @@
                     ],
                     "source": [
                         "obj-aizd-n",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-arp-0",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-arp-1",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-arp-10",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-arp-11",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-arp-12",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-arp-13",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-arp-14",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-arp-15",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-arp-16",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-arp-17",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-arp-18",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-arp-19",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-arp-2",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-arp-3",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-arp-4",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-arp-5",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-arp-6",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-arp-7",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-arp-8",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-arp-9",
                         0
                     ]
                 }
@@ -12663,78 +11951,6 @@
                     ],
                     "source": [
                         "obj-dec-n",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-div-0",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-div-1",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-div-2",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-div-3",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-div-4",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-s-arp",
-                        0
-                    ],
-                    "source": [
-                        "obj-div-5",
                         0
                     ]
                 }
@@ -15139,6 +14355,30 @@
                     ],
                     "source": [
                         "obj-pm-js",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-arpmode-msg",
+                        0
+                    ],
+                    "source": [
+                        "obj-arpmode-umenu",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-s-arp",
+                        0
+                    ],
+                    "source": [
+                        "obj-arpmode-msg",
                         0
                     ]
                 }

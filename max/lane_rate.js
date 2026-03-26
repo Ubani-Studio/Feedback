@@ -35,7 +35,10 @@ function msg_float(v) {
 	}
 }
 
+var ready = 0;
+
 function update() {
+	if (!ready) return;
 	for (var i = 0; i < 6; i++) {
 		var div;
 		if (linked) {
@@ -54,5 +57,6 @@ function bang() {
 }
 
 function loadbang() {
+	ready = 1;
 	update();
 }

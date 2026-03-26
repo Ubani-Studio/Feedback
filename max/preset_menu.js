@@ -106,3 +106,11 @@ function glide_preset(i) {
 		outlet(0, "glide", vals[i]);
 	}
 }
+
+function bang() {
+	// ignore — umenus send bang on load
+}
+
+function loadbang() {
+	// no action needed on load
+}
