@@ -31,7 +31,7 @@
                         280.0,
                         172.0
                     ],
-                    "text": "CHAOS RESONATOR v5\n\n5 attractors \u2192 6 waveguide resonators.\nBlend / Modulate / Route combining.\n19 African tuning systems. Arpeggiator.\nADSR. African patterns. BPM sync.\nMIDI clock. Scale-degree transpose.\n\n1. Turn on ezdac\n2. Choose attractor(s) + combine mode\n3. Connect MIDI clock (RYTM etc)\n4. STOP = click-free mute",
+                    "text": "CHAOS RESONATOR v5\n\n5 attractors → 6 waveguide resonators.\nBlend / Modulate / Route combining.\n19 African tuning systems. Arpeggiator.\nADSR. African patterns. BPM sync.\nMIDI clock. Scale-degree transpose.\n\n1. Turn on ezdac\n2. Choose attractor(s) + combine mode\n3. Connect MIDI clock (RYTM etc)\n4. STOP = click-free mute",
                     "varname": "obj-title"
                 }
             },
@@ -469,7 +469,7 @@
                         260.0,
                         95.0
                     ],
-                    "text": "VOICES (Main/Layer):\n1 Sub Bass (iya ilu) \u2190 X\n2 Body (omele) \u2190 Y\n3 Metallic (ogene) \u2190 Z\n4 Transient (gudugudu) \u2190 X (route)\n5 Drone \u2190 Y (route)\n6 Crystalline (shekere) \u2190 Z (route)",
+                    "text": "VOICES (Main/Layer):\n1 Sub Bass (iya ilu) ← X\n2 Body (omele) ← Y\n3 Metallic (ogene) ← Z\n4 Transient (gudugudu) ← X (route)\n5 Drone ← Y (route)\n6 Crystalline (shekere) ← Z (route)",
                     "varname": "obj-voices"
                 }
             },
@@ -487,7 +487,7 @@
                         160.0,
                         20.0
                     ],
-                    "text": "\u2014\u2014 LIVE / MIDI \u2014\u2014",
+                    "text": "—— LIVE / MIDI ——",
                     "varname": "obj-midi-label"
                 }
             },
@@ -844,7 +844,7 @@
                                         200.0,
                                         50.0
                                     ],
-                                    "text": "MIDI Clock \u2192 BPM sync\nStart = unmute + phase reset\nStop = mute"
+                                    "text": "MIDI Clock → BPM sync\nStart = unmute + phase reset\nStop = mute"
                                 }
                             }
                         ],
@@ -1179,7 +1179,7 @@
                         160.0,
                         20.0
                     ],
-                    "text": "\u2014\u2014 MIDI LEARN \u2014\u2014",
+                    "text": "—— MIDI LEARN ——",
                     "varname": "obj-ml-label"
                 }
             },
@@ -1582,7 +1582,7 @@
                         160.0,
                         20.0
                     ],
-                    "text": "\u2014\u2014 LORENZ \u2014\u2014",
+                    "text": "—— LORENZ ——",
                     "varname": "obj-lc-label"
                 }
             },
@@ -1916,7 +1916,7 @@
                         160.0,
                         20.0
                     ],
-                    "text": "\u2014\u2014 ATTRACTOR \u2014\u2014",
+                    "text": "—— ATTRACTOR ——",
                     "varname": "obj-att-label"
                 }
             },
@@ -2752,7 +2752,7 @@
                         55.0,
                         20.0
                     ],
-                    "text": "chua \u03b1",
+                    "text": "chua α",
                     "varname": "obj-chua_a-l"
                 }
             },
@@ -3156,7 +3156,7 @@
                         150.0,
                         20.0
                     ],
-                    "text": "\u2014\u2014 RESONATORS \u2014\u2014",
+                    "text": "—— RESONATORS ——",
                     "varname": "obj-rc-label"
                 }
             },
@@ -3794,7 +3794,7 @@
                         126.0,
                         20.0
                     ],
-                    "text": "\u2014\u2014 SUB-BASS \u2014\u2014",
+                    "text": "—— SUB-BASS ——",
                     "varname": "obj-sub-label"
                 }
             },
@@ -4204,7 +4204,7 @@
                         120.0,
                         20.0
                     ],
-                    "text": "\u2014\u2014 TUNING \u2014\u2014",
+                    "text": "—— TUNING ——",
                     "varname": "obj-ts-label"
                 }
             },
@@ -4597,7 +4597,7 @@
                         160.0,
                         20.0
                     ],
-                    "text": "\u2014\u2014 ROOT SPRING \u2014\u2014",
+                    "text": "—— ROOT SPRING ——",
                     "varname": "obj-rsp-label"
                 }
             },
@@ -4854,7 +4854,7 @@
                         110.0,
                         18.0
                     ],
-                    "text": "MIDI CC \u2192 offset",
+                    "text": "MIDI CC → offset",
                     "varname": "obj-rcc-l"
                 }
             },
@@ -4947,7 +4947,7 @@
                         160.0,
                         20.0
                     ],
-                    "text": "\u2014\u2014 ARPEGGIATOR \u2014\u2014",
+                    "text": "—— ARPEGGIATOR ——",
                     "varname": "obj-arp-label"
                 }
             },
@@ -5529,7 +5529,7 @@
                         123.0,
                         20.0
                     ],
-                    "text": "\u2014\u2014 ARP RATE \u2014\u2014",
+                    "text": "—— ARP RATE ——",
                     "varname": "obj-div-label"
                 }
             },
@@ -6143,7 +6143,7 @@
                         60.0,
                         18.0
                     ],
-                    "text": "\u2190 activate",
+                    "text": "← activate",
                     "varname": "obj-ugrid-hint"
                 }
             },
@@ -6219,7 +6219,7 @@
                         180.0,
                         20.0
                     ],
-                    "text": "\u2014\u2014 ADSR ENVELOPE \u2014\u2014",
+                    "text": "—— ADSR ENVELOPE ——",
                     "varname": "obj-adsr-label"
                 }
             },
@@ -6549,7 +6549,7 @@
                             },
                             {
                                 "box": {
-                                    "code": "// CHAOS RESONATOR \u2014 5 Attractors -> 6 Waveguide Resonators\n// Lorenz, Rossler, Chua, Halvorsen, Aizawa.\n// 3 combine modes: Blend, Modulate, Route.\n// 19 African tuning systems. Arpeggiator. ADSR envelope.\n// BPM-synced arp. African rhythm patterns. Mute.\n// Scale-degree transpose. MIDI sync reset.\n// tanh() in feedback = self-limiting.\n\n// === Declarations ===\nParam sigma(10);\nParam rho(28);\nParam beta(2.667);\nParam lorenz_dt(0.0012);\nParam chaos_gain(0.05);\nParam root(55);\nParam flex(0.5);\nParam tuning_system(0);\nParam master_gain(0.7);\nParam deg1(0);\nParam deg2(1);\nParam deg3(3);\nParam deg4(4);\nParam deg5(0);\nParam deg6(2);\nParam oct1(-1);\nParam oct2(0);\nParam oct3(0);\nParam oct4(1);\nParam oct5(-1);\nParam oct6(1);\nParam glide(0.001);\nParam reset(0);\nParam arp_mode(20);\nParam arp_rate(2);\nParam arp_bpm(120);\nParam arp_div(2);\nParam inversion(0);\nParam env_attack(0.005);\nParam env_decay(0.05);\nParam env_sustain(0.8);\nParam env_release(0.1);\nParam mute(0);\nParam transpose(0);\nParam arp_reset(0);\nParam clk_enable(0);\nParam user_pat_len(16);\nParam poly_mode(0);\nParam poly_len1(16); Param poly_len2(16); Param poly_len3(16);\nParam poly_len4(16); Param poly_len5(16); Param poly_len6(16);\nParam poly_rate1(2); Param poly_rate2(2); Param poly_rate3(2);\nParam poly_rate4(2); Param poly_rate5(2); Param poly_rate6(2);\nParam us0(63); Param us1(0); Param us2(0); Param us3(0);\nParam us4(63); Param us5(0); Param us6(0); Param us7(0);\nParam us8(63); Param us9(0); Param us10(0); Param us11(0);\nParam us12(63); Param us13(0); Param us14(0); Param us15(0);\nParam brightness(0);\nParam register(0);\nParam bass_oct(0);\nParam treble_oct(0);\nParam smooth_speed(1);\nParam sub_amt(0);\nParam sub_drive(0.0);\nParam sub_drone(0);\nParam sub_oct(-1);\nParam sub_chaos(0);\nParam eucl_pulses(3);\nParam eucl_steps(8);\nParam att_sel(0);\nParam att_b_sel(-1);\nParam combine_mode(0);\nParam blend_mix(0.5);\nParam mod_depth(0.5);\nParam root_offset(0);\nParam root_mode(0);\nParam root_return(0.5);\nParam ross_c(5.7);\nParam chua_alpha(15.6);\nParam halv_a(1.89);\nParam aiz_c(0.6);\nParam aiz_d(3.5);\nData tuning_table(190);\nData arp_pat_data(240);\nHistory init_done(0);\nHistory s_sigma(10);\nHistory s_rho(28);\nHistory s_beta(2.667);\nHistory s_dt(0.0012);\nHistory s_cg(0.03);\nHistory lx(0.1);\nHistory ly(0);\nHistory lz(0);\nHistory r1_pd(0);\nHistory r2_pd(0);\nHistory r3_pd(0);\nHistory r4_pd(0);\nHistory r5_pd(0);\nHistory r6_pd(0);\nHistory r1_sdl(0);\nHistory r2_sdl(0);\nHistory r3_sdl(0);\nHistory r4_sdl(0);\nHistory r5_sdl(0);\nHistory r6_sdl(0);\nHistory arp_phase(0);\nHistory arp_step(0);\nHistory arp_dir(1);\nHistory ps1(0); History ps2(0); History ps3(0);\nHistory ps4(0); History ps5(0); History ps6(0);\nHistory pph1(0); History pph2(0); History pph3(0);\nHistory pph4(0); History pph5(0); History pph6(0);\nHistory v_amp1(0);\nHistory v_amp2(0);\nHistory v_amp3(0);\nHistory v_amp4(0);\nHistory v_amp5(0);\nHistory v_amp6(0);\nHistory pk1(0);\nHistory pk2(0);\nHistory pk3(0);\nHistory pk4(0);\nHistory pk5(0);\nHistory pk6(0);\nHistory mute_s(0);\nHistory r_sub_pd(0);\nHistory r_sub_sdl(0);\nHistory sub_env_h(0);\nHistory rx(1); History ry(0); History rz(0);\nHistory chx(0.1); History chy(0); History chz(0);\nHistory hx(1); History hy(0); History hz(0);\nHistory aix(0.1); History aiy(0); History aiz_h(0);\nHistory bx_h(0); History by_h(0); History bz_h(0);\nHistory s_root_off(0);\nHistory clk_prev(0);\nHistory clk_count(0);\nHistory clk_bpm(120);\nDelay r1_d(48000);\nDelay r2_d(48000);\nDelay r3_d(48000);\nDelay r4_d(48000);\nDelay r5_d(48000);\nDelay r6_d(48000);\nDelay r_sub(48000);\n\n// === INIT (tuning tables + rhythm patterns, runs once) ===\nif (init_done < 0.5) {\n    // 0: Yoruba Pentatonic (Pythagorean base, flex at runtime)\n    poke(tuning_table, 5, 0, 0);\n    poke(tuning_table, 1.0, 1, 0);\n    poke(tuning_table, 1.125, 2, 0);\n    poke(tuning_table, 1.265625, 3, 0);\n    poke(tuning_table, 1.5, 4, 0);\n    poke(tuning_table, 1.6875, 5, 0);\n    // 1: Dundun 3-Tone (0, 200, 400c)\n    poke(tuning_table, 3, 10, 0);\n    poke(tuning_table, 1.0, 11, 0);\n    poke(tuning_table, 1.12246, 12, 0);\n    poke(tuning_table, 1.25992, 13, 0);\n    // 2: Balafon Equi-Pentatonic (0, 220, 460, 690, 930c)\n    poke(tuning_table, 5, 20, 0);\n    poke(tuning_table, 1.0, 21, 0);\n    poke(tuning_table, 1.13534, 22, 0);\n    poke(tuning_table, 1.30486, 23, 0);\n    poke(tuning_table, 1.49180, 24, 0);\n    poke(tuning_table, 1.71002, 25, 0);\n    // 3: Equi-Heptatonic 7-TET\n    poke(tuning_table, 7, 30, 0);\n    poke(tuning_table, 1.0, 31, 0);\n    poke(tuning_table, 1.10409, 32, 0);\n    poke(tuning_table, 1.21901, 33, 0);\n    poke(tuning_table, 1.34590, 34, 0);\n    poke(tuning_table, 1.48599, 35, 0);\n    poke(tuning_table, 1.64059, 36, 0);\n    poke(tuning_table, 1.81145, 37, 0);\n    // 4: BaAka/Pygmy 5-TET (0, 240, 480, 720, 960c)\n    poke(tuning_table, 5, 40, 0);\n    poke(tuning_table, 1.0, 41, 0);\n    poke(tuning_table, 1.14870, 42, 0);\n    poke(tuning_table, 1.31951, 43, 0);\n    poke(tuning_table, 1.51572, 44, 0);\n    poke(tuning_table, 1.74110, 45, 0);\n    // 5: Shona Nyamaropa (0, 180, 380, 500, 700, 880, 1080c)\n    poke(tuning_table, 7, 50, 0);\n    poke(tuning_table, 1.0, 51, 0);\n    poke(tuning_table, 1.10957, 52, 0);\n    poke(tuning_table, 1.24574, 53, 0);\n    poke(tuning_table, 1.33484, 54, 0);\n    poke(tuning_table, 1.49831, 55, 0);\n    poke(tuning_table, 1.65948, 56, 0);\n    poke(tuning_table, 1.86121, 57, 0);\n    // 6: Shona Gandanga (0, 100, 300, 500, 700, 800, 1000c)\n    poke(tuning_table, 7, 60, 0);\n    poke(tuning_table, 1.0, 61, 0);\n    poke(tuning_table, 1.05946, 62, 0);\n    poke(tuning_table, 1.18921, 63, 0);\n    poke(tuning_table, 1.33484, 64, 0);\n    poke(tuning_table, 1.49831, 65, 0);\n    poke(tuning_table, 1.58740, 66, 0);\n    poke(tuning_table, 1.78180, 67, 0);\n    // 7: Kora Silaba (0, 200, 385, 500, 700, 900, 1085c)\n    poke(tuning_table, 7, 70, 0);\n    poke(tuning_table, 1.0, 71, 0);\n    poke(tuning_table, 1.12246, 72, 0);\n    poke(tuning_table, 1.24915, 73, 0);\n    poke(tuning_table, 1.33484, 74, 0);\n    poke(tuning_table, 1.49831, 75, 0);\n    poke(tuning_table, 1.68179, 76, 0);\n    poke(tuning_table, 1.86459, 77, 0);\n    // 8: Kora Sauta (0, 185, 405, 605, 700, 885, 1105c)\n    poke(tuning_table, 7, 80, 0);\n    poke(tuning_table, 1.0, 81, 0);\n    poke(tuning_table, 1.11278, 82, 0);\n    poke(tuning_table, 1.26330, 83, 0);\n    poke(tuning_table, 1.41747, 84, 0);\n    poke(tuning_table, 1.49831, 85, 0);\n    poke(tuning_table, 1.66230, 86, 0);\n    poke(tuning_table, 1.88800, 87, 0);\n    // 9: Ethiopian Tizita Major (0, 200, 400, 700, 900c)\n    poke(tuning_table, 5, 90, 0);\n    poke(tuning_table, 1.0, 91, 0);\n    poke(tuning_table, 1.12246, 92, 0);\n    poke(tuning_table, 1.25992, 93, 0);\n    poke(tuning_table, 1.49831, 94, 0);\n    poke(tuning_table, 1.68179, 95, 0);\n    // 10: Ethiopian Tizita Minor (0, 200, 300, 700, 800c)\n    poke(tuning_table, 5, 100, 0);\n    poke(tuning_table, 1.0, 101, 0);\n    poke(tuning_table, 1.12246, 102, 0);\n    poke(tuning_table, 1.18921, 103, 0);\n    poke(tuning_table, 1.49831, 104, 0);\n    poke(tuning_table, 1.58740, 105, 0);\n    // 11: Ethiopian Bati (0, 200, 500, 700, 900c)\n    poke(tuning_table, 5, 110, 0);\n    poke(tuning_table, 1.0, 111, 0);\n    poke(tuning_table, 1.12246, 112, 0);\n    poke(tuning_table, 1.33484, 113, 0);\n    poke(tuning_table, 1.49831, 114, 0);\n    poke(tuning_table, 1.68179, 115, 0);\n    // 12: Ethiopian Ambassel (0, 200, 400, 700, 800c)\n    poke(tuning_table, 5, 120, 0);\n    poke(tuning_table, 1.0, 121, 0);\n    poke(tuning_table, 1.12246, 122, 0);\n    poke(tuning_table, 1.25992, 123, 0);\n    poke(tuning_table, 1.49831, 124, 0);\n    poke(tuning_table, 1.58740, 125, 0);\n    // 13: Ethiopian Anchihoye (0, 100, 500, 600, 900c)\n    poke(tuning_table, 5, 130, 0);\n    poke(tuning_table, 1.0, 131, 0);\n    poke(tuning_table, 1.05946, 132, 0);\n    poke(tuning_table, 1.33484, 133, 0);\n    poke(tuning_table, 1.41421, 134, 0);\n    poke(tuning_table, 1.68179, 135, 0);\n    // 14: Bugandan Amadinda (0, 240, 480, 720, 960c)\n    poke(tuning_table, 5, 140, 0);\n    poke(tuning_table, 1.0, 141, 0);\n    poke(tuning_table, 1.14870, 142, 0);\n    poke(tuning_table, 1.31951, 143, 0);\n    poke(tuning_table, 1.51572, 144, 0);\n    poke(tuning_table, 1.74110, 145, 0);\n    // 15: Chopi Timbila (0, 175, 346, 519, 681, 854, 1025c)\n    poke(tuning_table, 7, 150, 0);\n    poke(tuning_table, 1.0, 151, 0);\n    poke(tuning_table, 1.10653, 152, 0);\n    poke(tuning_table, 1.22082, 153, 0);\n    poke(tuning_table, 1.34890, 154, 0);\n    poke(tuning_table, 1.48160, 155, 0);\n    poke(tuning_table, 1.63720, 156, 0);\n    poke(tuning_table, 1.80699, 157, 0);\n    // 16: San Musical Bow (0, 200, 386, 498, 702, 884c)\n    poke(tuning_table, 6, 160, 0);\n    poke(tuning_table, 1.0, 161, 0);\n    poke(tuning_table, 1.12246, 162, 0);\n    poke(tuning_table, 1.24984, 163, 0);\n    poke(tuning_table, 1.33322, 164, 0);\n    poke(tuning_table, 1.50000, 165, 0);\n    poke(tuning_table, 1.66212, 166, 0);\n    // 17: Wagogo Ilimba \u2014 harmonics 4-9\n    poke(tuning_table, 6, 170, 0);\n    poke(tuning_table, 1.0, 171, 0);\n    poke(tuning_table, 1.25, 172, 0);\n    poke(tuning_table, 1.5, 173, 0);\n    poke(tuning_table, 1.75, 174, 0);\n    poke(tuning_table, 2.0, 175, 0);\n    poke(tuning_table, 2.25, 176, 0);\n    // 18: Igbo Pentatonic (0, 200, 386, 702, 884c)\n    poke(tuning_table, 5, 180, 0);\n    poke(tuning_table, 1.0, 181, 0);\n    poke(tuning_table, 1.12246, 182, 0);\n    poke(tuning_table, 1.24984, 183, 0);\n    poke(tuning_table, 1.50000, 184, 0);\n    poke(tuning_table, 1.66212, 185, 0);\n\n    // === RHYTHM PATTERN DATA ===\n    // Each pattern: [length, mask0, mask1, ...] at offset = patIdx * 16\n    // Voice bitmask: v1=1, v2=2, v3=4, v4=8, v5=16, v6=32\n\n    // Pattern 0 \u2014 Polyrhythm 3:2 (arp_mode 6, offset 0)\n    poke(arp_pat_data, 6, 0, 0);\n    poke(arp_pat_data, 63, 1, 0);\n    poke(arp_pat_data, 0, 2, 0);\n    poke(arp_pat_data, 21, 3, 0);\n    poke(arp_pat_data, 42, 4, 0);\n    poke(arp_pat_data, 21, 5, 0);\n    poke(arp_pat_data, 0, 6, 0);\n\n    // Pattern 1 \u2014 Triplet (arp_mode 7, offset 16)\n    poke(arp_pat_data, 3, 16, 0);\n    poke(arp_pat_data, 3, 17, 0);\n    poke(arp_pat_data, 12, 18, 0);\n    poke(arp_pat_data, 48, 19, 0);\n\n    // Pattern 2 \u2014 Bembe 12/8 bell (arp_mode 8, offset 32)\n    poke(arp_pat_data, 12, 32, 0);\n    poke(arp_pat_data, 1, 33, 0);\n    poke(arp_pat_data, 0, 34, 0);\n    poke(arp_pat_data, 4, 35, 0);\n    poke(arp_pat_data, 0, 36, 0);\n    poke(arp_pat_data, 2, 37, 0);\n    poke(arp_pat_data, 8, 38, 0);\n    poke(arp_pat_data, 0, 39, 0);\n    poke(arp_pat_data, 16, 40, 0);\n    poke(arp_pat_data, 0, 41, 0);\n    poke(arp_pat_data, 32, 42, 0);\n    poke(arp_pat_data, 0, 43, 0);\n    poke(arp_pat_data, 4, 44, 0);\n\n    // Pattern 3 \u2014 Shiko (arp_mode 9, offset 48)\n    poke(arp_pat_data, 12, 48, 0);\n    poke(arp_pat_data, 17, 49, 0);\n    poke(arp_pat_data, 0, 50, 0);\n    poke(arp_pat_data, 0, 51, 0);\n    poke(arp_pat_data, 8, 52, 0);\n    poke(arp_pat_data, 0, 53, 0);\n    poke(arp_pat_data, 0, 54, 0);\n    poke(arp_pat_data, 6, 55, 0);\n    poke(arp_pat_data, 0, 56, 0);\n    poke(arp_pat_data, 0, 57, 0);\n    poke(arp_pat_data, 0, 58, 0);\n    poke(arp_pat_data, 32, 59, 0);\n    poke(arp_pat_data, 0, 60, 0);\n\n    // Pattern 4 \u2014 Call & Response (arp_mode 10, offset 64)\n    poke(arp_pat_data, 8, 64, 0);\n    poke(arp_pat_data, 19, 65, 0);\n    poke(arp_pat_data, 19, 66, 0);\n    poke(arp_pat_data, 0, 67, 0);\n    poke(arp_pat_data, 0, 68, 0);\n    poke(arp_pat_data, 44, 69, 0);\n    poke(arp_pat_data, 44, 70, 0);\n    poke(arp_pat_data, 0, 71, 0);\n    poke(arp_pat_data, 0, 72, 0);\n\n    // Pattern 5 \u2014 Gahu (arp_mode 11, offset 80, length 15)\n    // Ewe social dance bell: x..x..x.x..x..x (15 steps)\n    poke(arp_pat_data, 15, 80, 0);\n    poke(arp_pat_data, 17, 81, 0);   // step 0: v1+v5 bass+metallic\n    poke(arp_pat_data, 0, 82, 0);\n    poke(arp_pat_data, 0, 83, 0);\n    poke(arp_pat_data, 4, 84, 0);    // step 3: v3 mid\n    poke(arp_pat_data, 0, 85, 0);\n    poke(arp_pat_data, 0, 86, 0);\n    poke(arp_pat_data, 10, 87, 0);   // step 6: v2+v4 low-mid+mid-high\n    poke(arp_pat_data, 0, 88, 0);\n    poke(arp_pat_data, 32, 89, 0);   // step 8: v6 crystal\n    poke(arp_pat_data, 0, 90, 0);\n    poke(arp_pat_data, 0, 91, 0);\n    poke(arp_pat_data, 5, 92, 0);    // step 11: v1+v3 bass+mid\n    poke(arp_pat_data, 0, 93, 0);\n    poke(arp_pat_data, 0, 94, 0);\n    poke(arp_pat_data, 48, 95, 0);   // step 14: v5+v6 metallic+crystal\n\n    // Pattern 6 \u2014 Son Clave 3:2 (arp_mode 12, offset 96, length 15)\n    // Foundational Afro-Cuban rhythm: x..x..x...x.x.. (15 steps)\n    poke(arp_pat_data, 15, 96, 0);\n    poke(arp_pat_data, 19, 97, 0);   // step 0: v1+v2+v5 low body\n    poke(arp_pat_data, 0, 98, 0);\n    poke(arp_pat_data, 0, 99, 0);\n    poke(arp_pat_data, 12, 100, 0);  // step 3: v3+v4 mid crack\n    poke(arp_pat_data, 0, 101, 0);\n    poke(arp_pat_data, 0, 102, 0);\n    poke(arp_pat_data, 32, 103, 0);  // step 6: v6 crystal\n    poke(arp_pat_data, 0, 104, 0);\n    poke(arp_pat_data, 0, 105, 0);\n    poke(arp_pat_data, 0, 106, 0);\n    poke(arp_pat_data, 5, 107, 0);   // step 10: v1+v3 bass+mid\n    poke(arp_pat_data, 0, 108, 0);\n    poke(arp_pat_data, 42, 109, 0);  // step 12: v2+v4+v6 full spread\n    poke(arp_pat_data, 0, 110, 0);\n    poke(arp_pat_data, 0, 111, 0);\n\n    // Pattern 7 \u2014 Fume Fume (arp_mode 13, offset 112, length 12)\n    // Ewe ceremonial bell: x.x..x.x..x. (12 steps)\n    poke(arp_pat_data, 12, 112, 0);\n    poke(arp_pat_data, 3, 113, 0);   // step 0: v1+v2 bass pair\n    poke(arp_pat_data, 0, 114, 0);\n    poke(arp_pat_data, 24, 115, 0);  // step 2: v4+v5 mid-high pair\n    poke(arp_pat_data, 0, 116, 0);\n    poke(arp_pat_data, 0, 117, 0);\n    poke(arp_pat_data, 36, 118, 0);  // step 5: v3+v6 mid+crystal\n    poke(arp_pat_data, 0, 119, 0);\n    poke(arp_pat_data, 17, 120, 0);  // step 7: v1+v5 bass+metallic\n    poke(arp_pat_data, 0, 121, 0);\n    poke(arp_pat_data, 0, 122, 0);\n    poke(arp_pat_data, 14, 123, 0);  // step 10: v2+v3+v4 mid spread\n    poke(arp_pat_data, 0, 124, 0);\n\n    // Pattern 8 \u2014 Kassa (arp_mode 14, offset 128, length 12)\n    // Manding harvest dance: xx.x.xx.x.x. (12 steps) \u2014 dense, energetic\n    poke(arp_pat_data, 12, 128, 0);\n    poke(arp_pat_data, 17, 129, 0);  // step 0: v1+v5 bass+metallic\n    poke(arp_pat_data, 4, 130, 0);   // step 1: v3 mid\n    poke(arp_pat_data, 0, 131, 0);\n    poke(arp_pat_data, 34, 132, 0);  // step 3: v2+v6 low-mid+crystal\n    poke(arp_pat_data, 0, 133, 0);\n    poke(arp_pat_data, 8, 134, 0);   // step 5: v4 mid-high\n    poke(arp_pat_data, 5, 135, 0);   // step 6: v1+v3 bass+mid\n    poke(arp_pat_data, 0, 136, 0);\n    poke(arp_pat_data, 48, 137, 0);  // step 8: v5+v6 metallic+crystal\n    poke(arp_pat_data, 0, 138, 0);\n    poke(arp_pat_data, 10, 139, 0);  // step 10: v2+v4 low-mid+mid-high\n    poke(arp_pat_data, 0, 140, 0);\n\n    // === LUSOPHONE / DIASPORA PATTERNS ===\n\n    // Pattern 9 \u2014 Kuduro (arp_mode 15, offset 144, length 15)\n    // Angolan: heavy kick pattern, syncopated. x..x..x.x..x..x at 140 BPM\n    poke(arp_pat_data, 15, 144, 0);\n    poke(arp_pat_data, 3, 145, 0);   // step 0: v1+v2 bass+body (kick)\n    poke(arp_pat_data, 0, 146, 0);\n    poke(arp_pat_data, 0, 147, 0);\n    poke(arp_pat_data, 3, 148, 0);   // step 3: kick\n    poke(arp_pat_data, 0, 149, 0);\n    poke(arp_pat_data, 0, 150, 0);\n    poke(arp_pat_data, 12, 151, 0);  // step 6: v3+v4 mid+transient (snare)\n    poke(arp_pat_data, 3, 152, 0);   // step 7: kick (syncopation)\n    poke(arp_pat_data, 0, 153, 0);\n    poke(arp_pat_data, 0, 154, 0);\n    poke(arp_pat_data, 3, 155, 0);   // step 10: kick\n    poke(arp_pat_data, 0, 156, 0);\n    poke(arp_pat_data, 0, 157, 0);\n    poke(arp_pat_data, 12, 158, 0);  // step 13: snare\n    poke(arp_pat_data, 3, 159, 0);   // step 14: kick (syncopation)\n\n    // Pattern 10 \u2014 Semba (arp_mode 16, offset 160, length 15)\n    // Angolan: flowing, 2-bar feel, bass-heavy with clave accent\n    poke(arp_pat_data, 15, 160, 0);\n    poke(arp_pat_data, 1, 161, 0);   // step 0: v1 bass\n    poke(arp_pat_data, 0, 162, 0);\n    poke(arp_pat_data, 0, 163, 0);\n    poke(arp_pat_data, 6, 164, 0);   // step 3: v2+v3 body+metallic\n    poke(arp_pat_data, 0, 165, 0);\n    poke(arp_pat_data, 1, 166, 0);   // step 5: v1 bass\n    poke(arp_pat_data, 0, 167, 0);\n    poke(arp_pat_data, 48, 168, 0);  // step 7: v5+v6 shimmer\n    poke(arp_pat_data, 1, 169, 0);   // step 8: v1 bass\n    poke(arp_pat_data, 0, 170, 0);\n    poke(arp_pat_data, 8, 171, 0);   // step 10: v4 transient\n    poke(arp_pat_data, 0, 172, 0);\n    poke(arp_pat_data, 6, 173, 0);   // step 12: v2+v3 body+metallic\n    poke(arp_pat_data, 0, 174, 0);\n    poke(arp_pat_data, 1, 175, 0);   // step 14: v1 bass\n\n    // Pattern 11 \u2014 Kizomba (arp_mode 17, offset 176, length 8)\n    // Angolan slow: intimate bass pulse, minimal percussion. 90 BPM.\n    poke(arp_pat_data, 8, 176, 0);\n    poke(arp_pat_data, 3, 177, 0);   // step 0: v1+v2 bass+body\n    poke(arp_pat_data, 0, 178, 0);\n    poke(arp_pat_data, 48, 179, 0);  // step 2: v5+v6 shimmer\n    poke(arp_pat_data, 0, 180, 0);\n    poke(arp_pat_data, 3, 181, 0);   // step 4: bass+body\n    poke(arp_pat_data, 0, 182, 0);\n    poke(arp_pat_data, 4, 183, 0);   // step 6: v3 metallic\n    poke(arp_pat_data, 0, 184, 0);\n\n    // Pattern 12 \u2014 Marrabenta (arp_mode 18, offset 192, length 12)\n    // Mozambican: 12/8 guitar-derived, bright and driving\n    poke(arp_pat_data, 12, 192, 0);\n    poke(arp_pat_data, 5, 193, 0);   // step 0: v1+v3 bass+metallic\n    poke(arp_pat_data, 0, 194, 0);\n    poke(arp_pat_data, 32, 195, 0);  // step 2: v6 crystal\n    poke(arp_pat_data, 2, 196, 0);   // step 3: v2 body\n    poke(arp_pat_data, 0, 197, 0);\n    poke(arp_pat_data, 16, 198, 0);  // step 5: v5 drone\n    poke(arp_pat_data, 5, 199, 0);   // step 6: v1+v3 bass+metallic\n    poke(arp_pat_data, 0, 200, 0);\n    poke(arp_pat_data, 8, 201, 0);   // step 8: v4 transient\n    poke(arp_pat_data, 2, 202, 0);   // step 9: v2 body\n    poke(arp_pat_data, 0, 203, 0);\n    poke(arp_pat_data, 48, 204, 0);  // step 11: v5+v6 shimmer\n\n    init_done = 1;\n}\n\n// === TUNING SETUP ===\nts = clamp(floor(tuning_system), 0, 18);\nts_base = ts * 10;\nts_size = max(peek(tuning_table, ts_base, 0), 1);\nj0 = 1.0; j1 = 1.111111; j2 = 1.25; j3 = 1.5; j4 = 1.666667;\n\n// === INVERSION (-2 to +2) ===\ninv_off = floor(clamp(inversion, -2, 2));\ninv_up = (inv_off > 0.5) ? inv_off : 0;\ninv_dn = (inv_off < -0.5) ? inv_off : 0;\nreg = floor(clamp(register, -3, 3));\nboct = floor(clamp(bass_oct, -2, 2));\ntoct = floor(clamp(treble_oct, 0, 4));\n\n// === LORENZ PARAM SMOOTHING ===\n// 0=off (instant), 1=slow (~500ms), 2=medium (~50ms), 3=fast (~5ms)\nsm = floor(clamp(smooth_speed, 0, 3));\nsm_coeff = (sm < 0.5) ? 1.0 : (sm < 1.5) ? (1.0 - exp(-1.0 / (0.5 * samplerate))) : (sm < 2.5) ? (1.0 - exp(-1.0 / (0.05 * samplerate))) : (1.0 - exp(-1.0 / (0.005 * samplerate)));\ns_sigma = s_sigma + (sigma - s_sigma) * sm_coeff;\ns_rho = s_rho + (rho - s_rho) * sm_coeff;\ns_beta = s_beta + (beta - s_beta) * sm_coeff;\ns_dt = s_dt + (lorenz_dt - s_dt) * sm_coeff;\ns_cg = s_cg + (chaos_gain - s_cg) * sm_coeff;\n\n// === CHAOS ATTRACTOR SYSTEM ===\n\n// --- LORENZ (4x unrolled Euler) ---\nrho_mod = s_rho + in1;\ntx = lx; ty = ly; tz = lz;\ndx = s_sigma * (ty - tx); dy = tx * (rho_mod - tz) - ty; dz = tx * ty - s_beta * tz;\ntx += dx * s_dt; ty += dy * s_dt; tz += dz * s_dt;\ndx = s_sigma * (ty - tx); dy = tx * (rho_mod - tz) - ty; dz = tx * ty - s_beta * tz;\ntx += dx * s_dt; ty += dy * s_dt; tz += dz * s_dt;\ndx = s_sigma * (ty - tx); dy = tx * (rho_mod - tz) - ty; dz = tx * ty - s_beta * tz;\ntx += dx * s_dt; ty += dy * s_dt; tz += dz * s_dt;\ndx = s_sigma * (ty - tx); dy = tx * (rho_mod - tz) - ty; dz = tx * ty - s_beta * tz;\ntx += dx * s_dt; ty += dy * s_dt; tz += dz * s_dt;\nlx = (reset > 0.5) ? 0.1 : clamp(tx, -100, 100) + noise() * 0.01;\nly = (reset > 0.5) ? 0.0 : clamp(ty, -100, 100) + noise() * 0.01;\nlz = (reset > 0.5) ? 0.0 : clamp(tz, -100, 100) + noise() * 0.01;\nlor_x = lx * 0.05; lor_y = ly * 0.04; lor_z = (lz - 25) * 0.04;\n\n// --- ROSSLER (4x unrolled Euler) ---\ndt_r = 0.006;\nrtx = rx; rty = ry; rtz = rz;\nrdx = -(rty + rtz); rdy = rtx + 0.2 * rty; rdz = 0.2 + rtz * (rtx - ross_c);\nrtx += rdx*dt_r; rty += rdy*dt_r; rtz += rdz*dt_r;\nrdx = -(rty + rtz); rdy = rtx + 0.2 * rty; rdz = 0.2 + rtz * (rtx - ross_c);\nrtx += rdx*dt_r; rty += rdy*dt_r; rtz += rdz*dt_r;\nrdx = -(rty + rtz); rdy = rtx + 0.2 * rty; rdz = 0.2 + rtz * (rtx - ross_c);\nrtx += rdx*dt_r; rty += rdy*dt_r; rtz += rdz*dt_r;\nrdx = -(rty + rtz); rdy = rtx + 0.2 * rty; rdz = 0.2 + rtz * (rtx - ross_c);\nrtx += rdx*dt_r; rty += rdy*dt_r; rtz += rdz*dt_r;\nrx = (reset > 0.5) ? 1.0 : clamp(rtx, -100, 100) + noise() * 0.01;\nry = (reset > 0.5) ? 0.0 : clamp(rty, -100, 100) + noise() * 0.01;\nrz = (reset > 0.5) ? 0.0 : clamp(rtz, -100, 100) + noise() * 0.01;\nros_x = rx * 0.08; ros_y = ry * 0.08; ros_z = (rz - 12) * 0.08;\n\n// --- CHUA (4x unrolled Euler) ---\ndt_c = 0.0012;\nctx = chx; cty = chy; ctz = chz;\nch_h = -0.714 * ctx + 0.5 * (-1.143 + 0.714) * (abs(ctx + 1) - abs(ctx - 1));\ncdx = chua_alpha * (cty - ctx - ch_h); cdy = ctx - cty + ctz; cdz = -28.0 * cty;\nctx += cdx*dt_c; cty += cdy*dt_c; ctz += cdz*dt_c;\nch_h = -0.714 * ctx + 0.5 * (-1.143 + 0.714) * (abs(ctx + 1) - abs(ctx - 1));\ncdx = chua_alpha * (cty - ctx - ch_h); cdy = ctx - cty + ctz; cdz = -28.0 * cty;\nctx += cdx*dt_c; cty += cdy*dt_c; ctz += cdz*dt_c;\nch_h = -0.714 * ctx + 0.5 * (-1.143 + 0.714) * (abs(ctx + 1) - abs(ctx - 1));\ncdx = chua_alpha * (cty - ctx - ch_h); cdy = ctx - cty + ctz; cdz = -28.0 * cty;\nctx += cdx*dt_c; cty += cdy*dt_c; ctz += cdz*dt_c;\nch_h = -0.714 * ctx + 0.5 * (-1.143 + 0.714) * (abs(ctx + 1) - abs(ctx - 1));\ncdx = chua_alpha * (cty - ctx - ch_h); cdy = ctx - cty + ctz; cdz = -28.0 * cty;\nctx += cdx*dt_c; cty += cdy*dt_c; ctz += cdz*dt_c;\nchx = (reset > 0.5) ? 0.1 : clamp(ctx, -10, 10) + noise() * 0.001;\nchy = (reset > 0.5) ? 0.0 : clamp(cty, -3, 3) + noise() * 0.001;\nchz = (reset > 0.5) ? 0.0 : clamp(ctz, -20, 20) + noise() * 0.001;\nchu_x = chx * 0.4; chu_y = chy * 2.0; chu_z = chz * 0.25;\n\n// --- HALVORSEN (4x unrolled Euler) ---\ndt_h = 0.005;\nhtx = hx; hty = hy; htz = hz;\nhdx = -halv_a*htx - 4*hty - 4*htz - hty*hty;\nhdy = -halv_a*hty - 4*htz - 4*htx - htz*htz;\nhdz = -halv_a*htz - 4*htx - 4*hty - htx*htx;\nhtx += hdx*dt_h; hty += hdy*dt_h; htz += hdz*dt_h;\nhdx = -halv_a*htx - 4*hty - 4*htz - hty*hty;\nhdy = -halv_a*hty - 4*htz - 4*htx - htz*htz;\nhdz = -halv_a*htz - 4*htx - 4*hty - htx*htx;\nhtx += hdx*dt_h; hty += hdy*dt_h; htz += hdz*dt_h;\nhdx = -halv_a*htx - 4*hty - 4*htz - hty*hty;\nhdy = -halv_a*hty - 4*htz - 4*htx - htz*htz;\nhdz = -halv_a*htz - 4*htx - 4*hty - htx*htx;\nhtx += hdx*dt_h; hty += hdy*dt_h; htz += hdz*dt_h;\nhdx = -halv_a*htx - 4*hty - 4*htz - hty*hty;\nhdy = -halv_a*hty - 4*htz - 4*htx - htz*htz;\nhdz = -halv_a*htz - 4*htx - 4*hty - htx*htx;\nhtx += hdx*dt_h; hty += hdy*dt_h; htz += hdz*dt_h;\nhx = (reset > 0.5) ? 1.0 : clamp(htx, -20, 20) + noise() * 0.01;\nhy = (reset > 0.5) ? 0.0 : clamp(hty, -20, 20) + noise() * 0.01;\nhz = (reset > 0.5) ? 0.0 : clamp(htz, -20, 20) + noise() * 0.01;\nhal_x = hx * 0.1; hal_y = hy * 0.1; hal_z = hz * 0.1;\n\n// --- AIZAWA (4x unrolled Euler) ---\ndt_a = 0.006;\natx = aix; aty = aiy; atz = aiz_h;\nadx = (atz - 0.7) * atx - aiz_d * aty;\nady = aiz_d * atx + (atz - 0.7) * aty;\nar2 = atx*atx + aty*aty;\nadz = aiz_c + 0.95 * atz - atz*atz*atz / 3.0 - ar2 * (1.0 + 0.25 * atz) + 0.1 * atz * atx * atx * atx;\natx += adx*dt_a; aty += ady*dt_a; atz += adz*dt_a;\nadx = (atz - 0.7) * atx - aiz_d * aty;\nady = aiz_d * atx + (atz - 0.7) * aty;\nar2 = atx*atx + aty*aty;\nadz = aiz_c + 0.95 * atz - atz*atz*atz / 3.0 - ar2 * (1.0 + 0.25 * atz) + 0.1 * atz * atx * atx * atx;\natx += adx*dt_a; aty += ady*dt_a; atz += adz*dt_a;\nadx = (atz - 0.7) * atx - aiz_d * aty;\nady = aiz_d * atx + (atz - 0.7) * aty;\nar2 = atx*atx + aty*aty;\nadz = aiz_c + 0.95 * atz - atz*atz*atz / 3.0 - ar2 * (1.0 + 0.25 * atz) + 0.1 * atz * atx * atx * atx;\natx += adx*dt_a; aty += ady*dt_a; atz += adz*dt_a;\nadx = (atz - 0.7) * atx - aiz_d * aty;\nady = aiz_d * atx + (atz - 0.7) * aty;\nar2 = atx*atx + aty*aty;\nadz = aiz_c + 0.95 * atz - atz*atz*atz / 3.0 - ar2 * (1.0 + 0.25 * atz) + 0.1 * atz * atx * atx * atx;\natx += adx*dt_a; aty += ady*dt_a; atz += adz*dt_a;\naix = (reset > 0.5) ? 0.1 : clamp(atx, -3, 3) + noise() * 0.001;\naiy = (reset > 0.5) ? 0.0 : clamp(aty, -3, 3) + noise() * 0.001;\naiz_h = (reset > 0.5) ? 0.0 : clamp(atz, -3, 3) + noise() * 0.001;\naiz_x = aix * 0.7; aiz_y = aiy * 0.7; aiz_z = (aiz_h - 0.5) * 1.0;\n\n// --- SELECT ATTRACTOR A ---\nas = floor(clamp(att_sel, 0, 4));\nax = (as < 0.5) ? lor_x : (as < 1.5) ? ros_x : (as < 2.5) ? chu_x : (as < 3.5) ? hal_x : aiz_x;\nay = (as < 0.5) ? lor_y : (as < 1.5) ? ros_y : (as < 2.5) ? chu_y : (as < 3.5) ? hal_y : aiz_y;\naz = (as < 0.5) ? lor_z : (as < 1.5) ? ros_z : (as < 2.5) ? chu_z : (as < 3.5) ? hal_z : aiz_z;\n\n// --- SELECT ATTRACTOR B ---\nbs = floor(clamp(att_b_sel, -1, 4));\nb_active = (bs > -0.5);\nbx_raw = (bs < 0.5) ? lor_x : (bs < 1.5) ? ros_x : (bs < 2.5) ? chu_x : (bs < 3.5) ? hal_x : aiz_x;\nby_raw = (bs < 0.5) ? lor_y : (bs < 1.5) ? ros_y : (bs < 2.5) ? chu_y : (bs < 3.5) ? hal_y : aiz_y;\nbz_raw = (bs < 0.5) ? lor_z : (bs < 1.5) ? ros_z : (bs < 2.5) ? chu_z : (bs < 3.5) ? hal_z : aiz_z;\n\n// --- COMBINING MODES ---\ncm = floor(clamp(combine_mode, 0, 2));\n\n// Mode 0: BLEND \u2014 linear crossfade\nbl_x = ax * (1.0 - blend_mix) + bx_raw * blend_mix;\nbl_y = ay * (1.0 - blend_mix) + by_raw * blend_mix;\nbl_z = az * (1.0 - blend_mix) + bz_raw * blend_mix;\n\n// Mode 1: MODULATE \u2014 B shapes A (floor-limited, never zeroes)\nmod_fx = max(0.15, 1.0 + bx_h * mod_depth * 0.6);\nmod_fy = max(0.15, 1.0 + by_h * mod_depth * 0.6);\nmod_fz = max(0.15, 1.0 + bz_h * mod_depth * 0.6);\nmd_x = ax * mod_fx;\nmd_y = ay * mod_fy;\nmd_z = az * mod_fz;\nbx_h = bx_raw; by_h = by_raw; bz_h = bz_raw;\n\n// Mode 2: ROUTE \u2014 A drives voices 1-3, B drives voices 4-6 (handled at excitation)\n\n// Final combined output for voices 1-3\ncx = b_active ? ((cm < 0.5) ? bl_x : (cm < 1.5) ? md_x : ax) : ax;\ncy = b_active ? ((cm < 0.5) ? bl_y : (cm < 1.5) ? md_y : ay) : ay;\ncz = b_active ? ((cm < 0.5) ? bl_z : (cm < 1.5) ? md_z : az) : az;\n\n// Route mode: separate chaos for voices 4-6\ncx_456 = (b_active * (cm > 1.5)) ? bx_raw : cx;\ncy_456 = (b_active * (cm > 1.5)) ? by_raw : cy;\ncz_456 = (b_active * (cm > 1.5)) ? bz_raw : cz;\n\n// === ANALOG CLOCK INPUT (rising edge \u2192 BPM) ===\nclk_in = in2;\nclk_edge = (clk_in > 0.5) * (clk_prev < 0.5) * (clk_enable > 0.5);\nclk_prev = clk_in;\nclk_count = clk_edge ? 0 : clk_count + 1;\nclk_hz = clk_edge ? (samplerate / max(clk_count, 1)) : 0;\nclk_bpm = clk_edge ? clamp(clk_hz * 60.0, 20, 300) : clk_bpm;\neff_arp_bpm = (clk_enable > 0.5) ? clk_bpm : arp_bpm;\n\n// === ARPEGGIATOR (BPM sync + patterns + MIDI reset) ===\neff_rate = (arp_div > 0.01) ? (eff_arp_bpm / 60.0 * arp_div) : arp_rate;\narp_ph_new = arp_phase + eff_rate / samplerate;\narp_trig_flag = (arp_ph_new >= 1.0);\narp_phase = arp_ph_new - floor(arp_ph_new);\n\n// Pattern detection\nis_user_pat = (arp_mode > 19.5);\nis_eucl = ((arp_mode > 18.5) * (arp_mode < 19.5));\nis_pattern = (arp_mode > 5.5);\npat_idx = clamp(floor(arp_mode - 6), 0, 12);\npat_base = pat_idx * 16;\ne_steps = clamp(floor(eucl_steps), 1, 16);\npat_len = is_user_pat ? max(user_pat_len, 1) : (is_eucl ? e_steps : (is_pattern ? max(peek(arp_pat_data, pat_base, 0), 1) : 6));\n\n// Standard mode stepping\nup_s = mod(arp_step + 1, 6);\ndn_s = mod(arp_step + 5, 6);\npp_next = arp_step + arp_dir;\npp_rev_hi = (pp_next > 5);\npp_rev_lo = (pp_next < 0);\npp_new_dir = pp_rev_hi ? -1 : (pp_rev_lo ? 1 : arp_dir);\npp_s = pp_rev_hi ? 4 : (pp_rev_lo ? 1 : clamp(pp_next, 0, 5));\nrnd_s = clamp(floor(abs(noise()) * 6), 0, 5);\nstd_new_s = (arp_mode > 3.5) ? rnd_s : (arp_mode > 2.5) ? pp_s : (arp_mode > 1.5) ? dn_s : (arp_mode > 0.5) ? up_s : arp_step;\n\n// Pattern mode: sequential stepping, wraps at pat_len\npat_next_s = mod(arp_step + 1, pat_len);\n\n// Select step\nnew_s = is_pattern ? pat_next_s : std_new_s;\nnew_d = ((arp_mode > 2.5) * (arp_mode < 3.5)) ? pp_new_dir : arp_dir;\narp_step = arp_trig_flag ? new_s : arp_step;\narp_dir = arp_trig_flag ? new_d : arp_dir;\n\n// Phase reset (MIDI sync \u2014 snaps pattern to downbeat)\narp_step = (arp_reset > 0.5) ? 0 : arp_step;\narp_phase = (arp_reset > 0.5) ? 0 : arp_phase;\n\ncur = floor(arp_step);\n\n// Standard voice activation (modes 0-5)\narp_active = ((arp_mode > 0.5) * (arp_mode < 4.5));\nst1 = arp_active ? (abs(cur) < 0.5 ? 1.0 : 0.0) : 1.0;\nst2 = arp_active ? (abs(cur - 1) < 0.5 ? 1.0 : 0.0) : 1.0;\nst3 = arp_active ? (abs(cur - 2) < 0.5 ? 1.0 : 0.0) : 1.0;\nst4 = arp_active ? (abs(cur - 3) < 0.5 ? 1.0 : 0.0) : 1.0;\nst5 = arp_active ? (abs(cur - 4) < 0.5 ? 1.0 : 0.0) : 1.0;\nst6 = arp_active ? (abs(cur - 5) < 0.5 ? 1.0 : 0.0) : 1.0;\n\n// Euclidean rhythm (Bjorklund algorithm inline \u2014 threshold method)\n// A step fires if floor(k * (step+1) / n) > floor(k * step / n)\ne_pulses = clamp(floor(eucl_pulses), 0, e_steps);\ne_cur = clamp(cur, 0, e_steps - 1);\ne_hit = (floor(e_pulses * (e_cur + 1.0) / e_steps) - floor(e_pulses * e_cur / e_steps)) > 0.5;\neucl_mask = e_hit ? 63 : 0;\n\n// Polymetric: per-voice phase accumulators + independent rates\nis_poly = (poly_mode > 0.5) * is_user_pat;\nbpm_base = eff_arp_bpm / 60.0;\npph1_n = pph1 + is_poly * bpm_base * poly_rate1 / samplerate;\npt1_trig = (pph1_n >= 1.0) * is_poly;\npph1 = is_poly ? (pph1_n - floor(pph1_n)) : 0;\nps1 = pt1_trig ? mod(ps1 + 1, max(poly_len1, 1)) : ps1;\npph2_n = pph2 + is_poly * bpm_base * poly_rate2 / samplerate;\npt2_trig = (pph2_n >= 1.0) * is_poly;\npph2 = is_poly ? (pph2_n - floor(pph2_n)) : 0;\nps2 = pt2_trig ? mod(ps2 + 1, max(poly_len2, 1)) : ps2;\npph3_n = pph3 + is_poly * bpm_base * poly_rate3 / samplerate;\npt3_trig = (pph3_n >= 1.0) * is_poly;\npph3 = is_poly ? (pph3_n - floor(pph3_n)) : 0;\nps3 = pt3_trig ? mod(ps3 + 1, max(poly_len3, 1)) : ps3;\npph4_n = pph4 + is_poly * bpm_base * poly_rate4 / samplerate;\npt4_trig = (pph4_n >= 1.0) * is_poly;\npph4 = is_poly ? (pph4_n - floor(pph4_n)) : 0;\nps4 = pt4_trig ? mod(ps4 + 1, max(poly_len4, 1)) : ps4;\npph5_n = pph5 + is_poly * bpm_base * poly_rate5 / samplerate;\npt5_trig = (pph5_n >= 1.0) * is_poly;\npph5 = is_poly ? (pph5_n - floor(pph5_n)) : 0;\nps5 = pt5_trig ? mod(ps5 + 1, max(poly_len5, 1)) : ps5;\npph6_n = pph6 + is_poly * bpm_base * poly_rate6 / samplerate;\npt6_trig = (pph6_n >= 1.0) * is_poly;\npph6 = is_poly ? (pph6_n - floor(pph6_n)) : 0;\nps6 = pt6_trig ? mod(ps6 + 1, max(poly_len6, 1)) : ps6;\n// Reset poly steps on arp_reset\nps1 = (arp_reset > 0.5) ? 0 : ps1;\nps2 = (arp_reset > 0.5) ? 0 : ps2;\nps3 = (arp_reset > 0.5) ? 0 : ps3;\nps4 = (arp_reset > 0.5) ? 0 : ps4;\nps5 = (arp_reset > 0.5) ? 0 : ps5;\nps6 = (arp_reset > 0.5) ? 0 : ps6;\n\n// Bitmask lookup helper \u2014 reads usN for a given step\nucur = clamp(cur, 0, 15);\nuser_mask = (ucur<0.5)?us0:(ucur<1.5)?us1:(ucur<2.5)?us2:(ucur<3.5)?us3:(ucur<4.5)?us4:(ucur<5.5)?us5:(ucur<6.5)?us6:(ucur<7.5)?us7:(ucur<8.5)?us8:(ucur<9.5)?us9:(ucur<10.5)?us10:(ucur<11.5)?us11:(ucur<12.5)?us12:(ucur<13.5)?us13:(ucur<14.5)?us14:us15;\n\n// Per-voice poly lookups\npc1 = clamp(floor(ps1), 0, 15); pm1 = (pc1<0.5)?us0:(pc1<1.5)?us1:(pc1<2.5)?us2:(pc1<3.5)?us3:(pc1<4.5)?us4:(pc1<5.5)?us5:(pc1<6.5)?us6:(pc1<7.5)?us7:(pc1<8.5)?us8:(pc1<9.5)?us9:(pc1<10.5)?us10:(pc1<11.5)?us11:(pc1<12.5)?us12:(pc1<13.5)?us13:(pc1<14.5)?us14:us15;\npc2 = clamp(floor(ps2), 0, 15); pm2 = (pc2<0.5)?us0:(pc2<1.5)?us1:(pc2<2.5)?us2:(pc2<3.5)?us3:(pc2<4.5)?us4:(pc2<5.5)?us5:(pc2<6.5)?us6:(pc2<7.5)?us7:(pc2<8.5)?us8:(pc2<9.5)?us9:(pc2<10.5)?us10:(pc2<11.5)?us11:(pc2<12.5)?us12:(pc2<13.5)?us13:(pc2<14.5)?us14:us15;\npc3 = clamp(floor(ps3), 0, 15); pm3 = (pc3<0.5)?us0:(pc3<1.5)?us1:(pc3<2.5)?us2:(pc3<3.5)?us3:(pc3<4.5)?us4:(pc3<5.5)?us5:(pc3<6.5)?us6:(pc3<7.5)?us7:(pc3<8.5)?us8:(pc3<9.5)?us9:(pc3<10.5)?us10:(pc3<11.5)?us11:(pc3<12.5)?us12:(pc3<13.5)?us13:(pc3<14.5)?us14:us15;\npc4 = clamp(floor(ps4), 0, 15); pm4 = (pc4<0.5)?us0:(pc4<1.5)?us1:(pc4<2.5)?us2:(pc4<3.5)?us3:(pc4<4.5)?us4:(pc4<5.5)?us5:(pc4<6.5)?us6:(pc4<7.5)?us7:(pc4<8.5)?us8:(pc4<9.5)?us9:(pc4<10.5)?us10:(pc4<11.5)?us11:(pc4<12.5)?us12:(pc4<13.5)?us13:(pc4<14.5)?us14:us15;\npc5 = clamp(floor(ps5), 0, 15); pm5 = (pc5<0.5)?us0:(pc5<1.5)?us1:(pc5<2.5)?us2:(pc5<3.5)?us3:(pc5<4.5)?us4:(pc5<5.5)?us5:(pc5<6.5)?us6:(pc5<7.5)?us7:(pc5<8.5)?us8:(pc5<9.5)?us9:(pc5<10.5)?us10:(pc5<11.5)?us11:(pc5<12.5)?us12:(pc5<13.5)?us13:(pc5<14.5)?us14:us15;\npc6 = clamp(floor(ps6), 0, 15); pm6 = (pc6<0.5)?us0:(pc6<1.5)?us1:(pc6<2.5)?us2:(pc6<3.5)?us3:(pc6<4.5)?us4:(pc6<5.5)?us5:(pc6<6.5)?us6:(pc6<7.5)?us7:(pc6<8.5)?us8:(pc6<9.5)?us9:(pc6<10.5)?us10:(pc6<11.5)?us11:(pc6<12.5)?us12:(pc6<13.5)?us13:(pc6<14.5)?us14:us15;\n\n// In poly mode, each voice reads its own step; in normal, all read shared step\nmask = is_user_pat ? user_mask : (is_eucl ? eucl_mask : peek(arp_pat_data, pat_base + 1 + clamp(cur, 0, 15), 0));\nm = floor(mask);\npt1 = is_poly ? (mod(floor(pm1), 2) > 0.5) : (mod(m, 2) > 0.5);\npt2 = is_poly ? (mod(floor(pm2 / 2), 2) > 0.5) : (mod(floor(m / 2), 2) > 0.5);\npt3 = is_poly ? (mod(floor(pm3 / 4), 2) > 0.5) : (mod(floor(m / 4), 2) > 0.5);\npt4 = is_poly ? (mod(floor(pm4 / 8), 2) > 0.5) : (mod(floor(m / 8), 2) > 0.5);\npt5 = is_poly ? (mod(floor(pm5 / 16), 2) > 0.5) : (mod(floor(m / 16), 2) > 0.5);\npt6 = is_poly ? (mod(floor(pm6 / 32), 2) > 0.5) : (mod(floor(m / 32), 2) > 0.5);\n\n// Select voice activation path\nt1 = is_pattern ? pt1 : st1;\nt2 = is_pattern ? pt2 : st2;\nt3 = is_pattern ? pt3 : st3;\nt4 = is_pattern ? pt4 : st4;\nt5 = is_pattern ? pt5 : st5;\nt6 = is_pattern ? pt6 : st6;\n\n// === ADSR ENVELOPE ===\na_rate = 1.0 / max(env_attack * samplerate, 1);\nd_coeff = 1.0 - exp(-4.0 / max(env_decay * samplerate, 1));\nr_coeff = 1.0 - exp(-4.0 / max(env_release * samplerate, 1));\n\ngate1 = t1 > 0.5;\natk_ph1 = gate1 * (1.0 - pk1);\npk1 = gate1 ? min(pk1 + (v_amp1 >= 0.999), 1.0) : 0.0;\nv_amp1 = atk_ph1 ? min(v_amp1 + a_rate, 1.0) : (gate1 ? (v_amp1 + (env_sustain - v_amp1) * d_coeff) : (v_amp1 + (0.0 - v_amp1) * r_coeff));\n\ngate2 = t2 > 0.5;\natk_ph2 = gate2 * (1.0 - pk2);\npk2 = gate2 ? min(pk2 + (v_amp2 >= 0.999), 1.0) : 0.0;\nv_amp2 = atk_ph2 ? min(v_amp2 + a_rate, 1.0) : (gate2 ? (v_amp2 + (env_sustain - v_amp2) * d_coeff) : (v_amp2 + (0.0 - v_amp2) * r_coeff));\n\ngate3 = t3 > 0.5;\natk_ph3 = gate3 * (1.0 - pk3);\npk3 = gate3 ? min(pk3 + (v_amp3 >= 0.999), 1.0) : 0.0;\nv_amp3 = atk_ph3 ? min(v_amp3 + a_rate, 1.0) : (gate3 ? (v_amp3 + (env_sustain - v_amp3) * d_coeff) : (v_amp3 + (0.0 - v_amp3) * r_coeff));\n\ngate4 = t4 > 0.5;\natk_ph4 = gate4 * (1.0 - pk4);\npk4 = gate4 ? min(pk4 + (v_amp4 >= 0.999), 1.0) : 0.0;\nv_amp4 = atk_ph4 ? min(v_amp4 + a_rate, 1.0) : (gate4 ? (v_amp4 + (env_sustain - v_amp4) * d_coeff) : (v_amp4 + (0.0 - v_amp4) * r_coeff));\n\ngate5 = t5 > 0.5;\natk_ph5 = gate5 * (1.0 - pk5);\npk5 = gate5 ? min(pk5 + (v_amp5 >= 0.999), 1.0) : 0.0;\nv_amp5 = atk_ph5 ? min(v_amp5 + a_rate, 1.0) : (gate5 ? (v_amp5 + (env_sustain - v_amp5) * d_coeff) : (v_amp5 + (0.0 - v_amp5) * r_coeff));\n\ngate6 = t6 > 0.5;\natk_ph6 = gate6 * (1.0 - pk6);\npk6 = gate6 ? min(pk6 + (v_amp6 >= 0.999), 1.0) : 0.0;\nv_amp6 = atk_ph6 ? min(v_amp6 + a_rate, 1.0) : (gate6 ? (v_amp6 + (env_sustain - v_amp6) * d_coeff) : (v_amp6 + (0.0 - v_amp6) * r_coeff));\n\n// === MUTE (click-free ~5ms fade) ===\nmute_coeff = 1.0 - exp(-1.0 / (0.005 * samplerate));\nmute_s = mute_s + (mute - mute_s) * mute_coeff;\nunmute = 1.0 - mute_s;\n\n// === ROOT SPRING / LATCH SYSTEM ===\nspring_target = (root_mode > 0.5) ? root_offset : 0.0;\ntrack_c = 1.0 - exp(-1.0 / (0.01 * samplerate));\nspring_c = 1.0 - exp(-1.0 / max(root_return * samplerate, 1));\nmoving_away = abs(root_offset - spring_target) > abs(s_root_off - spring_target);\nrcoeff = moving_away ? track_c : spring_c;\ns_root_off = s_root_off + (root_offset - s_root_off) * rcoeff;\neff_root = root * pow(2.0, s_root_off / 12.0);\n\n// === Voice 1: Sub Bass (iya ilu) ===\ninv_adj1 = (oct1 < -0.5) * inv_up + (oct1 > 0.5) * inv_dn;\neff_oct1 = oct1 + inv_adj1 + reg + (oct1 < -0.5) * boct + (oct1 > 0.5) * toct;\ndeg1_eff = deg1 + transpose;\ndeg1_w = mod(floor(deg1_eff) + ts_size * 20, ts_size);\noct1_x = floor(deg1_eff / ts_size);\nr1_rat = peek(tuning_table, ts_base + 1 + deg1_w, 0);\nr1_jrat = (deg1_w<0.5)?j0:(deg1_w<1.5)?j1:(deg1_w<2.5)?j2:(deg1_w<3.5)?j3:j4;\nr1_rat = (ts < 0.5) ? (r1_rat * (1.0-flex) + r1_jrat * flex) : r1_rat;\nr1_freq = eff_root * r1_rat * pow(2.0, eff_oct1 + oct1_x);\nr1_target = samplerate / max(r1_freq, 20);\nr1_sdl = (r1_sdl < 1) ? r1_target : r1_sdl + (r1_target - r1_sdl) * glide;\nexc1 = (cx * s_cg + noise() * 0.0003) * v_amp1 * unmute;\nr1_del = r1_d.read(r1_sdl);\nr1_avg = (r1_del + r1_pd) * 0.5;\nr1_pd = r1_del;\nr1_b = clamp(0.2 + brightness, 0, 1);\nr1_filt = r1_del * r1_b + r1_avg * (1.0 - r1_b);\nr1_out = tanh(r1_filt) * 0.9995;\nr1_d.write(exc1 + r1_out);\n\n// === SUB-BASS WAVEGUIDE (tracks voice 1 at -1 octave) ===\n// sub_drone=1: always resonates (gqom/dance bass bed)\n// sub_drone=0: follows voice 1 with 50ms attack / 2s release (pattern pulse)\nsub_tgt = (sub_drone > 0.5) ? 1.0 : v_amp1;\nsub_up = (sub_tgt > sub_env_h);\nsub_coeff = sub_up ? (1.0 - exp(-1.0 / (0.05 * samplerate))) : (1.0 - exp(-1.0 / (2.0 * samplerate)));\nsub_env_h = sub_env_h + (sub_tgt - sub_env_h) * sub_coeff;\nsub_freq = r1_freq * pow(2.0, sub_oct);\nsub_target = samplerate / max(sub_freq, 15);\nr_sub_sdl = (r_sub_sdl < 1) ? sub_target : r_sub_sdl + (sub_target - r_sub_sdl) * glide;\n// sub_chaos: 0=normal (voice1 excitation), 1=direct chaos (dirtier, for gqom)\nexc_sub_clean = cx * s_cg * sub_env_h * unmute * 1.5;\nexc_sub_chaos = (cx * cx + cy * cy + cz * cz) * s_cg * sub_env_h * unmute * 3.0;\nexc_sub = exc_sub_clean * (1.0 - sub_chaos) + exc_sub_chaos * sub_chaos;\nsub_del = r_sub.read(r_sub_sdl);\nsub_avg = (sub_del + r_sub_pd) * 0.5;\nr_sub_pd = sub_del;\nsub_filt = sub_del * 0.1 + sub_avg * 0.9;\nsub_out = tanh(sub_filt) * 0.99995;\nr_sub.write(exc_sub + sub_out);\n\n// === Voice 2: Body (omele) ===\ninv_adj2 = (oct2 < -0.5) * inv_up + (oct2 > 0.5) * inv_dn;\neff_oct2 = oct2 + inv_adj2 + reg + (oct2 < -0.5) * boct + (oct2 > 0.5) * toct;\ndeg2_eff = deg2 + transpose;\ndeg2_w = mod(floor(deg2_eff) + ts_size * 20, ts_size);\noct2_x = floor(deg2_eff / ts_size);\nr2_rat = peek(tuning_table, ts_base + 1 + deg2_w, 0);\nr2_jrat = (deg2_w<0.5)?j0:(deg2_w<1.5)?j1:(deg2_w<2.5)?j2:(deg2_w<3.5)?j3:j4;\nr2_rat = (ts < 0.5) ? (r2_rat * (1.0-flex) + r2_jrat * flex) : r2_rat;\nr2_freq = eff_root * r2_rat * pow(2.0, eff_oct2 + oct2_x);\nr2_target = samplerate / max(r2_freq, 20);\nr2_sdl = (r2_sdl < 1) ? r2_target : r2_sdl + (r2_target - r2_sdl) * glide;\nexc2 = (cy * s_cg + noise() * 0.0003) * v_amp2 * unmute;\nr2_del = r2_d.read(r2_sdl);\nr2_avg = (r2_del + r2_pd) * 0.5;\nr2_pd = r2_del;\nr2_b = clamp(0.4 + brightness, 0, 1);\nr2_filt = r2_del * r2_b + r2_avg * (1.0 - r2_b);\nr2_out = tanh(r2_filt) * 0.998;\nr2_d.write(exc2 + r2_out);\n\n// === Voice 3: Metallic (ogene) ===\ninv_adj3 = (oct3 < -0.5) * inv_up + (oct3 > 0.5) * inv_dn;\neff_oct3 = oct3 + inv_adj3 + reg + (oct3 < -0.5) * boct + (oct3 > 0.5) * toct;\ndeg3_eff = deg3 + transpose;\ndeg3_w = mod(floor(deg3_eff) + ts_size * 20, ts_size);\noct3_x = floor(deg3_eff / ts_size);\nr3_rat = peek(tuning_table, ts_base + 1 + deg3_w, 0);\nr3_jrat = (deg3_w<0.5)?j0:(deg3_w<1.5)?j1:(deg3_w<2.5)?j2:(deg3_w<3.5)?j3:j4;\nr3_rat = (ts < 0.5) ? (r3_rat * (1.0-flex) + r3_jrat * flex) : r3_rat;\nr3_freq = eff_root * r3_rat * pow(2.0, eff_oct3 + oct3_x);\nr3_target = samplerate / max(r3_freq, 20);\nr3_sdl = (r3_sdl < 1) ? r3_target : r3_sdl + (r3_target - r3_sdl) * glide;\nexc3 = (cz * s_cg + noise() * 0.0003) * v_amp3 * unmute;\nr3_del = r3_d.read(r3_sdl);\nr3_avg = (r3_del + r3_pd) * 0.5;\nr3_pd = r3_del;\nr3_b = clamp(0.85 + brightness, 0, 1);\nr3_filt = r3_del * r3_b + r3_avg * (1.0 - r3_b);\nr3_out = tanh(r3_filt) * 0.9975;\nr3_d.write(exc3 + r3_out);\n\n// === Voice 4: Transient (gudugudu) ===\ninv_adj4 = (oct4 < -0.5) * inv_up + (oct4 > 0.5) * inv_dn;\neff_oct4 = oct4 + inv_adj4 + reg + (oct4 < -0.5) * boct + (oct4 > 0.5) * toct;\ndeg4_eff = deg4 + transpose;\ndeg4_w = mod(floor(deg4_eff) + ts_size * 20, ts_size);\noct4_x = floor(deg4_eff / ts_size);\nr4_rat = peek(tuning_table, ts_base + 1 + deg4_w, 0);\nr4_jrat = (deg4_w<0.5)?j0:(deg4_w<1.5)?j1:(deg4_w<2.5)?j2:(deg4_w<3.5)?j3:j4;\nr4_rat = (ts < 0.5) ? (r4_rat * (1.0-flex) + r4_jrat * flex) : r4_rat;\nr4_freq = eff_root * r4_rat * pow(2.0, eff_oct4 + oct4_x);\nr4_target = samplerate / max(r4_freq, 20);\nr4_sdl = (r4_sdl < 1) ? r4_target : r4_sdl + (r4_target - r4_sdl) * glide;\nexc4 = (cx_456 * s_cg + noise() * 0.0003) * v_amp4 * unmute;\nr4_del = r4_d.read(r4_sdl);\nr4_avg = (r4_del + r4_pd) * 0.5;\nr4_pd = r4_del;\nr4_b = clamp(0.9 + brightness, 0, 1);\nr4_filt = r4_del * r4_b + r4_avg * (1.0 - r4_b);\nr4_out = tanh(r4_filt) * 0.993;\nr4_d.write(exc4 + r4_out);\n\n// === Voice 5: Drone ===\ninv_adj5 = (oct5 < -0.5) * inv_up + (oct5 > 0.5) * inv_dn;\neff_oct5 = oct5 + inv_adj5 + reg + (oct5 < -0.5) * boct + (oct5 > 0.5) * toct;\ndeg5_eff = deg5 + transpose;\ndeg5_w = mod(floor(deg5_eff) + ts_size * 20, ts_size);\noct5_x = floor(deg5_eff / ts_size);\nr5_rat = peek(tuning_table, ts_base + 1 + deg5_w, 0);\nr5_jrat = (deg5_w<0.5)?j0:(deg5_w<1.5)?j1:(deg5_w<2.5)?j2:(deg5_w<3.5)?j3:j4;\nr5_rat = (ts < 0.5) ? (r5_rat * (1.0-flex) + r5_jrat * flex) : r5_rat;\nr5_freq = eff_root * r5_rat * pow(2.0, eff_oct5 + oct5_x);\nr5_target = samplerate / max(r5_freq, 20);\nr5_sdl = (r5_sdl < 1) ? r5_target : r5_sdl + (r5_target - r5_sdl) * glide;\nexc5 = (cy_456 * s_cg + noise() * 0.0003) * v_amp5 * unmute;\nr5_del = r5_d.read(r5_sdl);\nr5_avg = (r5_del + r5_pd) * 0.5;\nr5_pd = r5_del;\nr5_b = clamp(0.3 + brightness, 0, 1);\nr5_filt = r5_del * r5_b + r5_avg * (1.0 - r5_b);\nr5_out = tanh(r5_filt) * 0.9998;\nr5_d.write(exc5 + r5_out);\n\n// === Voice 6: Crystalline (shekere) ===\ninv_adj6 = (oct6 < -0.5) * inv_up + (oct6 > 0.5) * inv_dn;\neff_oct6 = oct6 + inv_adj6 + reg + (oct6 < -0.5) * boct + (oct6 > 0.5) * toct;\ndeg6_eff = deg6 + transpose;\ndeg6_w = mod(floor(deg6_eff) + ts_size * 20, ts_size);\noct6_x = floor(deg6_eff / ts_size);\nr6_rat = peek(tuning_table, ts_base + 1 + deg6_w, 0);\nr6_jrat = (deg6_w<0.5)?j0:(deg6_w<1.5)?j1:(deg6_w<2.5)?j2:(deg6_w<3.5)?j3:j4;\nr6_rat = (ts < 0.5) ? (r6_rat * (1.0-flex) + r6_jrat * flex) : r6_rat;\nr6_freq = eff_root * r6_rat * pow(2.0, eff_oct6 + oct6_x);\nr6_target = samplerate / max(r6_freq, 20);\nr6_sdl = (r6_sdl < 1) ? r6_target : r6_sdl + (r6_target - r6_sdl) * glide;\nexc6 = (cz_456 * s_cg + noise() * 0.0003) * v_amp6 * unmute;\nr6_del = r6_d.read(r6_sdl);\nr6_avg = (r6_del + r6_pd) * 0.5;\nr6_pd = r6_del;\nr6_b = clamp(0.95 + brightness, 0, 1);\nr6_filt = r6_del * r6_b + r6_avg * (1.0 - r6_b);\nr6_out = tanh(r6_filt) * 0.9965;\nr6_d.write(exc6 + r6_out);\n\n// === STEREO MIX (with sub-bass + drive saturation) ===\nsub_g = sub_amt;\nleft = r1_out*v_amp1*0.7 + r2_out*v_amp2*0.5 + r3_out*v_amp3*0.2 + r4_out*v_amp4*0.4 + r5_out*v_amp5*0.6 + r6_out*v_amp6*0.3 + sub_out*sub_g;\nright = r1_out*v_amp1*0.3 + r2_out*v_amp2*0.5 + r3_out*v_amp3*0.8 + r4_out*v_amp4*0.6 + r5_out*v_amp5*0.4 + r6_out*v_amp6*0.7 + sub_out*sub_g;\ndrv = max(1.0 + sub_drive, 1.0);\nout1 = tanh(left * drv) * master_gain * unmute;\nout2 = tanh(right * drv) * master_gain * unmute;\n// Attractor state outputs (for visual sync \u2014 normalized chaos XYZ)\nout3 = cx * s_cg;\nout4 = cy * s_cg;\nout5 = cz * s_cg;\n\n// === STEP POSITION OUTPUT (for visual cursor) ===\nout6 = floor(arp_step);\npoly_packed = floor(ps1) + floor(ps2) * 16 + floor(ps3) * 256 + floor(ps4) * 4096 + floor(ps5) * 65536 + floor(ps6) * 1048576;\nout7 = is_poly ? poly_packed : floor(arp_step);",
+                                    "code": "// CHAOS RESONATOR — 5 Attractors -> 6 Waveguide Resonators\n// Lorenz, Rossler, Chua, Halvorsen, Aizawa.\n// 3 combine modes: Blend, Modulate, Route.\n// 19 African tuning systems. Arpeggiator. ADSR envelope.\n// BPM-synced arp. African rhythm patterns. Mute.\n// Scale-degree transpose. MIDI sync reset.\n// tanh() in feedback = self-limiting.\n\n// === Declarations ===\nParam sigma(10);\nParam rho(28);\nParam beta(2.667);\nParam lorenz_dt(0.0012);\nParam chaos_gain(0.05);\nParam root(55);\nParam flex(0.5);\nParam tuning_system(0);\nParam master_gain(0.7);\nParam deg1(0);\nParam deg2(1);\nParam deg3(3);\nParam deg4(4);\nParam deg5(0);\nParam deg6(2);\nParam oct1(-1);\nParam oct2(0);\nParam oct3(0);\nParam oct4(1);\nParam oct5(-1);\nParam oct6(1);\nParam glide(0.001);\nParam reset(0);\nParam arp_mode(20);\nParam arp_rate(2);\nParam arp_bpm(120);\nParam arp_div(2);\nParam inversion(0);\nParam env_attack(0.005);\nParam env_decay(0.05);\nParam env_sustain(0.8);\nParam env_release(0.1);\nParam mute(0);\nParam transpose(0);\nParam arp_reset(0);\nParam clk_enable(0);\nParam user_pat_len(16);\nParam poly_mode(0);\nParam poly_len1(16); Param poly_len2(16); Param poly_len3(16);\nParam poly_len4(16); Param poly_len5(16); Param poly_len6(16);\nParam poly_rate1(2); Param poly_rate2(2); Param poly_rate3(2);\nParam poly_rate4(2); Param poly_rate5(2); Param poly_rate6(2);\nParam us0(63); Param us1(0); Param us2(0); Param us3(0);\nParam us4(63); Param us5(0); Param us6(0); Param us7(0);\nParam us8(63); Param us9(0); Param us10(0); Param us11(0);\nParam us12(63); Param us13(0); Param us14(0); Param us15(0);\nParam brightness(0);\nParam register(0);\nParam bass_oct(0);\nParam treble_oct(0);\nParam smooth_speed(1);\nParam sub_amt(0);\nParam sub_drive(0.0);\nParam sub_drone(0);\nParam sub_oct(-1);\nParam sub_chaos(0);\nParam eucl_pulses(3);\nParam eucl_steps(8);\nParam att_sel(0);\nParam att_b_sel(-1);\nParam combine_mode(0);\nParam blend_mix(0.5);\nParam mod_depth(0.5);\nParam root_offset(0);\nParam root_mode(0);\nParam root_return(0.5);\nParam ross_c(5.7);\nParam chua_alpha(15.6);\nParam halv_a(1.89);\nParam aiz_c(0.6);\nParam aiz_d(3.5);\nData tuning_table(190);\nData arp_pat_data(240);\nHistory init_done(0);\nHistory s_sigma(10);\nHistory s_rho(28);\nHistory s_beta(2.667);\nHistory s_dt(0.0012);\nHistory s_cg(0.03);\nHistory lx(0.1);\nHistory ly(0);\nHistory lz(0);\nHistory r1_pd(0);\nHistory r2_pd(0);\nHistory r3_pd(0);\nHistory r4_pd(0);\nHistory r5_pd(0);\nHistory r6_pd(0);\nHistory r1_sdl(0);\nHistory r2_sdl(0);\nHistory r3_sdl(0);\nHistory r4_sdl(0);\nHistory r5_sdl(0);\nHistory r6_sdl(0);\nHistory arp_phase(0);\nHistory arp_step(0);\nHistory arp_dir(1);\nHistory ps1(0); History ps2(0); History ps3(0);\nHistory ps4(0); History ps5(0); History ps6(0);\nHistory pph1(0); History pph2(0); History pph3(0);\nHistory pph4(0); History pph5(0); History pph6(0);\nHistory v_amp1(0);\nHistory v_amp2(0);\nHistory v_amp3(0);\nHistory v_amp4(0);\nHistory v_amp5(0);\nHistory v_amp6(0);\nHistory pk1(0);\nHistory pk2(0);\nHistory pk3(0);\nHistory pk4(0);\nHistory pk5(0);\nHistory pk6(0);\nHistory mute_s(0);\nHistory r_sub_pd(0);\nHistory r_sub_sdl(0);\nHistory sub_env_h(0);\nHistory rx(1); History ry(0); History rz(0);\nHistory chx(0.1); History chy(0); History chz(0);\nHistory hx(1); History hy(0); History hz(0);\nHistory aix(0.1); History aiy(0); History aiz_h(0);\nHistory bx_h(0); History by_h(0); History bz_h(0);\nHistory s_root_off(0);\nHistory prev_roff(0);\nHistory roff_idle(0);\nHistory clk_prev(0);\nHistory clk_count(0);\nHistory clk_bpm(120);\nDelay r1_d(48000);\nDelay r2_d(48000);\nDelay r3_d(48000);\nDelay r4_d(48000);\nDelay r5_d(48000);\nDelay r6_d(48000);\nDelay r_sub(48000);\n\n// === INIT (tuning tables + rhythm patterns, runs once) ===\nif (init_done < 0.5) {\n    // 0: Yoruba Pentatonic (Pythagorean base, flex at runtime)\n    poke(tuning_table, 5, 0, 0);\n    poke(tuning_table, 1.0, 1, 0);\n    poke(tuning_table, 1.125, 2, 0);\n    poke(tuning_table, 1.265625, 3, 0);\n    poke(tuning_table, 1.5, 4, 0);\n    poke(tuning_table, 1.6875, 5, 0);\n    // 1: Dundun 3-Tone (0, 200, 400c)\n    poke(tuning_table, 3, 10, 0);\n    poke(tuning_table, 1.0, 11, 0);\n    poke(tuning_table, 1.12246, 12, 0);\n    poke(tuning_table, 1.25992, 13, 0);\n    // 2: Balafon Equi-Pentatonic (0, 220, 460, 690, 930c)\n    poke(tuning_table, 5, 20, 0);\n    poke(tuning_table, 1.0, 21, 0);\n    poke(tuning_table, 1.13534, 22, 0);\n    poke(tuning_table, 1.30486, 23, 0);\n    poke(tuning_table, 1.49180, 24, 0);\n    poke(tuning_table, 1.71002, 25, 0);\n    // 3: Equi-Heptatonic 7-TET\n    poke(tuning_table, 7, 30, 0);\n    poke(tuning_table, 1.0, 31, 0);\n    poke(tuning_table, 1.10409, 32, 0);\n    poke(tuning_table, 1.21901, 33, 0);\n    poke(tuning_table, 1.34590, 34, 0);\n    poke(tuning_table, 1.48599, 35, 0);\n    poke(tuning_table, 1.64059, 36, 0);\n    poke(tuning_table, 1.81145, 37, 0);\n    // 4: BaAka/Pygmy 5-TET (0, 240, 480, 720, 960c)\n    poke(tuning_table, 5, 40, 0);\n    poke(tuning_table, 1.0, 41, 0);\n    poke(tuning_table, 1.14870, 42, 0);\n    poke(tuning_table, 1.31951, 43, 0);\n    poke(tuning_table, 1.51572, 44, 0);\n    poke(tuning_table, 1.74110, 45, 0);\n    // 5: Shona Nyamaropa (0, 180, 380, 500, 700, 880, 1080c)\n    poke(tuning_table, 7, 50, 0);\n    poke(tuning_table, 1.0, 51, 0);\n    poke(tuning_table, 1.10957, 52, 0);\n    poke(tuning_table, 1.24574, 53, 0);\n    poke(tuning_table, 1.33484, 54, 0);\n    poke(tuning_table, 1.49831, 55, 0);\n    poke(tuning_table, 1.65948, 56, 0);\n    poke(tuning_table, 1.86121, 57, 0);\n    // 6: Shona Gandanga (0, 100, 300, 500, 700, 800, 1000c)\n    poke(tuning_table, 7, 60, 0);\n    poke(tuning_table, 1.0, 61, 0);\n    poke(tuning_table, 1.05946, 62, 0);\n    poke(tuning_table, 1.18921, 63, 0);\n    poke(tuning_table, 1.33484, 64, 0);\n    poke(tuning_table, 1.49831, 65, 0);\n    poke(tuning_table, 1.58740, 66, 0);\n    poke(tuning_table, 1.78180, 67, 0);\n    // 7: Kora Silaba (0, 200, 385, 500, 700, 900, 1085c)\n    poke(tuning_table, 7, 70, 0);\n    poke(tuning_table, 1.0, 71, 0);\n    poke(tuning_table, 1.12246, 72, 0);\n    poke(tuning_table, 1.24915, 73, 0);\n    poke(tuning_table, 1.33484, 74, 0);\n    poke(tuning_table, 1.49831, 75, 0);\n    poke(tuning_table, 1.68179, 76, 0);\n    poke(tuning_table, 1.86459, 77, 0);\n    // 8: Kora Sauta (0, 185, 405, 605, 700, 885, 1105c)\n    poke(tuning_table, 7, 80, 0);\n    poke(tuning_table, 1.0, 81, 0);\n    poke(tuning_table, 1.11278, 82, 0);\n    poke(tuning_table, 1.26330, 83, 0);\n    poke(tuning_table, 1.41747, 84, 0);\n    poke(tuning_table, 1.49831, 85, 0);\n    poke(tuning_table, 1.66230, 86, 0);\n    poke(tuning_table, 1.88800, 87, 0);\n    // 9: Ethiopian Tizita Major (0, 200, 400, 700, 900c)\n    poke(tuning_table, 5, 90, 0);\n    poke(tuning_table, 1.0, 91, 0);\n    poke(tuning_table, 1.12246, 92, 0);\n    poke(tuning_table, 1.25992, 93, 0);\n    poke(tuning_table, 1.49831, 94, 0);\n    poke(tuning_table, 1.68179, 95, 0);\n    // 10: Ethiopian Tizita Minor (0, 200, 300, 700, 800c)\n    poke(tuning_table, 5, 100, 0);\n    poke(tuning_table, 1.0, 101, 0);\n    poke(tuning_table, 1.12246, 102, 0);\n    poke(tuning_table, 1.18921, 103, 0);\n    poke(tuning_table, 1.49831, 104, 0);\n    poke(tuning_table, 1.58740, 105, 0);\n    // 11: Ethiopian Bati (0, 200, 500, 700, 900c)\n    poke(tuning_table, 5, 110, 0);\n    poke(tuning_table, 1.0, 111, 0);\n    poke(tuning_table, 1.12246, 112, 0);\n    poke(tuning_table, 1.33484, 113, 0);\n    poke(tuning_table, 1.49831, 114, 0);\n    poke(tuning_table, 1.68179, 115, 0);\n    // 12: Ethiopian Ambassel (0, 200, 400, 700, 800c)\n    poke(tuning_table, 5, 120, 0);\n    poke(tuning_table, 1.0, 121, 0);\n    poke(tuning_table, 1.12246, 122, 0);\n    poke(tuning_table, 1.25992, 123, 0);\n    poke(tuning_table, 1.49831, 124, 0);\n    poke(tuning_table, 1.58740, 125, 0);\n    // 13: Ethiopian Anchihoye (0, 100, 500, 600, 900c)\n    poke(tuning_table, 5, 130, 0);\n    poke(tuning_table, 1.0, 131, 0);\n    poke(tuning_table, 1.05946, 132, 0);\n    poke(tuning_table, 1.33484, 133, 0);\n    poke(tuning_table, 1.41421, 134, 0);\n    poke(tuning_table, 1.68179, 135, 0);\n    // 14: Bugandan Amadinda (0, 240, 480, 720, 960c)\n    poke(tuning_table, 5, 140, 0);\n    poke(tuning_table, 1.0, 141, 0);\n    poke(tuning_table, 1.14870, 142, 0);\n    poke(tuning_table, 1.31951, 143, 0);\n    poke(tuning_table, 1.51572, 144, 0);\n    poke(tuning_table, 1.74110, 145, 0);\n    // 15: Chopi Timbila (0, 175, 346, 519, 681, 854, 1025c)\n    poke(tuning_table, 7, 150, 0);\n    poke(tuning_table, 1.0, 151, 0);\n    poke(tuning_table, 1.10653, 152, 0);\n    poke(tuning_table, 1.22082, 153, 0);\n    poke(tuning_table, 1.34890, 154, 0);\n    poke(tuning_table, 1.48160, 155, 0);\n    poke(tuning_table, 1.63720, 156, 0);\n    poke(tuning_table, 1.80699, 157, 0);\n    // 16: San Musical Bow (0, 200, 386, 498, 702, 884c)\n    poke(tuning_table, 6, 160, 0);\n    poke(tuning_table, 1.0, 161, 0);\n    poke(tuning_table, 1.12246, 162, 0);\n    poke(tuning_table, 1.24984, 163, 0);\n    poke(tuning_table, 1.33322, 164, 0);\n    poke(tuning_table, 1.50000, 165, 0);\n    poke(tuning_table, 1.66212, 166, 0);\n    // 17: Wagogo Ilimba — harmonics 4-9\n    poke(tuning_table, 6, 170, 0);\n    poke(tuning_table, 1.0, 171, 0);\n    poke(tuning_table, 1.25, 172, 0);\n    poke(tuning_table, 1.5, 173, 0);\n    poke(tuning_table, 1.75, 174, 0);\n    poke(tuning_table, 2.0, 175, 0);\n    poke(tuning_table, 2.25, 176, 0);\n    // 18: Igbo Pentatonic (0, 200, 386, 702, 884c)\n    poke(tuning_table, 5, 180, 0);\n    poke(tuning_table, 1.0, 181, 0);\n    poke(tuning_table, 1.12246, 182, 0);\n    poke(tuning_table, 1.24984, 183, 0);\n    poke(tuning_table, 1.50000, 184, 0);\n    poke(tuning_table, 1.66212, 185, 0);\n\n    // === RHYTHM PATTERN DATA ===\n    // Each pattern: [length, mask0, mask1, ...] at offset = patIdx * 16\n    // Voice bitmask: v1=1, v2=2, v3=4, v4=8, v5=16, v6=32\n\n    // Pattern 0 — Polyrhythm 3:2 (arp_mode 6, offset 0)\n    poke(arp_pat_data, 6, 0, 0);\n    poke(arp_pat_data, 63, 1, 0);\n    poke(arp_pat_data, 0, 2, 0);\n    poke(arp_pat_data, 21, 3, 0);\n    poke(arp_pat_data, 42, 4, 0);\n    poke(arp_pat_data, 21, 5, 0);\n    poke(arp_pat_data, 0, 6, 0);\n\n    // Pattern 1 — Triplet (arp_mode 7, offset 16)\n    poke(arp_pat_data, 3, 16, 0);\n    poke(arp_pat_data, 3, 17, 0);\n    poke(arp_pat_data, 12, 18, 0);\n    poke(arp_pat_data, 48, 19, 0);\n\n    // Pattern 2 — Bembe 12/8 bell (arp_mode 8, offset 32)\n    poke(arp_pat_data, 12, 32, 0);\n    poke(arp_pat_data, 1, 33, 0);\n    poke(arp_pat_data, 0, 34, 0);\n    poke(arp_pat_data, 4, 35, 0);\n    poke(arp_pat_data, 0, 36, 0);\n    poke(arp_pat_data, 2, 37, 0);\n    poke(arp_pat_data, 8, 38, 0);\n    poke(arp_pat_data, 0, 39, 0);\n    poke(arp_pat_data, 16, 40, 0);\n    poke(arp_pat_data, 0, 41, 0);\n    poke(arp_pat_data, 32, 42, 0);\n    poke(arp_pat_data, 0, 43, 0);\n    poke(arp_pat_data, 4, 44, 0);\n\n    // Pattern 3 — Shiko (arp_mode 9, offset 48)\n    poke(arp_pat_data, 12, 48, 0);\n    poke(arp_pat_data, 17, 49, 0);\n    poke(arp_pat_data, 0, 50, 0);\n    poke(arp_pat_data, 0, 51, 0);\n    poke(arp_pat_data, 8, 52, 0);\n    poke(arp_pat_data, 0, 53, 0);\n    poke(arp_pat_data, 0, 54, 0);\n    poke(arp_pat_data, 6, 55, 0);\n    poke(arp_pat_data, 0, 56, 0);\n    poke(arp_pat_data, 0, 57, 0);\n    poke(arp_pat_data, 0, 58, 0);\n    poke(arp_pat_data, 32, 59, 0);\n    poke(arp_pat_data, 0, 60, 0);\n\n    // Pattern 4 — Call & Response (arp_mode 10, offset 64)\n    poke(arp_pat_data, 8, 64, 0);\n    poke(arp_pat_data, 19, 65, 0);\n    poke(arp_pat_data, 19, 66, 0);\n    poke(arp_pat_data, 0, 67, 0);\n    poke(arp_pat_data, 0, 68, 0);\n    poke(arp_pat_data, 44, 69, 0);\n    poke(arp_pat_data, 44, 70, 0);\n    poke(arp_pat_data, 0, 71, 0);\n    poke(arp_pat_data, 0, 72, 0);\n\n    // Pattern 5 — Gahu (arp_mode 11, offset 80, length 15)\n    // Ewe social dance bell: x..x..x.x..x..x (15 steps)\n    poke(arp_pat_data, 15, 80, 0);\n    poke(arp_pat_data, 17, 81, 0);   // step 0: v1+v5 bass+metallic\n    poke(arp_pat_data, 0, 82, 0);\n    poke(arp_pat_data, 0, 83, 0);\n    poke(arp_pat_data, 4, 84, 0);    // step 3: v3 mid\n    poke(arp_pat_data, 0, 85, 0);\n    poke(arp_pat_data, 0, 86, 0);\n    poke(arp_pat_data, 10, 87, 0);   // step 6: v2+v4 low-mid+mid-high\n    poke(arp_pat_data, 0, 88, 0);\n    poke(arp_pat_data, 32, 89, 0);   // step 8: v6 crystal\n    poke(arp_pat_data, 0, 90, 0);\n    poke(arp_pat_data, 0, 91, 0);\n    poke(arp_pat_data, 5, 92, 0);    // step 11: v1+v3 bass+mid\n    poke(arp_pat_data, 0, 93, 0);\n    poke(arp_pat_data, 0, 94, 0);\n    poke(arp_pat_data, 48, 95, 0);   // step 14: v5+v6 metallic+crystal\n\n    // Pattern 6 — Son Clave 3:2 (arp_mode 12, offset 96, length 15)\n    // Foundational Afro-Cuban rhythm: x..x..x...x.x.. (15 steps)\n    poke(arp_pat_data, 15, 96, 0);\n    poke(arp_pat_data, 19, 97, 0);   // step 0: v1+v2+v5 low body\n    poke(arp_pat_data, 0, 98, 0);\n    poke(arp_pat_data, 0, 99, 0);\n    poke(arp_pat_data, 12, 100, 0);  // step 3: v3+v4 mid crack\n    poke(arp_pat_data, 0, 101, 0);\n    poke(arp_pat_data, 0, 102, 0);\n    poke(arp_pat_data, 32, 103, 0);  // step 6: v6 crystal\n    poke(arp_pat_data, 0, 104, 0);\n    poke(arp_pat_data, 0, 105, 0);\n    poke(arp_pat_data, 0, 106, 0);\n    poke(arp_pat_data, 5, 107, 0);   // step 10: v1+v3 bass+mid\n    poke(arp_pat_data, 0, 108, 0);\n    poke(arp_pat_data, 42, 109, 0);  // step 12: v2+v4+v6 full spread\n    poke(arp_pat_data, 0, 110, 0);\n    poke(arp_pat_data, 0, 111, 0);\n\n    // Pattern 7 — Fume Fume (arp_mode 13, offset 112, length 12)\n    // Ewe ceremonial bell: x.x..x.x..x. (12 steps)\n    poke(arp_pat_data, 12, 112, 0);\n    poke(arp_pat_data, 3, 113, 0);   // step 0: v1+v2 bass pair\n    poke(arp_pat_data, 0, 114, 0);\n    poke(arp_pat_data, 24, 115, 0);  // step 2: v4+v5 mid-high pair\n    poke(arp_pat_data, 0, 116, 0);\n    poke(arp_pat_data, 0, 117, 0);\n    poke(arp_pat_data, 36, 118, 0);  // step 5: v3+v6 mid+crystal\n    poke(arp_pat_data, 0, 119, 0);\n    poke(arp_pat_data, 17, 120, 0);  // step 7: v1+v5 bass+metallic\n    poke(arp_pat_data, 0, 121, 0);\n    poke(arp_pat_data, 0, 122, 0);\n    poke(arp_pat_data, 14, 123, 0);  // step 10: v2+v3+v4 mid spread\n    poke(arp_pat_data, 0, 124, 0);\n\n    // Pattern 8 — Kassa (arp_mode 14, offset 128, length 12)\n    // Manding harvest dance: xx.x.xx.x.x. (12 steps) — dense, energetic\n    poke(arp_pat_data, 12, 128, 0);\n    poke(arp_pat_data, 17, 129, 0);  // step 0: v1+v5 bass+metallic\n    poke(arp_pat_data, 4, 130, 0);   // step 1: v3 mid\n    poke(arp_pat_data, 0, 131, 0);\n    poke(arp_pat_data, 34, 132, 0);  // step 3: v2+v6 low-mid+crystal\n    poke(arp_pat_data, 0, 133, 0);\n    poke(arp_pat_data, 8, 134, 0);   // step 5: v4 mid-high\n    poke(arp_pat_data, 5, 135, 0);   // step 6: v1+v3 bass+mid\n    poke(arp_pat_data, 0, 136, 0);\n    poke(arp_pat_data, 48, 137, 0);  // step 8: v5+v6 metallic+crystal\n    poke(arp_pat_data, 0, 138, 0);\n    poke(arp_pat_data, 10, 139, 0);  // step 10: v2+v4 low-mid+mid-high\n    poke(arp_pat_data, 0, 140, 0);\n\n    // === LUSOPHONE / DIASPORA PATTERNS ===\n\n    // Pattern 9 — Kuduro (arp_mode 15, offset 144, length 15)\n    // Angolan: heavy kick pattern, syncopated. x..x..x.x..x..x at 140 BPM\n    poke(arp_pat_data, 15, 144, 0);\n    poke(arp_pat_data, 3, 145, 0);   // step 0: v1+v2 bass+body (kick)\n    poke(arp_pat_data, 0, 146, 0);\n    poke(arp_pat_data, 0, 147, 0);\n    poke(arp_pat_data, 3, 148, 0);   // step 3: kick\n    poke(arp_pat_data, 0, 149, 0);\n    poke(arp_pat_data, 0, 150, 0);\n    poke(arp_pat_data, 12, 151, 0);  // step 6: v3+v4 mid+transient (snare)\n    poke(arp_pat_data, 3, 152, 0);   // step 7: kick (syncopation)\n    poke(arp_pat_data, 0, 153, 0);\n    poke(arp_pat_data, 0, 154, 0);\n    poke(arp_pat_data, 3, 155, 0);   // step 10: kick\n    poke(arp_pat_data, 0, 156, 0);\n    poke(arp_pat_data, 0, 157, 0);\n    poke(arp_pat_data, 12, 158, 0);  // step 13: snare\n    poke(arp_pat_data, 3, 159, 0);   // step 14: kick (syncopation)\n\n    // Pattern 10 — Semba (arp_mode 16, offset 160, length 15)\n    // Angolan: flowing, 2-bar feel, bass-heavy with clave accent\n    poke(arp_pat_data, 15, 160, 0);\n    poke(arp_pat_data, 1, 161, 0);   // step 0: v1 bass\n    poke(arp_pat_data, 0, 162, 0);\n    poke(arp_pat_data, 0, 163, 0);\n    poke(arp_pat_data, 6, 164, 0);   // step 3: v2+v3 body+metallic\n    poke(arp_pat_data, 0, 165, 0);\n    poke(arp_pat_data, 1, 166, 0);   // step 5: v1 bass\n    poke(arp_pat_data, 0, 167, 0);\n    poke(arp_pat_data, 48, 168, 0);  // step 7: v5+v6 shimmer\n    poke(arp_pat_data, 1, 169, 0);   // step 8: v1 bass\n    poke(arp_pat_data, 0, 170, 0);\n    poke(arp_pat_data, 8, 171, 0);   // step 10: v4 transient\n    poke(arp_pat_data, 0, 172, 0);\n    poke(arp_pat_data, 6, 173, 0);   // step 12: v2+v3 body+metallic\n    poke(arp_pat_data, 0, 174, 0);\n    poke(arp_pat_data, 1, 175, 0);   // step 14: v1 bass\n\n    // Pattern 11 — Kizomba (arp_mode 17, offset 176, length 8)\n    // Angolan slow: intimate bass pulse, minimal percussion. 90 BPM.\n    poke(arp_pat_data, 8, 176, 0);\n    poke(arp_pat_data, 3, 177, 0);   // step 0: v1+v2 bass+body\n    poke(arp_pat_data, 0, 178, 0);\n    poke(arp_pat_data, 48, 179, 0);  // step 2: v5+v6 shimmer\n    poke(arp_pat_data, 0, 180, 0);\n    poke(arp_pat_data, 3, 181, 0);   // step 4: bass+body\n    poke(arp_pat_data, 0, 182, 0);\n    poke(arp_pat_data, 4, 183, 0);   // step 6: v3 metallic\n    poke(arp_pat_data, 0, 184, 0);\n\n    // Pattern 12 — Marrabenta (arp_mode 18, offset 192, length 12)\n    // Mozambican: 12/8 guitar-derived, bright and driving\n    poke(arp_pat_data, 12, 192, 0);\n    poke(arp_pat_data, 5, 193, 0);   // step 0: v1+v3 bass+metallic\n    poke(arp_pat_data, 0, 194, 0);\n    poke(arp_pat_data, 32, 195, 0);  // step 2: v6 crystal\n    poke(arp_pat_data, 2, 196, 0);   // step 3: v2 body\n    poke(arp_pat_data, 0, 197, 0);\n    poke(arp_pat_data, 16, 198, 0);  // step 5: v5 drone\n    poke(arp_pat_data, 5, 199, 0);   // step 6: v1+v3 bass+metallic\n    poke(arp_pat_data, 0, 200, 0);\n    poke(arp_pat_data, 8, 201, 0);   // step 8: v4 transient\n    poke(arp_pat_data, 2, 202, 0);   // step 9: v2 body\n    poke(arp_pat_data, 0, 203, 0);\n    poke(arp_pat_data, 48, 204, 0);  // step 11: v5+v6 shimmer\n\n    init_done = 1;\n}\n\n// === TUNING SETUP ===\nts = clamp(floor(tuning_system), 0, 18);\nts_base = ts * 10;\nts_size = max(peek(tuning_table, ts_base, 0), 1);\nj0 = 1.0; j1 = 1.111111; j2 = 1.25; j3 = 1.5; j4 = 1.666667;\n\n// === INVERSION (-2 to +2) ===\ninv_off = floor(clamp(inversion, -2, 2));\ninv_up = (inv_off > 0.5) ? inv_off : 0;\ninv_dn = (inv_off < -0.5) ? inv_off : 0;\nreg = floor(clamp(register, -3, 3));\nboct = floor(clamp(bass_oct, -2, 2));\ntoct = floor(clamp(treble_oct, 0, 4));\n\n// === LORENZ PARAM SMOOTHING ===\n// 0=off (instant), 1=slow (~500ms), 2=medium (~50ms), 3=fast (~5ms)\nsm = floor(clamp(smooth_speed, 0, 3));\nsm_coeff = (sm < 0.5) ? 1.0 : (sm < 1.5) ? (1.0 - exp(-1.0 / (0.5 * samplerate))) : (sm < 2.5) ? (1.0 - exp(-1.0 / (0.05 * samplerate))) : (1.0 - exp(-1.0 / (0.005 * samplerate)));\ns_sigma = s_sigma + (sigma - s_sigma) * sm_coeff;\ns_rho = s_rho + (rho - s_rho) * sm_coeff;\ns_beta = s_beta + (beta - s_beta) * sm_coeff;\ns_dt = s_dt + (lorenz_dt - s_dt) * sm_coeff;\ns_cg = s_cg + (chaos_gain - s_cg) * sm_coeff;\n\n// === CHAOS ATTRACTOR SYSTEM ===\n\n// --- LORENZ (4x unrolled Euler) ---\nrho_mod = s_rho + in1;\ntx = lx; ty = ly; tz = lz;\ndx = s_sigma * (ty - tx); dy = tx * (rho_mod - tz) - ty; dz = tx * ty - s_beta * tz;\ntx += dx * s_dt; ty += dy * s_dt; tz += dz * s_dt;\ndx = s_sigma * (ty - tx); dy = tx * (rho_mod - tz) - ty; dz = tx * ty - s_beta * tz;\ntx += dx * s_dt; ty += dy * s_dt; tz += dz * s_dt;\ndx = s_sigma * (ty - tx); dy = tx * (rho_mod - tz) - ty; dz = tx * ty - s_beta * tz;\ntx += dx * s_dt; ty += dy * s_dt; tz += dz * s_dt;\ndx = s_sigma * (ty - tx); dy = tx * (rho_mod - tz) - ty; dz = tx * ty - s_beta * tz;\ntx += dx * s_dt; ty += dy * s_dt; tz += dz * s_dt;\nlx = (reset > 0.5) ? 0.1 : clamp(tx, -100, 100) + noise() * 0.01;\nly = (reset > 0.5) ? 0.0 : clamp(ty, -100, 100) + noise() * 0.01;\nlz = (reset > 0.5) ? 0.0 : clamp(tz, -100, 100) + noise() * 0.01;\nlor_x = lx * 0.05; lor_y = ly * 0.04; lor_z = (lz - 25) * 0.04;\n\n// --- ROSSLER (4x unrolled Euler) ---\ndt_r = 0.006;\nrtx = rx; rty = ry; rtz = rz;\nrdx = -(rty + rtz); rdy = rtx + 0.2 * rty; rdz = 0.2 + rtz * (rtx - ross_c);\nrtx += rdx*dt_r; rty += rdy*dt_r; rtz += rdz*dt_r;\nrdx = -(rty + rtz); rdy = rtx + 0.2 * rty; rdz = 0.2 + rtz * (rtx - ross_c);\nrtx += rdx*dt_r; rty += rdy*dt_r; rtz += rdz*dt_r;\nrdx = -(rty + rtz); rdy = rtx + 0.2 * rty; rdz = 0.2 + rtz * (rtx - ross_c);\nrtx += rdx*dt_r; rty += rdy*dt_r; rtz += rdz*dt_r;\nrdx = -(rty + rtz); rdy = rtx + 0.2 * rty; rdz = 0.2 + rtz * (rtx - ross_c);\nrtx += rdx*dt_r; rty += rdy*dt_r; rtz += rdz*dt_r;\nrx = (reset > 0.5) ? 1.0 : clamp(rtx, -100, 100) + noise() * 0.01;\nry = (reset > 0.5) ? 0.0 : clamp(rty, -100, 100) + noise() * 0.01;\nrz = (reset > 0.5) ? 0.0 : clamp(rtz, -100, 100) + noise() * 0.01;\nros_x = rx * 0.08; ros_y = ry * 0.08; ros_z = (rz - 12) * 0.08;\n\n// --- CHUA (4x unrolled Euler) ---\ndt_c = 0.0012;\nctx = chx; cty = chy; ctz = chz;\nch_h = -0.714 * ctx + 0.5 * (-1.143 + 0.714) * (abs(ctx + 1) - abs(ctx - 1));\ncdx = chua_alpha * (cty - ctx - ch_h); cdy = ctx - cty + ctz; cdz = -28.0 * cty;\nctx += cdx*dt_c; cty += cdy*dt_c; ctz += cdz*dt_c;\nch_h = -0.714 * ctx + 0.5 * (-1.143 + 0.714) * (abs(ctx + 1) - abs(ctx - 1));\ncdx = chua_alpha * (cty - ctx - ch_h); cdy = ctx - cty + ctz; cdz = -28.0 * cty;\nctx += cdx*dt_c; cty += cdy*dt_c; ctz += cdz*dt_c;\nch_h = -0.714 * ctx + 0.5 * (-1.143 + 0.714) * (abs(ctx + 1) - abs(ctx - 1));\ncdx = chua_alpha * (cty - ctx - ch_h); cdy = ctx - cty + ctz; cdz = -28.0 * cty;\nctx += cdx*dt_c; cty += cdy*dt_c; ctz += cdz*dt_c;\nch_h = -0.714 * ctx + 0.5 * (-1.143 + 0.714) * (abs(ctx + 1) - abs(ctx - 1));\ncdx = chua_alpha * (cty - ctx - ch_h); cdy = ctx - cty + ctz; cdz = -28.0 * cty;\nctx += cdx*dt_c; cty += cdy*dt_c; ctz += cdz*dt_c;\nchx = (reset > 0.5) ? 0.1 : clamp(ctx, -10, 10) + noise() * 0.001;\nchy = (reset > 0.5) ? 0.0 : clamp(cty, -3, 3) + noise() * 0.001;\nchz = (reset > 0.5) ? 0.0 : clamp(ctz, -20, 20) + noise() * 0.001;\nchu_x = chx * 0.4; chu_y = chy * 2.0; chu_z = chz * 0.25;\n\n// --- HALVORSEN (4x unrolled Euler) ---\ndt_h = 0.005;\nhtx = hx; hty = hy; htz = hz;\nhdx = -halv_a*htx - 4*hty - 4*htz - hty*hty;\nhdy = -halv_a*hty - 4*htz - 4*htx - htz*htz;\nhdz = -halv_a*htz - 4*htx - 4*hty - htx*htx;\nhtx += hdx*dt_h; hty += hdy*dt_h; htz += hdz*dt_h;\nhdx = -halv_a*htx - 4*hty - 4*htz - hty*hty;\nhdy = -halv_a*hty - 4*htz - 4*htx - htz*htz;\nhdz = -halv_a*htz - 4*htx - 4*hty - htx*htx;\nhtx += hdx*dt_h; hty += hdy*dt_h; htz += hdz*dt_h;\nhdx = -halv_a*htx - 4*hty - 4*htz - hty*hty;\nhdy = -halv_a*hty - 4*htz - 4*htx - htz*htz;\nhdz = -halv_a*htz - 4*htx - 4*hty - htx*htx;\nhtx += hdx*dt_h; hty += hdy*dt_h; htz += hdz*dt_h;\nhdx = -halv_a*htx - 4*hty - 4*htz - hty*hty;\nhdy = -halv_a*hty - 4*htz - 4*htx - htz*htz;\nhdz = -halv_a*htz - 4*htx - 4*hty - htx*htx;\nhtx += hdx*dt_h; hty += hdy*dt_h; htz += hdz*dt_h;\nhx = (reset > 0.5) ? 1.0 : clamp(htx, -20, 20) + noise() * 0.01;\nhy = (reset > 0.5) ? 0.0 : clamp(hty, -20, 20) + noise() * 0.01;\nhz = (reset > 0.5) ? 0.0 : clamp(htz, -20, 20) + noise() * 0.01;\nhal_x = hx * 0.1; hal_y = hy * 0.1; hal_z = hz * 0.1;\n\n// --- AIZAWA (4x unrolled Euler) ---\ndt_a = 0.006;\natx = aix; aty = aiy; atz = aiz_h;\nadx = (atz - 0.7) * atx - aiz_d * aty;\nady = aiz_d * atx + (atz - 0.7) * aty;\nar2 = atx*atx + aty*aty;\nadz = aiz_c + 0.95 * atz - atz*atz*atz / 3.0 - ar2 * (1.0 + 0.25 * atz) + 0.1 * atz * atx * atx * atx;\natx += adx*dt_a; aty += ady*dt_a; atz += adz*dt_a;\nadx = (atz - 0.7) * atx - aiz_d * aty;\nady = aiz_d * atx + (atz - 0.7) * aty;\nar2 = atx*atx + aty*aty;\nadz = aiz_c + 0.95 * atz - atz*atz*atz / 3.0 - ar2 * (1.0 + 0.25 * atz) + 0.1 * atz * atx * atx * atx;\natx += adx*dt_a; aty += ady*dt_a; atz += adz*dt_a;\nadx = (atz - 0.7) * atx - aiz_d * aty;\nady = aiz_d * atx + (atz - 0.7) * aty;\nar2 = atx*atx + aty*aty;\nadz = aiz_c + 0.95 * atz - atz*atz*atz / 3.0 - ar2 * (1.0 + 0.25 * atz) + 0.1 * atz * atx * atx * atx;\natx += adx*dt_a; aty += ady*dt_a; atz += adz*dt_a;\nadx = (atz - 0.7) * atx - aiz_d * aty;\nady = aiz_d * atx + (atz - 0.7) * aty;\nar2 = atx*atx + aty*aty;\nadz = aiz_c + 0.95 * atz - atz*atz*atz / 3.0 - ar2 * (1.0 + 0.25 * atz) + 0.1 * atz * atx * atx * atx;\natx += adx*dt_a; aty += ady*dt_a; atz += adz*dt_a;\naix = (reset > 0.5) ? 0.1 : clamp(atx, -3, 3) + noise() * 0.001;\naiy = (reset > 0.5) ? 0.0 : clamp(aty, -3, 3) + noise() * 0.001;\naiz_h = (reset > 0.5) ? 0.0 : clamp(atz, -3, 3) + noise() * 0.001;\naiz_x = aix * 0.7; aiz_y = aiy * 0.7; aiz_z = (aiz_h - 0.5) * 1.0;\n\n// --- SELECT ATTRACTOR A ---\nas = floor(clamp(att_sel, 0, 4));\nax = (as < 0.5) ? lor_x : (as < 1.5) ? ros_x : (as < 2.5) ? chu_x : (as < 3.5) ? hal_x : aiz_x;\nay = (as < 0.5) ? lor_y : (as < 1.5) ? ros_y : (as < 2.5) ? chu_y : (as < 3.5) ? hal_y : aiz_y;\naz = (as < 0.5) ? lor_z : (as < 1.5) ? ros_z : (as < 2.5) ? chu_z : (as < 3.5) ? hal_z : aiz_z;\n\n// --- SELECT ATTRACTOR B ---\nbs = floor(clamp(att_b_sel, -1, 4));\nb_active = (bs > -0.5);\nbx_raw = (bs < 0.5) ? lor_x : (bs < 1.5) ? ros_x : (bs < 2.5) ? chu_x : (bs < 3.5) ? hal_x : aiz_x;\nby_raw = (bs < 0.5) ? lor_y : (bs < 1.5) ? ros_y : (bs < 2.5) ? chu_y : (bs < 3.5) ? hal_y : aiz_y;\nbz_raw = (bs < 0.5) ? lor_z : (bs < 1.5) ? ros_z : (bs < 2.5) ? chu_z : (bs < 3.5) ? hal_z : aiz_z;\n\n// --- COMBINING MODES ---\ncm = floor(clamp(combine_mode, 0, 2));\n\n// Mode 0: BLEND — linear crossfade\nbl_x = ax * (1.0 - blend_mix) + bx_raw * blend_mix;\nbl_y = ay * (1.0 - blend_mix) + by_raw * blend_mix;\nbl_z = az * (1.0 - blend_mix) + bz_raw * blend_mix;\n\n// Mode 1: MODULATE — B shapes A (floor-limited, never zeroes)\nmod_fx = max(0.15, 1.0 + bx_h * mod_depth * 0.6);\nmod_fy = max(0.15, 1.0 + by_h * mod_depth * 0.6);\nmod_fz = max(0.15, 1.0 + bz_h * mod_depth * 0.6);\nmd_x = ax * mod_fx;\nmd_y = ay * mod_fy;\nmd_z = az * mod_fz;\nbx_h = bx_raw; by_h = by_raw; bz_h = bz_raw;\n\n// Mode 2: ROUTE — A drives voices 1-3, B drives voices 4-6 (handled at excitation)\n\n// Final combined output for voices 1-3\ncx = b_active ? ((cm < 0.5) ? bl_x : (cm < 1.5) ? md_x : ax) : ax;\ncy = b_active ? ((cm < 0.5) ? bl_y : (cm < 1.5) ? md_y : ay) : ay;\ncz = b_active ? ((cm < 0.5) ? bl_z : (cm < 1.5) ? md_z : az) : az;\n\n// Route mode: separate chaos for voices 4-6\ncx_456 = (b_active * (cm > 1.5)) ? bx_raw : cx;\ncy_456 = (b_active * (cm > 1.5)) ? by_raw : cy;\ncz_456 = (b_active * (cm > 1.5)) ? bz_raw : cz;\n\n// === ANALOG CLOCK INPUT (rising edge → BPM) ===\nclk_in = in2;\nclk_edge = (clk_in > 0.5) * (clk_prev < 0.5) * (clk_enable > 0.5);\nclk_prev = clk_in;\nclk_count = clk_edge ? 0 : clk_count + 1;\nclk_hz = clk_edge ? (samplerate / max(clk_count, 1)) : 0;\nclk_bpm = clk_edge ? clamp(clk_hz * 60.0, 20, 300) : clk_bpm;\neff_arp_bpm = (clk_enable > 0.5) ? clk_bpm : arp_bpm;\n\n// === ARPEGGIATOR (BPM sync + patterns + MIDI reset) ===\neff_rate = (arp_div > 0.01) ? (eff_arp_bpm / 60.0 * arp_div) : arp_rate;\narp_ph_new = arp_phase + eff_rate / samplerate;\narp_trig_flag = (arp_ph_new >= 1.0);\narp_phase = arp_ph_new - floor(arp_ph_new);\n\n// Pattern detection\nis_user_pat = (arp_mode > 19.5);\nis_eucl = ((arp_mode > 18.5) * (arp_mode < 19.5));\nis_pattern = (arp_mode > 5.5);\npat_idx = clamp(floor(arp_mode - 6), 0, 12);\npat_base = pat_idx * 16;\ne_steps = clamp(floor(eucl_steps), 1, 16);\npat_len = is_user_pat ? max(user_pat_len, 1) : (is_eucl ? e_steps : (is_pattern ? max(peek(arp_pat_data, pat_base, 0), 1) : 6));\n\n// Standard mode stepping\nup_s = mod(arp_step + 1, 6);\ndn_s = mod(arp_step + 5, 6);\npp_next = arp_step + arp_dir;\npp_rev_hi = (pp_next > 5);\npp_rev_lo = (pp_next < 0);\npp_new_dir = pp_rev_hi ? -1 : (pp_rev_lo ? 1 : arp_dir);\npp_s = pp_rev_hi ? 4 : (pp_rev_lo ? 1 : clamp(pp_next, 0, 5));\nrnd_s = clamp(floor(abs(noise()) * 6), 0, 5);\nstd_new_s = (arp_mode > 3.5) ? rnd_s : (arp_mode > 2.5) ? pp_s : (arp_mode > 1.5) ? dn_s : (arp_mode > 0.5) ? up_s : arp_step;\n\n// Pattern mode: sequential stepping, wraps at pat_len\npat_next_s = mod(arp_step + 1, pat_len);\n\n// Select step\nnew_s = is_pattern ? pat_next_s : std_new_s;\nnew_d = ((arp_mode > 2.5) * (arp_mode < 3.5)) ? pp_new_dir : arp_dir;\narp_step = arp_trig_flag ? new_s : arp_step;\narp_dir = arp_trig_flag ? new_d : arp_dir;\n\n// Phase reset (MIDI sync — snaps pattern to downbeat)\narp_step = (arp_reset > 0.5) ? 0 : arp_step;\narp_phase = (arp_reset > 0.5) ? 0 : arp_phase;\n\ncur = floor(arp_step);\n\n// Standard voice activation (modes 0-5)\narp_active = ((arp_mode > 0.5) * (arp_mode < 4.5));\nst1 = arp_active ? (abs(cur) < 0.5 ? 1.0 : 0.0) : 1.0;\nst2 = arp_active ? (abs(cur - 1) < 0.5 ? 1.0 : 0.0) : 1.0;\nst3 = arp_active ? (abs(cur - 2) < 0.5 ? 1.0 : 0.0) : 1.0;\nst4 = arp_active ? (abs(cur - 3) < 0.5 ? 1.0 : 0.0) : 1.0;\nst5 = arp_active ? (abs(cur - 4) < 0.5 ? 1.0 : 0.0) : 1.0;\nst6 = arp_active ? (abs(cur - 5) < 0.5 ? 1.0 : 0.0) : 1.0;\n\n// Euclidean rhythm (Bjorklund algorithm inline — threshold method)\n// A step fires if floor(k * (step+1) / n) > floor(k * step / n)\ne_pulses = clamp(floor(eucl_pulses), 0, e_steps);\ne_cur = clamp(cur, 0, e_steps - 1);\ne_hit = (floor(e_pulses * (e_cur + 1.0) / e_steps) - floor(e_pulses * e_cur / e_steps)) > 0.5;\neucl_mask = e_hit ? 63 : 0;\n\n// Polymetric: per-voice phase accumulators + independent rates\nis_poly = (poly_mode > 0.5) * is_user_pat;\nbpm_base = eff_arp_bpm / 60.0;\npph1_n = pph1 + is_poly * bpm_base * poly_rate1 / samplerate;\npt1_trig = (pph1_n >= 1.0) * is_poly;\npph1 = is_poly ? (pph1_n - floor(pph1_n)) : 0;\nps1 = pt1_trig ? mod(ps1 + 1, max(poly_len1, 1)) : ps1;\npph2_n = pph2 + is_poly * bpm_base * poly_rate2 / samplerate;\npt2_trig = (pph2_n >= 1.0) * is_poly;\npph2 = is_poly ? (pph2_n - floor(pph2_n)) : 0;\nps2 = pt2_trig ? mod(ps2 + 1, max(poly_len2, 1)) : ps2;\npph3_n = pph3 + is_poly * bpm_base * poly_rate3 / samplerate;\npt3_trig = (pph3_n >= 1.0) * is_poly;\npph3 = is_poly ? (pph3_n - floor(pph3_n)) : 0;\nps3 = pt3_trig ? mod(ps3 + 1, max(poly_len3, 1)) : ps3;\npph4_n = pph4 + is_poly * bpm_base * poly_rate4 / samplerate;\npt4_trig = (pph4_n >= 1.0) * is_poly;\npph4 = is_poly ? (pph4_n - floor(pph4_n)) : 0;\nps4 = pt4_trig ? mod(ps4 + 1, max(poly_len4, 1)) : ps4;\npph5_n = pph5 + is_poly * bpm_base * poly_rate5 / samplerate;\npt5_trig = (pph5_n >= 1.0) * is_poly;\npph5 = is_poly ? (pph5_n - floor(pph5_n)) : 0;\nps5 = pt5_trig ? mod(ps5 + 1, max(poly_len5, 1)) : ps5;\npph6_n = pph6 + is_poly * bpm_base * poly_rate6 / samplerate;\npt6_trig = (pph6_n >= 1.0) * is_poly;\npph6 = is_poly ? (pph6_n - floor(pph6_n)) : 0;\nps6 = pt6_trig ? mod(ps6 + 1, max(poly_len6, 1)) : ps6;\n// Reset poly steps on arp_reset\nps1 = (arp_reset > 0.5) ? 0 : ps1;\nps2 = (arp_reset > 0.5) ? 0 : ps2;\nps3 = (arp_reset > 0.5) ? 0 : ps3;\nps4 = (arp_reset > 0.5) ? 0 : ps4;\nps5 = (arp_reset > 0.5) ? 0 : ps5;\nps6 = (arp_reset > 0.5) ? 0 : ps6;\n\n// Bitmask lookup helper — reads usN for a given step\nucur = clamp(cur, 0, 15);\nuser_mask = (ucur<0.5)?us0:(ucur<1.5)?us1:(ucur<2.5)?us2:(ucur<3.5)?us3:(ucur<4.5)?us4:(ucur<5.5)?us5:(ucur<6.5)?us6:(ucur<7.5)?us7:(ucur<8.5)?us8:(ucur<9.5)?us9:(ucur<10.5)?us10:(ucur<11.5)?us11:(ucur<12.5)?us12:(ucur<13.5)?us13:(ucur<14.5)?us14:us15;\n\n// Per-voice poly lookups\npc1 = clamp(floor(ps1), 0, 15); pm1 = (pc1<0.5)?us0:(pc1<1.5)?us1:(pc1<2.5)?us2:(pc1<3.5)?us3:(pc1<4.5)?us4:(pc1<5.5)?us5:(pc1<6.5)?us6:(pc1<7.5)?us7:(pc1<8.5)?us8:(pc1<9.5)?us9:(pc1<10.5)?us10:(pc1<11.5)?us11:(pc1<12.5)?us12:(pc1<13.5)?us13:(pc1<14.5)?us14:us15;\npc2 = clamp(floor(ps2), 0, 15); pm2 = (pc2<0.5)?us0:(pc2<1.5)?us1:(pc2<2.5)?us2:(pc2<3.5)?us3:(pc2<4.5)?us4:(pc2<5.5)?us5:(pc2<6.5)?us6:(pc2<7.5)?us7:(pc2<8.5)?us8:(pc2<9.5)?us9:(pc2<10.5)?us10:(pc2<11.5)?us11:(pc2<12.5)?us12:(pc2<13.5)?us13:(pc2<14.5)?us14:us15;\npc3 = clamp(floor(ps3), 0, 15); pm3 = (pc3<0.5)?us0:(pc3<1.5)?us1:(pc3<2.5)?us2:(pc3<3.5)?us3:(pc3<4.5)?us4:(pc3<5.5)?us5:(pc3<6.5)?us6:(pc3<7.5)?us7:(pc3<8.5)?us8:(pc3<9.5)?us9:(pc3<10.5)?us10:(pc3<11.5)?us11:(pc3<12.5)?us12:(pc3<13.5)?us13:(pc3<14.5)?us14:us15;\npc4 = clamp(floor(ps4), 0, 15); pm4 = (pc4<0.5)?us0:(pc4<1.5)?us1:(pc4<2.5)?us2:(pc4<3.5)?us3:(pc4<4.5)?us4:(pc4<5.5)?us5:(pc4<6.5)?us6:(pc4<7.5)?us7:(pc4<8.5)?us8:(pc4<9.5)?us9:(pc4<10.5)?us10:(pc4<11.5)?us11:(pc4<12.5)?us12:(pc4<13.5)?us13:(pc4<14.5)?us14:us15;\npc5 = clamp(floor(ps5), 0, 15); pm5 = (pc5<0.5)?us0:(pc5<1.5)?us1:(pc5<2.5)?us2:(pc5<3.5)?us3:(pc5<4.5)?us4:(pc5<5.5)?us5:(pc5<6.5)?us6:(pc5<7.5)?us7:(pc5<8.5)?us8:(pc5<9.5)?us9:(pc5<10.5)?us10:(pc5<11.5)?us11:(pc5<12.5)?us12:(pc5<13.5)?us13:(pc5<14.5)?us14:us15;\npc6 = clamp(floor(ps6), 0, 15); pm6 = (pc6<0.5)?us0:(pc6<1.5)?us1:(pc6<2.5)?us2:(pc6<3.5)?us3:(pc6<4.5)?us4:(pc6<5.5)?us5:(pc6<6.5)?us6:(pc6<7.5)?us7:(pc6<8.5)?us8:(pc6<9.5)?us9:(pc6<10.5)?us10:(pc6<11.5)?us11:(pc6<12.5)?us12:(pc6<13.5)?us13:(pc6<14.5)?us14:us15;\n\n// In poly mode, each voice reads its own step; in normal, all read shared step\nmask = is_user_pat ? user_mask : (is_eucl ? eucl_mask : peek(arp_pat_data, pat_base + 1 + clamp(cur, 0, 15), 0));\nm = floor(mask);\npt1 = is_poly ? (mod(floor(pm1), 2) > 0.5) : (mod(m, 2) > 0.5);\npt2 = is_poly ? (mod(floor(pm2 / 2), 2) > 0.5) : (mod(floor(m / 2), 2) > 0.5);\npt3 = is_poly ? (mod(floor(pm3 / 4), 2) > 0.5) : (mod(floor(m / 4), 2) > 0.5);\npt4 = is_poly ? (mod(floor(pm4 / 8), 2) > 0.5) : (mod(floor(m / 8), 2) > 0.5);\npt5 = is_poly ? (mod(floor(pm5 / 16), 2) > 0.5) : (mod(floor(m / 16), 2) > 0.5);\npt6 = is_poly ? (mod(floor(pm6 / 32), 2) > 0.5) : (mod(floor(m / 32), 2) > 0.5);\n\n// Select voice activation path\nt1 = is_pattern ? pt1 : st1;\nt2 = is_pattern ? pt2 : st2;\nt3 = is_pattern ? pt3 : st3;\nt4 = is_pattern ? pt4 : st4;\nt5 = is_pattern ? pt5 : st5;\nt6 = is_pattern ? pt6 : st6;\n\n// === ADSR ENVELOPE ===\na_rate = 1.0 / max(env_attack * samplerate, 1);\nd_coeff = 1.0 - exp(-4.0 / max(env_decay * samplerate, 1));\nr_coeff = 1.0 - exp(-4.0 / max(env_release * samplerate, 1));\n\ngate1 = t1 > 0.5;\natk_ph1 = gate1 * (1.0 - pk1);\npk1 = gate1 ? min(pk1 + (v_amp1 >= 0.999), 1.0) : 0.0;\nv_amp1 = atk_ph1 ? min(v_amp1 + a_rate, 1.0) : (gate1 ? (v_amp1 + (env_sustain - v_amp1) * d_coeff) : (v_amp1 + (0.0 - v_amp1) * r_coeff));\n\ngate2 = t2 > 0.5;\natk_ph2 = gate2 * (1.0 - pk2);\npk2 = gate2 ? min(pk2 + (v_amp2 >= 0.999), 1.0) : 0.0;\nv_amp2 = atk_ph2 ? min(v_amp2 + a_rate, 1.0) : (gate2 ? (v_amp2 + (env_sustain - v_amp2) * d_coeff) : (v_amp2 + (0.0 - v_amp2) * r_coeff));\n\ngate3 = t3 > 0.5;\natk_ph3 = gate3 * (1.0 - pk3);\npk3 = gate3 ? min(pk3 + (v_amp3 >= 0.999), 1.0) : 0.0;\nv_amp3 = atk_ph3 ? min(v_amp3 + a_rate, 1.0) : (gate3 ? (v_amp3 + (env_sustain - v_amp3) * d_coeff) : (v_amp3 + (0.0 - v_amp3) * r_coeff));\n\ngate4 = t4 > 0.5;\natk_ph4 = gate4 * (1.0 - pk4);\npk4 = gate4 ? min(pk4 + (v_amp4 >= 0.999), 1.0) : 0.0;\nv_amp4 = atk_ph4 ? min(v_amp4 + a_rate, 1.0) : (gate4 ? (v_amp4 + (env_sustain - v_amp4) * d_coeff) : (v_amp4 + (0.0 - v_amp4) * r_coeff));\n\ngate5 = t5 > 0.5;\natk_ph5 = gate5 * (1.0 - pk5);\npk5 = gate5 ? min(pk5 + (v_amp5 >= 0.999), 1.0) : 0.0;\nv_amp5 = atk_ph5 ? min(v_amp5 + a_rate, 1.0) : (gate5 ? (v_amp5 + (env_sustain - v_amp5) * d_coeff) : (v_amp5 + (0.0 - v_amp5) * r_coeff));\n\ngate6 = t6 > 0.5;\natk_ph6 = gate6 * (1.0 - pk6);\npk6 = gate6 ? min(pk6 + (v_amp6 >= 0.999), 1.0) : 0.0;\nv_amp6 = atk_ph6 ? min(v_amp6 + a_rate, 1.0) : (gate6 ? (v_amp6 + (env_sustain - v_amp6) * d_coeff) : (v_amp6 + (0.0 - v_amp6) * r_coeff));\n\n// === MUTE (click-free ~5ms fade) ===\nmute_coeff = 1.0 - exp(-1.0 / (0.005 * samplerate));\nmute_s = mute_s + (mute - mute_s) * mute_coeff;\nunmute = 1.0 - mute_s;\n\n// === ROOT SPRING / LATCH SYSTEM ===\n// Detect when root_offset stops changing (user released control)\nroff_changed = abs(root_offset - prev_roff) > 0.0001;\nprev_roff = root_offset;\nroff_idle = roff_changed ? 0 : min(roff_idle + 1, samplerate);\nis_idle = roff_idle > (0.1 * samplerate);\nis_latch = (root_mode > 0.5);\ntrack_c = 1.0 - exp(-1.0 / (0.01 * samplerate));\nspring_c = 1.0 - exp(-1.0 / max(root_return * samplerate, 1));\n// Latch: always follow root_offset\n// Spring: follow while active, snap to 0 when idle\nspring_target = is_latch ? root_offset : (is_idle ? 0.0 : root_offset);\nrcoeff = is_latch ? spring_c : (is_idle ? spring_c : track_c);\ns_root_off = s_root_off + (spring_target - s_root_off) * rcoeff;\neff_root = root * pow(2.0, s_root_off / 12.0);\n\n// === Voice 1: Sub Bass (iya ilu) ===\ninv_adj1 = (oct1 < -0.5) * inv_up + (oct1 > 0.5) * inv_dn;\neff_oct1 = oct1 + inv_adj1 + reg + (oct1 < -0.5) * boct + (oct1 > 0.5) * toct;\ndeg1_eff = deg1 + transpose;\ndeg1_w = mod(floor(deg1_eff) + ts_size * 20, ts_size);\noct1_x = floor(deg1_eff / ts_size);\nr1_rat = peek(tuning_table, ts_base + 1 + deg1_w, 0);\nr1_jrat = (deg1_w<0.5)?j0:(deg1_w<1.5)?j1:(deg1_w<2.5)?j2:(deg1_w<3.5)?j3:j4;\nr1_rat = (ts < 0.5) ? (r1_rat * (1.0-flex) + r1_jrat * flex) : r1_rat;\nr1_freq = eff_root * r1_rat * pow(2.0, eff_oct1 + oct1_x);\nr1_target = samplerate / max(r1_freq, 20);\nr1_sdl = (r1_sdl < 1) ? r1_target : r1_sdl + (r1_target - r1_sdl) * glide;\nexc1 = (cx * s_cg + noise() * 0.0003) * v_amp1 * unmute;\nr1_del = r1_d.read(r1_sdl);\nr1_avg = (r1_del + r1_pd) * 0.5;\nr1_pd = r1_del;\nr1_b = clamp(0.2 + brightness, 0, 1);\nr1_filt = r1_del * r1_b + r1_avg * (1.0 - r1_b);\nr1_out = tanh(r1_filt) * 0.9995;\nr1_d.write(exc1 + r1_out);\n\n// === SUB-BASS WAVEGUIDE (tracks voice 1 at -1 octave) ===\n// sub_drone=1: always resonates (gqom/dance bass bed)\n// sub_drone=0: follows voice 1 with 50ms attack / 2s release (pattern pulse)\nsub_tgt = (sub_drone > 0.5) ? 1.0 : v_amp1;\nsub_up = (sub_tgt > sub_env_h);\nsub_coeff = sub_up ? (1.0 - exp(-1.0 / (0.05 * samplerate))) : (1.0 - exp(-1.0 / (2.0 * samplerate)));\nsub_env_h = sub_env_h + (sub_tgt - sub_env_h) * sub_coeff;\nsub_freq = r1_freq * pow(2.0, sub_oct);\nsub_target = samplerate / max(sub_freq, 15);\nr_sub_sdl = (r_sub_sdl < 1) ? sub_target : r_sub_sdl + (sub_target - r_sub_sdl) * glide;\n// sub_chaos: 0=normal (voice1 excitation), 1=direct chaos (dirtier, for gqom)\nexc_sub_clean = cx * s_cg * sub_env_h * unmute * 1.5;\nexc_sub_chaos = (cx * cx + cy * cy + cz * cz) * s_cg * sub_env_h * unmute * 3.0;\nexc_sub = exc_sub_clean * (1.0 - sub_chaos) + exc_sub_chaos * sub_chaos;\nsub_del = r_sub.read(r_sub_sdl);\nsub_avg = (sub_del + r_sub_pd) * 0.5;\nr_sub_pd = sub_del;\nsub_filt = sub_del * 0.1 + sub_avg * 0.9;\nsub_out = tanh(sub_filt) * 0.99995;\nr_sub.write(exc_sub + sub_out);\n\n// === Voice 2: Body (omele) ===\ninv_adj2 = (oct2 < -0.5) * inv_up + (oct2 > 0.5) * inv_dn;\neff_oct2 = oct2 + inv_adj2 + reg + (oct2 < -0.5) * boct + (oct2 > 0.5) * toct;\ndeg2_eff = deg2 + transpose;\ndeg2_w = mod(floor(deg2_eff) + ts_size * 20, ts_size);\noct2_x = floor(deg2_eff / ts_size);\nr2_rat = peek(tuning_table, ts_base + 1 + deg2_w, 0);\nr2_jrat = (deg2_w<0.5)?j0:(deg2_w<1.5)?j1:(deg2_w<2.5)?j2:(deg2_w<3.5)?j3:j4;\nr2_rat = (ts < 0.5) ? (r2_rat * (1.0-flex) + r2_jrat * flex) : r2_rat;\nr2_freq = eff_root * r2_rat * pow(2.0, eff_oct2 + oct2_x);\nr2_target = samplerate / max(r2_freq, 20);\nr2_sdl = (r2_sdl < 1) ? r2_target : r2_sdl + (r2_target - r2_sdl) * glide;\nexc2 = (cy * s_cg + noise() * 0.0003) * v_amp2 * unmute;\nr2_del = r2_d.read(r2_sdl);\nr2_avg = (r2_del + r2_pd) * 0.5;\nr2_pd = r2_del;\nr2_b = clamp(0.4 + brightness, 0, 1);\nr2_filt = r2_del * r2_b + r2_avg * (1.0 - r2_b);\nr2_out = tanh(r2_filt) * 0.998;\nr2_d.write(exc2 + r2_out);\n\n// === Voice 3: Metallic (ogene) ===\ninv_adj3 = (oct3 < -0.5) * inv_up + (oct3 > 0.5) * inv_dn;\neff_oct3 = oct3 + inv_adj3 + reg + (oct3 < -0.5) * boct + (oct3 > 0.5) * toct;\ndeg3_eff = deg3 + transpose;\ndeg3_w = mod(floor(deg3_eff) + ts_size * 20, ts_size);\noct3_x = floor(deg3_eff / ts_size);\nr3_rat = peek(tuning_table, ts_base + 1 + deg3_w, 0);\nr3_jrat = (deg3_w<0.5)?j0:(deg3_w<1.5)?j1:(deg3_w<2.5)?j2:(deg3_w<3.5)?j3:j4;\nr3_rat = (ts < 0.5) ? (r3_rat * (1.0-flex) + r3_jrat * flex) : r3_rat;\nr3_freq = eff_root * r3_rat * pow(2.0, eff_oct3 + oct3_x);\nr3_target = samplerate / max(r3_freq, 20);\nr3_sdl = (r3_sdl < 1) ? r3_target : r3_sdl + (r3_target - r3_sdl) * glide;\nexc3 = (cz * s_cg + noise() * 0.0003) * v_amp3 * unmute;\nr3_del = r3_d.read(r3_sdl);\nr3_avg = (r3_del + r3_pd) * 0.5;\nr3_pd = r3_del;\nr3_b = clamp(0.85 + brightness, 0, 1);\nr3_filt = r3_del * r3_b + r3_avg * (1.0 - r3_b);\nr3_out = tanh(r3_filt) * 0.9975;\nr3_d.write(exc3 + r3_out);\n\n// === Voice 4: Transient (gudugudu) ===\ninv_adj4 = (oct4 < -0.5) * inv_up + (oct4 > 0.5) * inv_dn;\neff_oct4 = oct4 + inv_adj4 + reg + (oct4 < -0.5) * boct + (oct4 > 0.5) * toct;\ndeg4_eff = deg4 + transpose;\ndeg4_w = mod(floor(deg4_eff) + ts_size * 20, ts_size);\noct4_x = floor(deg4_eff / ts_size);\nr4_rat = peek(tuning_table, ts_base + 1 + deg4_w, 0);\nr4_jrat = (deg4_w<0.5)?j0:(deg4_w<1.5)?j1:(deg4_w<2.5)?j2:(deg4_w<3.5)?j3:j4;\nr4_rat = (ts < 0.5) ? (r4_rat * (1.0-flex) + r4_jrat * flex) : r4_rat;\nr4_freq = eff_root * r4_rat * pow(2.0, eff_oct4 + oct4_x);\nr4_target = samplerate / max(r4_freq, 20);\nr4_sdl = (r4_sdl < 1) ? r4_target : r4_sdl + (r4_target - r4_sdl) * glide;\nexc4 = (cx_456 * s_cg + noise() * 0.0003) * v_amp4 * unmute;\nr4_del = r4_d.read(r4_sdl);\nr4_avg = (r4_del + r4_pd) * 0.5;\nr4_pd = r4_del;\nr4_b = clamp(0.9 + brightness, 0, 1);\nr4_filt = r4_del * r4_b + r4_avg * (1.0 - r4_b);\nr4_out = tanh(r4_filt) * 0.993;\nr4_d.write(exc4 + r4_out);\n\n// === Voice 5: Drone ===\ninv_adj5 = (oct5 < -0.5) * inv_up + (oct5 > 0.5) * inv_dn;\neff_oct5 = oct5 + inv_adj5 + reg + (oct5 < -0.5) * boct + (oct5 > 0.5) * toct;\ndeg5_eff = deg5 + transpose;\ndeg5_w = mod(floor(deg5_eff) + ts_size * 20, ts_size);\noct5_x = floor(deg5_eff / ts_size);\nr5_rat = peek(tuning_table, ts_base + 1 + deg5_w, 0);\nr5_jrat = (deg5_w<0.5)?j0:(deg5_w<1.5)?j1:(deg5_w<2.5)?j2:(deg5_w<3.5)?j3:j4;\nr5_rat = (ts < 0.5) ? (r5_rat * (1.0-flex) + r5_jrat * flex) : r5_rat;\nr5_freq = eff_root * r5_rat * pow(2.0, eff_oct5 + oct5_x);\nr5_target = samplerate / max(r5_freq, 20);\nr5_sdl = (r5_sdl < 1) ? r5_target : r5_sdl + (r5_target - r5_sdl) * glide;\nexc5 = (cy_456 * s_cg + noise() * 0.0003) * v_amp5 * unmute;\nr5_del = r5_d.read(r5_sdl);\nr5_avg = (r5_del + r5_pd) * 0.5;\nr5_pd = r5_del;\nr5_b = clamp(0.3 + brightness, 0, 1);\nr5_filt = r5_del * r5_b + r5_avg * (1.0 - r5_b);\nr5_out = tanh(r5_filt) * 0.9998;\nr5_d.write(exc5 + r5_out);\n\n// === Voice 6: Crystalline (shekere) ===\ninv_adj6 = (oct6 < -0.5) * inv_up + (oct6 > 0.5) * inv_dn;\neff_oct6 = oct6 + inv_adj6 + reg + (oct6 < -0.5) * boct + (oct6 > 0.5) * toct;\ndeg6_eff = deg6 + transpose;\ndeg6_w = mod(floor(deg6_eff) + ts_size * 20, ts_size);\noct6_x = floor(deg6_eff / ts_size);\nr6_rat = peek(tuning_table, ts_base + 1 + deg6_w, 0);\nr6_jrat = (deg6_w<0.5)?j0:(deg6_w<1.5)?j1:(deg6_w<2.5)?j2:(deg6_w<3.5)?j3:j4;\nr6_rat = (ts < 0.5) ? (r6_rat * (1.0-flex) + r6_jrat * flex) : r6_rat;\nr6_freq = eff_root * r6_rat * pow(2.0, eff_oct6 + oct6_x);\nr6_target = samplerate / max(r6_freq, 20);\nr6_sdl = (r6_sdl < 1) ? r6_target : r6_sdl + (r6_target - r6_sdl) * glide;\nexc6 = (cz_456 * s_cg + noise() * 0.0003) * v_amp6 * unmute;\nr6_del = r6_d.read(r6_sdl);\nr6_avg = (r6_del + r6_pd) * 0.5;\nr6_pd = r6_del;\nr6_b = clamp(0.95 + brightness, 0, 1);\nr6_filt = r6_del * r6_b + r6_avg * (1.0 - r6_b);\nr6_out = tanh(r6_filt) * 0.9965;\nr6_d.write(exc6 + r6_out);\n\n// === STEREO MIX (with sub-bass + drive saturation) ===\nsub_g = sub_amt;\nleft = r1_out*v_amp1*0.7 + r2_out*v_amp2*0.5 + r3_out*v_amp3*0.2 + r4_out*v_amp4*0.4 + r5_out*v_amp5*0.6 + r6_out*v_amp6*0.3 + sub_out*sub_g;\nright = r1_out*v_amp1*0.3 + r2_out*v_amp2*0.5 + r3_out*v_amp3*0.8 + r4_out*v_amp4*0.6 + r5_out*v_amp5*0.4 + r6_out*v_amp6*0.7 + sub_out*sub_g;\ndrv = max(1.0 + sub_drive, 1.0);\nout1 = tanh(left * drv) * master_gain * unmute;\nout2 = tanh(right * drv) * master_gain * unmute;\n// Attractor state outputs (for visual sync — normalized chaos XYZ)\nout3 = cx * s_cg;\nout4 = cy * s_cg;\nout5 = cz * s_cg;\n\n// === STEP POSITION OUTPUT (for visual cursor) ===\nout6 = floor(arp_step);\npoly_packed = floor(ps1) + floor(ps2) * 16 + floor(ps3) * 256 + floor(ps4) * 4096 + floor(ps5) * 65536 + floor(ps6) * 1048576;\nout7 = is_poly ? poly_packed : floor(arp_step);",
                                     "fontface": 0,
                                     "fontname": "<Monospaced>",
                                     "fontsize": 12.0,
@@ -7153,7 +7153,7 @@
                         120.0,
                         20.0
                     ],
-                    "text": "\u2014\u2014 RECORD \u2014\u2014",
+                    "text": "—— RECORD ——",
                     "varname": "obj-rec-label"
                 }
             },
@@ -8161,1087 +8161,17 @@
                 "box": {
                     "fontface": 1,
                     "fontsize": 12.0,
-                    "id": "obj-rp-label",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        852.0,
-                        50.0,
-                        200.0,
-                        20.0
-                    ],
-                    "text": "\u2014\u2014 RHO PRESETS \u2014\u2014",
-                    "varname": "obj-rp-label"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-rp1",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        72.0,
-                        52.0,
-                        22.0
-                    ],
-                    "text": "rho 20",
-                    "varname": "obj-rp1"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-rp1-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        909.0,
-                        72.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "converging (quiet)",
-                    "varname": "obj-rp1-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-rp2",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        96.0,
-                        73.0,
-                        22.0
-                    ],
-                    "text": "rho 24.74",
-                    "varname": "obj-rp2"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-rp2-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        930.0,
-                        96.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "onset of chaos (edge)",
-                    "varname": "obj-rp2-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-rp3",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        120.0,
-                        52.0,
-                        22.0
-                    ],
-                    "text": "rho 28",
-                    "varname": "obj-rp3"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-rp3-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        909.0,
-                        120.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "classic chaos",
-                    "varname": "obj-rp3-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-rp4",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        144.0,
-                        59.0,
-                        22.0
-                    ],
-                    "text": "rho 100",
-                    "varname": "obj-rp4"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-rp4-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        916.0,
-                        144.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "periodic orbit (pitched!)",
-                    "varname": "obj-rp4-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-rp5",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        168.0,
-                        59.0,
-                        22.0
-                    ],
-                    "text": "rho 166",
-                    "varname": "obj-rp5"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-rp5-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        916.0,
-                        168.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "stable periodic",
-                    "varname": "obj-rp5-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-rp6",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        192.0,
-                        52.0,
-                        22.0
-                    ],
-                    "text": "rho 50",
-                    "varname": "obj-rp6"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-rp6-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        909.0,
-                        192.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "intermittent bursts",
-                    "varname": "obj-rp6-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-rp-label-send",
-                    "maxclass": "newobj",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        852.0,
-                        216.0,
-                        52.0,
-                        22.0
-                    ],
-                    "text": "s toGen",
-                    "varname": "obj-rp-label-send"
-                }
-            },
-            {
-                "box": {
-                    "fontface": 1,
-                    "fontsize": 12.0,
-                    "id": "obj-cgp-label",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        852.0,
-                        244.0,
-                        200.0,
-                        20.0
-                    ],
-                    "text": "\u2014\u2014 CHAOS GAIN \u2014\u2014",
-                    "varname": "obj-cgp-label"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-cgp1",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        266.0,
-                        122.0,
-                        22.0
-                    ],
-                    "text": "chaos_gain 0.002",
-                    "varname": "obj-cgp1"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-cgp1-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        979.0,
-                        266.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "whisper",
-                    "varname": "obj-cgp1-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-cgp2",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        290.0,
-                        122.0,
-                        22.0
-                    ],
-                    "text": "chaos_gain 0.005",
-                    "varname": "obj-cgp2"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-cgp2-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        979.0,
-                        290.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "gentle",
-                    "varname": "obj-cgp2-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-cgp3",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        314.0,
-                        115.0,
-                        22.0
-                    ],
-                    "text": "chaos_gain 0.01",
-                    "varname": "obj-cgp3"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-cgp3-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        972.0,
-                        314.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "balanced (default)",
-                    "varname": "obj-cgp3-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-cgp4",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        338.0,
-                        115.0,
-                        22.0
-                    ],
-                    "text": "chaos_gain 0.03",
-                    "varname": "obj-cgp4"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-cgp4-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        972.0,
-                        338.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "aggressive",
-                    "varname": "obj-cgp4-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-cgp5",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        362.0,
-                        108.0,
-                        22.0
-                    ],
-                    "text": "chaos_gain 0.1",
-                    "varname": "obj-cgp5"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-cgp5-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        965.0,
-                        362.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "full distortion",
-                    "varname": "obj-cgp5-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-cgp-label-send",
-                    "maxclass": "newobj",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        852.0,
-                        386.0,
-                        52.0,
-                        22.0
-                    ],
-                    "text": "s toGen",
-                    "varname": "obj-cgp-label-send"
-                }
-            },
-            {
-                "box": {
-                    "fontface": 1,
-                    "fontsize": 12.0,
-                    "id": "obj-gp-label",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        852.0,
-                        414.0,
-                        200.0,
-                        20.0
-                    ],
-                    "text": "\u2014\u2014 GLIDE \u2014\u2014",
-                    "varname": "obj-gp-label"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-gp1",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        436.0,
-                        94.0,
-                        22.0
-                    ],
-                    "text": "glide 0.0002",
-                    "varname": "obj-gp1"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-gp1-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        951.0,
-                        436.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "slow (portamento)",
-                    "varname": "obj-gp1-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-gp2",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        460.0,
-                        87.0,
-                        22.0
-                    ],
-                    "text": "glide 0.001",
-                    "varname": "obj-gp2"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-gp2-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        944.0,
-                        460.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "default (~22ms)",
-                    "varname": "obj-gp2-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-gp3",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        484.0,
-                        80.0,
-                        22.0
-                    ],
-                    "text": "glide 0.01",
-                    "varname": "obj-gp3"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-gp3-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        937.0,
-                        484.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "fast (snap)",
-                    "varname": "obj-gp3-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-gp-label-send",
-                    "maxclass": "newobj",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        852.0,
-                        508.0,
-                        52.0,
-                        22.0
-                    ],
-                    "text": "s toGen",
-                    "varname": "obj-gp-label-send"
-                }
-            },
-            {
-                "box": {
-                    "fontface": 1,
-                    "fontsize": 12.0,
-                    "id": "obj-ep-label",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        852.0,
-                        536.0,
-                        200.0,
-                        20.0
-                    ],
-                    "text": "\u2014\u2014 ADSR PRESETS \u2014\u2014",
-                    "varname": "obj-ep-label"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-ep1",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        558.0,
-                        479.0,
-                        22.0
-                    ],
-                    "text": "env_attack 0.001, env_decay 0.08, env_sustain 0., env_release 0.05",
-                    "varname": "obj-ep1"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-ep1-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        1336.0,
-                        558.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "Pluck",
-                    "varname": "obj-ep1-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-ep2",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        582.0,
-                        451.0,
-                        22.0
-                    ],
-                    "text": "env_attack 0.3, env_decay 0.2, env_sustain 0.9, env_release 1.",
-                    "varname": "obj-ep2"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-ep2-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        1308.0,
-                        582.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "Pad",
-                    "varname": "obj-ep2-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-ep3",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        606.0,
-                        451.0,
-                        22.0
-                    ],
-                    "text": "env_attack 1., env_decay 0.5, env_sustain 0.7, env_release 2.",
-                    "varname": "obj-ep3"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-ep3-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        1308.0,
-                        606.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "Swell",
-                    "varname": "obj-ep3-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-ep4",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        630.0,
-                        479.0,
-                        22.0
-                    ],
-                    "text": "env_attack 0.001, env_decay 0.02, env_sustain 0., env_release 0.01",
-                    "varname": "obj-ep4"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-ep4-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        1336.0,
-                        630.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "Staccato",
-                    "varname": "obj-ep4-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-ep5",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        654.0,
-                        472.0,
-                        22.0
-                    ],
-                    "text": "env_attack 0.005, env_decay 0.05, env_sustain 0.8, env_release 0.1",
-                    "varname": "obj-ep5"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-ep5-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        1329.0,
-                        654.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "Default",
-                    "varname": "obj-ep5-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-ep-label-send",
-                    "maxclass": "newobj",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        852.0,
-                        678.0,
-                        52.0,
-                        22.0
-                    ],
-                    "text": "s toGen",
-                    "varname": "obj-ep-label-send"
-                }
-            },
-            {
-                "box": {
-                    "fontface": 1,
-                    "fontsize": 12.0,
-                    "id": "obj-ar-label",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        852.0,
-                        706.0,
-                        200.0,
-                        20.0
-                    ],
-                    "text": "\u2014\u2014 AFRICAN ROOTS \u2014\u2014",
-                    "varname": "obj-ar-label"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-ar0",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        728.0,
-                        59.0,
-                        22.0
-                    ],
-                    "text": "root 61",
-                    "varname": "obj-ar0"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-ar0-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        916.0,
-                        728.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "Dundun Low (Akinbo 2019: 61.4 Hz)",
-                    "varname": "obj-ar0-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-ar1",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        752.0,
-                        59.0,
-                        22.0
-                    ],
-                    "text": "root 82",
-                    "varname": "obj-ar1"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-ar1-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        916.0,
-                        752.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "Iya Ilu \u2014 bata mother drum",
-                    "varname": "obj-ar1-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-ar2",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        776.0,
-                        66.0,
-                        22.0
-                    ],
-                    "text": "root 125",
-                    "varname": "obj-ar2"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-ar2-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        923.0,
-                        776.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "Dundun Mid (Akinbo 2019: 124.8 Hz)",
-                    "varname": "obj-ar2-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-ar3",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        800.0,
-                        66.0,
-                        22.0
-                    ],
-                    "text": "root 172",
-                    "varname": "obj-ar3"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-ar3-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        923.0,
-                        800.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "Dundun High (Akinbo 2019: 172.3 Hz)",
-                    "varname": "obj-ar3-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-ar4",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        824.0,
-                        66.0,
-                        22.0
-                    ],
-                    "text": "root 220",
-                    "varname": "obj-ar4"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-ar4-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        923.0,
-                        824.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "Balafon \u2014 West African xylophone",
-                    "varname": "obj-ar4-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-ar5",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        848.0,
-                        66.0,
-                        22.0
-                    ],
-                    "text": "root 350",
-                    "varname": "obj-ar5"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-ar5-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        923.0,
-                        848.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "Agogo \u2014 Yoruba double bell",
-                    "varname": "obj-ar5-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-ar-label-send",
-                    "maxclass": "newobj",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        852.0,
-                        872.0,
-                        52.0,
-                        22.0
-                    ],
-                    "text": "s toGen",
-                    "varname": "obj-ar-label-send"
-                }
-            },
-            {
-                "box": {
-                    "fontface": 1,
-                    "fontsize": 12.0,
                     "id": "obj-cp-label",
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [
                         852.0,
-                        900.0,
+                        353.0,
                         200.0,
                         20.0
                     ],
-                    "text": "\u2014\u2014 CHORD PRESETS \u2014\u2014",
+                    "text": "—— CHORD PRESETS ——",
                     "varname": "obj-cp-label"
                 }
             },
@@ -9256,7 +8186,7 @@
                     ],
                     "patching_rect": [
                         852.0,
-                        922.0,
+                        375.0,
                         600.0,
                         22.0
                     ],
@@ -9273,7 +8203,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         1457.0,
-                        922.0,
+                        375.0,
                         250.0,
                         20.0
                     ],
@@ -9292,7 +8222,7 @@
                     ],
                     "patching_rect": [
                         852.0,
-                        946.0,
+                        399.0,
                         600.0,
                         22.0
                     ],
@@ -9309,7 +8239,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         1457.0,
-                        946.0,
+                        399.0,
                         250.0,
                         20.0
                     ],
@@ -9328,7 +8258,7 @@
                     ],
                     "patching_rect": [
                         852.0,
-                        970.0,
+                        423.0,
                         600.0,
                         22.0
                     ],
@@ -9345,7 +8275,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         1457.0,
-                        970.0,
+                        423.0,
                         250.0,
                         20.0
                     ],
@@ -9364,7 +8294,7 @@
                     ],
                     "patching_rect": [
                         852.0,
-                        994.0,
+                        447.0,
                         600.0,
                         22.0
                     ],
@@ -9381,7 +8311,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         1457.0,
-                        994.0,
+                        447.0,
                         250.0,
                         20.0
                     ],
@@ -9397,7 +8327,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         852.0,
-                        1018.0,
+                        471.0,
                         52.0,
                         22.0
                     ],
@@ -9415,11 +8345,11 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         852.0,
-                        1046.0,
+                        499.0,
                         200.0,
                         20.0
                     ],
-                    "text": "\u2014\u2014 DRONE PRESETS \u2014\u2014",
+                    "text": "—— DRONE PRESETS ——",
                     "varname": "obj-dr-label"
                 }
             },
@@ -9434,7 +8364,7 @@
                     ],
                     "patching_rect": [
                         852.0,
-                        1068.0,
+                        521.0,
                         600.0,
                         22.0
                     ],
@@ -9451,7 +8381,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         1457.0,
-                        1068.0,
+                        521.0,
                         250.0,
                         20.0
                     ],
@@ -9470,7 +8400,7 @@
                     ],
                     "patching_rect": [
                         852.0,
-                        1092.0,
+                        545.0,
                         600.0,
                         22.0
                     ],
@@ -9487,7 +8417,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         1457.0,
-                        1092.0,
+                        545.0,
                         250.0,
                         20.0
                     ],
@@ -9503,7 +8433,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         852.0,
-                        1116.0,
+                        569.0,
                         52.0,
                         22.0
                     ],
@@ -9521,11 +8451,11 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         852.0,
-                        1144.0,
+                        597.0,
                         200.0,
                         20.0
                     ],
-                    "text": "\u2014\u2014 ATTRACTOR COMBOS \u2014\u2014",
+                    "text": "—— ATTRACTOR COMBOS ——",
                     "varname": "obj-ac-label"
                 }
             },
@@ -9540,7 +8470,7 @@
                     ],
                     "patching_rect": [
                         852.0,
-                        1166.0,
+                        619.0,
                         171.0,
                         22.0
                     ],
@@ -9557,7 +8487,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         1028.0,
-                        1166.0,
+                        619.0,
                         250.0,
                         20.0
                     ],
@@ -9576,7 +8506,7 @@
                     ],
                     "patching_rect": [
                         852.0,
-                        1190.0,
+                        643.0,
                         255.0,
                         22.0
                     ],
@@ -9593,7 +8523,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         1112.0,
-                        1190.0,
+                        643.0,
                         250.0,
                         20.0
                     ],
@@ -9612,7 +8542,7 @@
                     ],
                     "patching_rect": [
                         852.0,
-                        1214.0,
+                        667.0,
                         290.0,
                         22.0
                     ],
@@ -9629,7 +8559,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         1147.0,
-                        1214.0,
+                        667.0,
                         250.0,
                         20.0
                     ],
@@ -9648,7 +8578,7 @@
                     ],
                     "patching_rect": [
                         852.0,
-                        1238.0,
+                        691.0,
                         262.0,
                         22.0
                     ],
@@ -9665,7 +8595,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         1119.0,
-                        1238.0,
+                        691.0,
                         250.0,
                         20.0
                     ],
@@ -9684,7 +8614,7 @@
                     ],
                     "patching_rect": [
                         852.0,
-                        1262.0,
+                        715.0,
                         325.0,
                         22.0
                     ],
@@ -9701,7 +8631,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         1182.0,
-                        1262.0,
+                        715.0,
                         250.0,
                         20.0
                     ],
@@ -9720,7 +8650,7 @@
                     ],
                     "patching_rect": [
                         852.0,
-                        1286.0,
+                        739.0,
                         381.0,
                         22.0
                     ],
@@ -9737,7 +8667,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         1238.0,
-                        1286.0,
+                        739.0,
                         250.0,
                         20.0
                     ],
@@ -9756,7 +8686,7 @@
                     ],
                     "patching_rect": [
                         852.0,
-                        1310.0,
+                        763.0,
                         381.0,
                         22.0
                     ],
@@ -9773,11 +8703,11 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         1238.0,
-                        1310.0,
+                        763.0,
                         250.0,
                         20.0
                     ],
-                    "text": "Lorenz\u00d7Chua Modulate",
+                    "text": "Lorenz×Chua Modulate",
                     "varname": "obj-ac7-l"
                 }
             },
@@ -9792,7 +8722,7 @@
                     ],
                     "patching_rect": [
                         852.0,
-                        1334.0,
+                        787.0,
                         276.0,
                         22.0
                     ],
@@ -9809,7 +8739,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         1133.0,
-                        1334.0,
+                        787.0,
                         250.0,
                         20.0
                     ],
@@ -9828,7 +8758,7 @@
                     ],
                     "patching_rect": [
                         852.0,
-                        1358.0,
+                        811.0,
                         381.0,
                         22.0
                     ],
@@ -9845,11 +8775,11 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         1238.0,
-                        1358.0,
+                        811.0,
                         250.0,
                         20.0
                     ],
-                    "text": "Rossler\u00d7Aizawa Modulate",
+                    "text": "Rossler×Aizawa Modulate",
                     "varname": "obj-ac9-l"
                 }
             },
@@ -9864,7 +8794,7 @@
                     ],
                     "patching_rect": [
                         852.0,
-                        1382.0,
+                        835.0,
                         381.0,
                         22.0
                     ],
@@ -9881,7 +8811,7 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         1238.0,
-                        1382.0,
+                        835.0,
                         250.0,
                         20.0
                     ],
@@ -9897,1320 +8827,12 @@
                     "numoutlets": 0,
                     "patching_rect": [
                         852.0,
-                        1406.0,
+                        859.0,
                         52.0,
                         22.0
                     ],
                     "text": "s toGen",
                     "varname": "obj-ac-label-send"
-                }
-            },
-            {
-                "box": {
-                    "fontface": 1,
-                    "fontsize": 12.0,
-                    "id": "obj-pp-label",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        852.0,
-                        1434.0,
-                        200.0,
-                        20.0
-                    ],
-                    "text": "\u2014\u2014 PATTERN PRESETS \u2014\u2014",
-                    "varname": "obj-pp-label"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-pp1",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        1456.0,
-                        248.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 8, arp_div 3, arp_bpm 120",
-                    "varname": "obj-pp1"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-pp1-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        1105.0,
-                        1456.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "Bembe 12/8 triplet feel",
-                    "varname": "obj-pp1-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-pp2",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        1480.0,
-                        241.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 9, arp_div 2, arp_bpm 90",
-                    "varname": "obj-pp2"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-pp2-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        1098.0,
-                        1480.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "Shiko slow 1/8",
-                    "varname": "obj-pp2-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-pp3",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        1504.0,
-                        248.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 6, arp_div 4, arp_bpm 130",
-                    "varname": "obj-pp3"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-pp3-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        1105.0,
-                        1504.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "Poly 3:2 fast 1/16",
-                    "varname": "obj-pp3-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-pp4",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        1528.0,
-                        255.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 10, arp_div 1, arp_bpm 100",
-                    "varname": "obj-pp4"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-pp4-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        1112.0,
-                        1528.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "Call/Resp quarter note",
-                    "varname": "obj-pp4-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-pp5",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        1552.0,
-                        255.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 11, arp_div 2, arp_bpm 110",
-                    "varname": "obj-pp5"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-pp5-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        1112.0,
-                        1552.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "Gahu 15-step \u2014 Ewe dance",
-                    "varname": "obj-pp5-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-pp6",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        1576.0,
-                        248.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 12, arp_div 4, arp_bpm 95",
-                    "varname": "obj-pp6"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-pp6-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        1105.0,
-                        1576.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "Son Clave 3:2 \u2014 Afro-Cuban",
-                    "varname": "obj-pp6-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-pp7",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        1600.0,
-                        255.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 13, arp_div 3, arp_bpm 120",
-                    "varname": "obj-pp7"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-pp7-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        1112.0,
-                        1600.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "Fume Fume \u2014 Ewe ceremony",
-                    "varname": "obj-pp7-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-pp8",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        1624.0,
-                        255.0,
-                        22.0
-                    ],
-                    "text": "arp_mode 14, arp_div 4, arp_bpm 140",
-                    "varname": "obj-pp8"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-pp8-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        1112.0,
-                        1624.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "Kassa \u2014 Manding harvest",
-                    "varname": "obj-pp8-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-pp-label-send",
-                    "maxclass": "newobj",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        852.0,
-                        1648.0,
-                        52.0,
-                        22.0
-                    ],
-                    "text": "s toGen",
-                    "varname": "obj-pp-label-send"
-                }
-            },
-            {
-                "box": {
-                    "fontface": 1,
-                    "fontsize": 12.0,
-                    "id": "obj-rsp-preset-label",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        852.0,
-                        1676.0,
-                        200.0,
-                        20.0
-                    ],
-                    "text": "\u2014\u2014 ROOT SPRING \u2014\u2014",
-                    "varname": "obj-rsp-preset-label"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-rsp1",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        1698.0,
-                        311.0,
-                        22.0
-                    ],
-                    "text": "root_offset 0, root_mode 0, root_return 0.1",
-                    "varname": "obj-rsp1"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-rsp1-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        1168.0,
-                        1698.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "Tight (fast snap)",
-                    "varname": "obj-rsp1-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-rsp2",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        1722.0,
-                        311.0,
-                        22.0
-                    ],
-                    "text": "root_offset 0, root_mode 0, root_return 0.5",
-                    "varname": "obj-rsp2"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-rsp2-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        1168.0,
-                        1722.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "Elastic (default)",
-                    "varname": "obj-rsp2-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-rsp3",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        1746.0,
-                        311.0,
-                        22.0
-                    ],
-                    "text": "root_offset 0, root_mode 0, root_return 2.",
-                    "varname": "obj-rsp3"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-rsp3-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        1168.0,
-                        1746.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "Slow (glacial drift)",
-                    "varname": "obj-rsp3-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-rsp4",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        1770.0,
-                        87.0,
-                        22.0
-                    ],
-                    "text": "root_mode 1",
-                    "varname": "obj-rsp4"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 12.0,
-                    "id": "obj-rsp4-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        944.0,
-                        1770.0,
-                        250.0,
-                        20.0
-                    ],
-                    "text": "Latch (hold position)",
-                    "varname": "obj-rsp4-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-rsp-preset-label-send",
-                    "maxclass": "newobj",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        852.0,
-                        1794.0,
-                        52.0,
-                        22.0
-                    ],
-                    "text": "s toGen",
-                    "varname": "obj-rsp-preset-label-send"
-                }
-            },
-            {
-                "box": {
-                    "fontface": 1,
-                    "fontsize": 12.0,
-                    "id": "obj-tsp-label",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        852.0,
-                        1822.0,
-                        200.0,
-                        20.0
-                    ],
-                    "text": "\u2014\u2014 TUNING SYSTEMS \u2014\u2014",
-                    "varname": "obj-tsp-label"
-                }
-            },
-            {
-                "box": {
-                    "fontface": 1,
-                    "fontsize": 12.0,
-                    "id": "obj-tsr-wes",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        852.0,
-                        1844.0,
-                        180.0,
-                        20.0
-                    ],
-                    "text": "West African",
-                    "varname": "obj-tsr-wes"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-tsp-0",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        1864.0,
-                        100.0,
-                        22.0
-                    ],
-                    "text": "tuning_system 0",
-                    "varname": "obj-tsp-0"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-tsp-0-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        957.0,
-                        1864.0,
-                        170.0,
-                        19.0
-                    ],
-                    "text": "Yoruba Pentatonic",
-                    "varname": "obj-tsp-0-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-tsp-1",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        1888.0,
-                        100.0,
-                        22.0
-                    ],
-                    "text": "tuning_system 1",
-                    "varname": "obj-tsp-1"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-tsp-1-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        957.0,
-                        1888.0,
-                        170.0,
-                        19.0
-                    ],
-                    "text": "Dundun 3-Tone",
-                    "varname": "obj-tsp-1-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-tsp-2",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        1912.0,
-                        100.0,
-                        22.0
-                    ],
-                    "text": "tuning_system 2",
-                    "varname": "obj-tsp-2"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-tsp-2-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        957.0,
-                        1912.0,
-                        170.0,
-                        19.0
-                    ],
-                    "text": "Balafon Equi-Penta",
-                    "varname": "obj-tsp-2-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-tsp-3",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        1936.0,
-                        100.0,
-                        22.0
-                    ],
-                    "text": "tuning_system 3",
-                    "varname": "obj-tsp-3"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-tsp-3-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        957.0,
-                        1936.0,
-                        170.0,
-                        19.0
-                    ],
-                    "text": "Equi-Heptatonic 7-TET",
-                    "varname": "obj-tsp-3-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-tsp-18",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        1960.0,
-                        103.0,
-                        22.0
-                    ],
-                    "text": "tuning_system 18",
-                    "varname": "obj-tsp-18"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-tsp-18-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        957.0,
-                        1960.0,
-                        170.0,
-                        19.0
-                    ],
-                    "text": "Igbo Pentatonic",
-                    "varname": "obj-tsp-18-l"
-                }
-            },
-            {
-                "box": {
-                    "fontface": 1,
-                    "fontsize": 12.0,
-                    "id": "obj-tsr-man",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        852.0,
-                        1990.0,
-                        180.0,
-                        20.0
-                    ],
-                    "text": "Mandinka / Senegambia",
-                    "varname": "obj-tsr-man"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-tsp-7",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        2010.0,
-                        100.0,
-                        22.0
-                    ],
-                    "text": "tuning_system 7",
-                    "varname": "obj-tsp-7"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-tsp-7-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        957.0,
-                        2010.0,
-                        170.0,
-                        19.0
-                    ],
-                    "text": "Kora Silaba",
-                    "varname": "obj-tsp-7-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-tsp-8",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        2034.0,
-                        100.0,
-                        22.0
-                    ],
-                    "text": "tuning_system 8",
-                    "varname": "obj-tsp-8"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-tsp-8-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        957.0,
-                        2034.0,
-                        170.0,
-                        19.0
-                    ],
-                    "text": "Kora Sauta",
-                    "varname": "obj-tsp-8-l"
-                }
-            },
-            {
-                "box": {
-                    "fontface": 1,
-                    "fontsize": 12.0,
-                    "id": "obj-tsr-cen",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        852.0,
-                        2064.0,
-                        180.0,
-                        20.0
-                    ],
-                    "text": "Central African",
-                    "varname": "obj-tsr-cen"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-tsp-4",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        2084.0,
-                        100.0,
-                        22.0
-                    ],
-                    "text": "tuning_system 4",
-                    "varname": "obj-tsp-4"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-tsp-4-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        957.0,
-                        2084.0,
-                        170.0,
-                        19.0
-                    ],
-                    "text": "BaAka/Pygmy 5-TET",
-                    "varname": "obj-tsp-4-l"
-                }
-            },
-            {
-                "box": {
-                    "fontface": 1,
-                    "fontsize": 12.0,
-                    "id": "obj-tsr-eas",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        852.0,
-                        2114.0,
-                        180.0,
-                        20.0
-                    ],
-                    "text": "East African",
-                    "varname": "obj-tsr-eas"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-tsp-9",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        2134.0,
-                        100.0,
-                        22.0
-                    ],
-                    "text": "tuning_system 9",
-                    "varname": "obj-tsp-9"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-tsp-9-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        957.0,
-                        2134.0,
-                        170.0,
-                        19.0
-                    ],
-                    "text": "Tizita Major",
-                    "varname": "obj-tsp-9-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-tsp-10",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        2158.0,
-                        103.0,
-                        22.0
-                    ],
-                    "text": "tuning_system 10",
-                    "varname": "obj-tsp-10"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-tsp-10-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        957.0,
-                        2158.0,
-                        170.0,
-                        19.0
-                    ],
-                    "text": "Tizita Minor",
-                    "varname": "obj-tsp-10-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-tsp-11",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        2182.0,
-                        102.0,
-                        22.0
-                    ],
-                    "text": "tuning_system 11",
-                    "varname": "obj-tsp-11"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-tsp-11-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        957.0,
-                        2182.0,
-                        170.0,
-                        19.0
-                    ],
-                    "text": "Bati",
-                    "varname": "obj-tsp-11-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-tsp-12",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        2206.0,
-                        103.0,
-                        22.0
-                    ],
-                    "text": "tuning_system 12",
-                    "varname": "obj-tsp-12"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-tsp-12-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        957.0,
-                        2206.0,
-                        170.0,
-                        19.0
-                    ],
-                    "text": "Ambassel",
-                    "varname": "obj-tsp-12-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-tsp-13",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        2230.0,
-                        103.0,
-                        22.0
-                    ],
-                    "text": "tuning_system 13",
-                    "varname": "obj-tsp-13"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-tsp-13-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        957.0,
-                        2230.0,
-                        170.0,
-                        19.0
-                    ],
-                    "text": "Anchihoye",
-                    "varname": "obj-tsp-13-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-tsp-14",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        2254.0,
-                        103.0,
-                        22.0
-                    ],
-                    "text": "tuning_system 14",
-                    "varname": "obj-tsp-14"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-tsp-14-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        957.0,
-                        2254.0,
-                        170.0,
-                        19.0
-                    ],
-                    "text": "Amadinda",
-                    "varname": "obj-tsp-14-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-tsp-17",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        2278.0,
-                        103.0,
-                        22.0
-                    ],
-                    "text": "tuning_system 17",
-                    "varname": "obj-tsp-17"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-tsp-17-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        957.0,
-                        2278.0,
-                        170.0,
-                        19.0
-                    ],
-                    "text": "Wagogo Ilimba",
-                    "varname": "obj-tsp-17-l"
-                }
-            },
-            {
-                "box": {
-                    "fontface": 1,
-                    "fontsize": 12.0,
-                    "id": "obj-tsr-sou",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        852.0,
-                        2308.0,
-                        180.0,
-                        20.0
-                    ],
-                    "text": "Southern African",
-                    "varname": "obj-tsr-sou"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-tsp-5",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        2328.0,
-                        100.0,
-                        22.0
-                    ],
-                    "text": "tuning_system 5",
-                    "varname": "obj-tsp-5"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-tsp-5-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        957.0,
-                        2328.0,
-                        170.0,
-                        19.0
-                    ],
-                    "text": "Shona Nyamaropa",
-                    "varname": "obj-tsp-5-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-tsp-6",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        2352.0,
-                        100.0,
-                        22.0
-                    ],
-                    "text": "tuning_system 6",
-                    "varname": "obj-tsp-6"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-tsp-6-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        957.0,
-                        2352.0,
-                        170.0,
-                        19.0
-                    ],
-                    "text": "Shona Gandanga",
-                    "varname": "obj-tsp-6-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-tsp-15",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        2376.0,
-                        103.0,
-                        22.0
-                    ],
-                    "text": "tuning_system 15",
-                    "varname": "obj-tsp-15"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-tsp-15-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        957.0,
-                        2376.0,
-                        170.0,
-                        19.0
-                    ],
-                    "text": "Chopi Timbila",
-                    "varname": "obj-tsp-15-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-tsp-16",
-                    "maxclass": "message",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [
-                        ""
-                    ],
-                    "patching_rect": [
-                        852.0,
-                        2400.0,
-                        103.0,
-                        22.0
-                    ],
-                    "text": "tuning_system 16",
-                    "varname": "obj-tsp-16"
-                }
-            },
-            {
-                "box": {
-                    "fontsize": 11.0,
-                    "id": "obj-tsp-16-l",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        957.0,
-                        2400.0,
-                        170.0,
-                        19.0
-                    ],
-                    "text": "San Musical Bow",
-                    "varname": "obj-tsp-16-l"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-tsp-send",
-                    "maxclass": "newobj",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [
-                        852.0,
-                        2430.0,
-                        52.0,
-                        22.0
-                    ],
-                    "text": "s toGen",
-                    "varname": "obj-tsp-send"
                 }
             },
             {
@@ -11285,7 +8907,7 @@
                         250.0,
                         34.0
                     ],
-                    "text": "OSC OUTPUT to TouchDesigner\nport 7000 \u2014 toggle to enable",
+                    "text": "OSC OUTPUT to TouchDesigner\nport 7000 — toggle to enable",
                     "varname": "obj-osc-comment"
                 }
             },
@@ -13445,6 +11067,483 @@
                     "fontsize": 9.0,
                     "varname": "obj-lr-def-link"
                 }
+            },
+            {
+                "box": {
+                    "fontface": 1,
+                    "fontsize": 12.0,
+                    "id": "obj-pm-header",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        852,
+                        50,
+                        200.0,
+                        20.0
+                    ],
+                    "text": "—— PRESETS ——",
+                    "varname": "obj-pm-header"
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 11.0,
+                    "id": "obj-pm-tuning-l",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        852,
+                        77,
+                        90.0,
+                        19.0
+                    ],
+                    "text": "Tuning",
+                    "varname": "obj-pm-tuning-l"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-pm-tuning",
+                    "maxclass": "umenu",
+                    "numinlets": 1,
+                    "numoutlets": 3,
+                    "outlettype": [
+                        "int",
+                        "",
+                        ""
+                    ],
+                    "parameter_enable": 0,
+                    "patching_rect": [
+                        945,
+                        75,
+                        160,
+                        20
+                    ],
+                    "items": [
+                        "Yoruba Pentatonic",
+                        ",",
+                        "Dundun 3-Tone",
+                        ",",
+                        "Balafon Equi-Penta",
+                        ",",
+                        "Equi-Heptatonic 7-TET",
+                        ",",
+                        "BaAka/Pygmy 5-TET",
+                        ",",
+                        "Shona Nyamaropa",
+                        ",",
+                        "Shona Gandanga",
+                        ",",
+                        "Kora Silaba",
+                        ",",
+                        "Kora Sauta",
+                        ",",
+                        "Tizita Major",
+                        ",",
+                        "Tizita Minor",
+                        ",",
+                        "Bati",
+                        ",",
+                        "Ambassel",
+                        ",",
+                        "Anchihoye",
+                        ",",
+                        "Amadinda",
+                        ",",
+                        "Chopi Timbila",
+                        ",",
+                        "San Musical Bow",
+                        ",",
+                        "Wagogo Ilimba",
+                        ",",
+                        "Igbo Pentatonic"
+                    ],
+                    "varname": "obj-pm-tuning"
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 11.0,
+                    "id": "obj-pm-pattern-l",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        852,
+                        102,
+                        90.0,
+                        19.0
+                    ],
+                    "text": "Pattern",
+                    "varname": "obj-pm-pattern-l"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-pm-pattern",
+                    "maxclass": "umenu",
+                    "numinlets": 1,
+                    "numoutlets": 3,
+                    "outlettype": [
+                        "int",
+                        "",
+                        ""
+                    ],
+                    "parameter_enable": 0,
+                    "patching_rect": [
+                        945,
+                        100,
+                        160,
+                        20
+                    ],
+                    "items": [
+                        "Bembe 12/8",
+                        ",",
+                        "Shiko",
+                        ",",
+                        "Poly 3:2",
+                        ",",
+                        "Call/Response",
+                        ",",
+                        "Gahu 15-step",
+                        ",",
+                        "Son Clave 3:2",
+                        ",",
+                        "Fume Fume",
+                        ",",
+                        "Kassa"
+                    ],
+                    "varname": "obj-pm-pattern"
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 11.0,
+                    "id": "obj-pm-rho-l",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        852,
+                        127,
+                        90.0,
+                        19.0
+                    ],
+                    "text": "Rho",
+                    "varname": "obj-pm-rho-l"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-pm-rho",
+                    "maxclass": "umenu",
+                    "numinlets": 1,
+                    "numoutlets": 3,
+                    "outlettype": [
+                        "int",
+                        "",
+                        ""
+                    ],
+                    "parameter_enable": 0,
+                    "patching_rect": [
+                        945,
+                        125,
+                        160,
+                        20
+                    ],
+                    "items": [
+                        "Converging (20)",
+                        ",",
+                        "Edge (24.74)",
+                        ",",
+                        "Classic (28)",
+                        ",",
+                        "Periodic (100)",
+                        ",",
+                        "Stable (166)",
+                        ",",
+                        "Bursts (50)"
+                    ],
+                    "varname": "obj-pm-rho"
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 11.0,
+                    "id": "obj-pm-roots-l",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        852,
+                        152,
+                        90.0,
+                        19.0
+                    ],
+                    "text": "Root",
+                    "varname": "obj-pm-roots-l"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-pm-roots",
+                    "maxclass": "umenu",
+                    "numinlets": 1,
+                    "numoutlets": 3,
+                    "outlettype": [
+                        "int",
+                        "",
+                        ""
+                    ],
+                    "parameter_enable": 0,
+                    "patching_rect": [
+                        945,
+                        150,
+                        160,
+                        20
+                    ],
+                    "items": [
+                        "Dundun Low (61)",
+                        ",",
+                        "Iya Ilu (82)",
+                        ",",
+                        "Dundun Mid (125)",
+                        ",",
+                        "Dundun High (172)",
+                        ",",
+                        "Balafon (220)",
+                        ",",
+                        "Agogo (350)"
+                    ],
+                    "varname": "obj-pm-roots"
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 11.0,
+                    "id": "obj-pm-adsr-l",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        852,
+                        177,
+                        90.0,
+                        19.0
+                    ],
+                    "text": "ADSR",
+                    "varname": "obj-pm-adsr-l"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-pm-adsr",
+                    "maxclass": "umenu",
+                    "numinlets": 1,
+                    "numoutlets": 3,
+                    "outlettype": [
+                        "int",
+                        "",
+                        ""
+                    ],
+                    "parameter_enable": 0,
+                    "patching_rect": [
+                        945,
+                        175,
+                        160,
+                        20
+                    ],
+                    "items": [
+                        "Pluck",
+                        ",",
+                        "Pad",
+                        ",",
+                        "Swell",
+                        ",",
+                        "Staccato",
+                        ",",
+                        "Default"
+                    ],
+                    "varname": "obj-pm-adsr"
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 11.0,
+                    "id": "obj-pm-chaos-l",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        852,
+                        202,
+                        90.0,
+                        19.0
+                    ],
+                    "text": "Chaos",
+                    "varname": "obj-pm-chaos-l"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-pm-chaos",
+                    "maxclass": "umenu",
+                    "numinlets": 1,
+                    "numoutlets": 3,
+                    "outlettype": [
+                        "int",
+                        "",
+                        ""
+                    ],
+                    "parameter_enable": 0,
+                    "patching_rect": [
+                        945,
+                        200,
+                        160,
+                        20
+                    ],
+                    "items": [
+                        "Whisper (0.002)",
+                        ",",
+                        "Gentle (0.005)",
+                        ",",
+                        "Balanced (0.01)",
+                        ",",
+                        "Aggressive (0.03)",
+                        ",",
+                        "Full (0.1)"
+                    ],
+                    "varname": "obj-pm-chaos"
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 11.0,
+                    "id": "obj-pm-spring-l",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        852,
+                        227,
+                        90.0,
+                        19.0
+                    ],
+                    "text": "Spring",
+                    "varname": "obj-pm-spring-l"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-pm-spring",
+                    "maxclass": "umenu",
+                    "numinlets": 1,
+                    "numoutlets": 3,
+                    "outlettype": [
+                        "int",
+                        "",
+                        ""
+                    ],
+                    "parameter_enable": 0,
+                    "patching_rect": [
+                        945,
+                        225,
+                        160,
+                        20
+                    ],
+                    "items": [
+                        "Tight",
+                        ",",
+                        "Elastic",
+                        ",",
+                        "Slow",
+                        ",",
+                        "Latch"
+                    ],
+                    "varname": "obj-pm-spring"
+                }
+            },
+            {
+                "box": {
+                    "fontsize": 11.0,
+                    "id": "obj-pm-glide-l",
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        852,
+                        252,
+                        90.0,
+                        19.0
+                    ],
+                    "text": "Glide",
+                    "varname": "obj-pm-glide-l"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-pm-glide",
+                    "maxclass": "umenu",
+                    "numinlets": 1,
+                    "numoutlets": 3,
+                    "outlettype": [
+                        "int",
+                        "",
+                        ""
+                    ],
+                    "parameter_enable": 0,
+                    "patching_rect": [
+                        945,
+                        250,
+                        160,
+                        20
+                    ],
+                    "items": [
+                        "Slow (porta)",
+                        ",",
+                        "Default",
+                        ",",
+                        "Fast (snap)"
+                    ],
+                    "varname": "obj-pm-glide"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-pm-js",
+                    "maxclass": "newobj",
+                    "numinlets": 8,
+                    "numoutlets": 1,
+                    "outlettype": [
+                        ""
+                    ],
+                    "patching_rect": [
+                        945,
+                        285,
+                        200,
+                        22.0
+                    ],
+                    "text": "js preset_menu.js",
+                    "varname": "obj-pm-js"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-pm-send",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [
+                        945,
+                        313,
+                        52.0,
+                        22.0
+                    ],
+                    "text": "s toGen",
+                    "varname": "obj-pm-send"
+                }
             }
         ],
         "lines": [
@@ -13756,78 +11855,6 @@
                     ],
                     "source": [
                         "obj-aizd-n",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-ar-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-ar0",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-ar-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-ar1",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-ar-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-ar2",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-ar-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-ar3",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-ar-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-ar4",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-ar-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-ar5",
                         0
                     ]
                 }
@@ -14487,66 +12514,6 @@
             {
                 "patchline": {
                     "destination": [
-                        "obj-cgp-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-cgp1",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-cgp-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-cgp2",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-cgp-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-cgp3",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-cgp-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-cgp4",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-cgp-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-cgp5",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
                         "obj-s-att",
                         0
                     ],
@@ -14883,66 +12850,6 @@
             {
                 "patchline": {
                     "destination": [
-                        "obj-ep-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-ep1",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-ep-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-ep2",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-ep-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-ep3",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-ep-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-ep4",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-ep-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-ep5",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
                         "obj-s-arp",
                         0
                     ],
@@ -15174,42 +13081,6 @@
                     ],
                     "source": [
                         "obj-glide-n",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-gp-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-gp1",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-gp-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-gp2",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-gp-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-gp3",
                         0
                     ]
                 }
@@ -15843,102 +13714,6 @@
             {
                 "patchline": {
                     "destination": [
-                        "obj-pp-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-pp1",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-pp-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-pp2",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-pp-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-pp3",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-pp-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-pp4",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-pp-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-pp5",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-pp-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-pp6",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-pp-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-pp7",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-pp-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-pp8",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
                         "obj-gen",
                         0
                     ],
@@ -16279,78 +14054,6 @@
             {
                 "patchline": {
                     "destination": [
-                        "obj-rp-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-rp1",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-rp-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-rp2",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-rp-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-rp3",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-rp-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-rp4",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-rp-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-rp5",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-rp-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-rp6",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
                         "obj-s-tun",
                         0
                     ],
@@ -16368,54 +14071,6 @@
                     ],
                     "source": [
                         "obj-rret-n",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-rsp-preset-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-rsp1",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-rsp-preset-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-rsp2",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-rsp-preset-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-rsp3",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-rsp-preset-label-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-rsp4",
                         0
                     ]
                 }
@@ -16788,234 +14443,6 @@
                     ],
                     "source": [
                         "obj-ts-n",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-tsp-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-tsp-0",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-tsp-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-tsp-1",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-tsp-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-tsp-10",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-tsp-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-tsp-11",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-tsp-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-tsp-12",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-tsp-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-tsp-13",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-tsp-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-tsp-14",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-tsp-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-tsp-15",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-tsp-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-tsp-16",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-tsp-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-tsp-17",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-tsp-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-tsp-18",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-tsp-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-tsp-2",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-tsp-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-tsp-3",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-tsp-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-tsp-4",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-tsp-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-tsp-5",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-tsp-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-tsp-6",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-tsp-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-tsp-7",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-tsp-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-tsp-8",
-                        0
-                    ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [
-                        "obj-tsp-send",
-                        0
-                    ],
-                    "source": [
-                        "obj-tsp-9",
                         0
                     ]
                 }
@@ -17604,6 +15031,114 @@
                     ],
                     "destination": [
                         "obj-link-tog",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-pm-js",
+                        0
+                    ],
+                    "source": [
+                        "obj-pm-tuning",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-pm-js",
+                        1
+                    ],
+                    "source": [
+                        "obj-pm-pattern",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-pm-js",
+                        2
+                    ],
+                    "source": [
+                        "obj-pm-rho",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-pm-js",
+                        3
+                    ],
+                    "source": [
+                        "obj-pm-roots",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-pm-js",
+                        4
+                    ],
+                    "source": [
+                        "obj-pm-adsr",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-pm-js",
+                        5
+                    ],
+                    "source": [
+                        "obj-pm-chaos",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-pm-js",
+                        6
+                    ],
+                    "source": [
+                        "obj-pm-spring",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-pm-js",
+                        7
+                    ],
+                    "source": [
+                        "obj-pm-glide",
+                        0
+                    ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [
+                        "obj-pm-send",
+                        0
+                    ],
+                    "source": [
+                        "obj-pm-js",
                         0
                     ]
                 }
